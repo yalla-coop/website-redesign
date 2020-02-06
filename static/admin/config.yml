@@ -1,0 +1,40 @@
+backend:
+  name: test-repo
+
+media_folder: static/assets
+public_folder: /assets
+
+collections:
+  - name: case-study
+    label: Case Study
+    folder: case-study
+    extension: json
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+
+  - name: testimonials
+    label: Testimonials
+    folder: testimonials
+    extension: json
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: text }
+      - { name: clientName, label: Client name }
+      - { name: jobTitle, label: Job title }
+
+  - name: stories
+    label: Stories
+    folder: stories
+    extension: json
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: image, label: Image, widget: image }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: text }
