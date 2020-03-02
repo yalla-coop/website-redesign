@@ -28,6 +28,11 @@ module.exports = {
         extensions: ['.js', '.jsx'],
       },
     ],
+    // ignores the libraries being in devDependencies like: jest and storybook
+    'import/no-extraneous-dependencies': [
+      'error',
+      { devDependencies: ['**/*.test.js', '**/*.spec.js','**/*.stories.js'] },
+    ],
     // configure the prettier plugin
     'prettier/prettier': [
       'error',
