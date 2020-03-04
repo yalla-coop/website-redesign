@@ -54,6 +54,7 @@ export const CapsHeadingSmall = styled.h3`
 `
 
 // Paragraphs
+// naming: {Bold}?{Size}P, examples: XLP: x-large paragraph
 
 export const XLP = styled.p`
   font-size: ${psize.xl};
