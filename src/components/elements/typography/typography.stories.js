@@ -1,5 +1,6 @@
 import React from 'react'
 import { H1, H2, H3, H4, Link, P } from './typography'
+import { size } from '../../../utils/typography'
 
 export default {
   title: 'Design System/Typography',
@@ -12,4 +13,4 @@ export const h4 = () => <H4>Heading 4</H4>
 
 export const link = () => <Link to="/">Click Here</Link>
 
-export const paragraph = () => <P>This is a paragraph</P>
+export const paragraph = () => <P s={size.xs}>This is a paragraph</P>
