@@ -1,19 +1,17 @@
 import React from 'react'
+import { letterSpacing } from '../../../utils'
 import {
+  CapsHeadingLarge,
+  CapsHeadingMedium,
+  CapsHeadingSmall,
   H1,
   H2,
   H3,
   H4,
-  CapsHeadingLarge,
-  CapsHeadingMedium,
-  CapsHeadingSmall,
-  Link,
-  P,
-} from './typography'
-import { size, letterSpacing } from '../../../utils'
+} from './index'
 
 export default {
-  title: 'Design System/Typography',
+  title: 'Design System/Typography/Headings',
 }
 
 export const h1 = () => <H1>Heading 1</H1>
@@ -44,7 +42,3 @@ export const CapsHeadingSmallRegular = () => (
 export const CapsHeadingSmallLetterSpacing = () => (
   <CapsHeadingSmall l={letterSpacing.huge}>caps heading small</CapsHeadingSmall>
 )
-
-export const link = () => <Link to="/">Click Here</Link>
-
-export const paragraph = () => <P s={size.xs}>This is a paragraph</P>
