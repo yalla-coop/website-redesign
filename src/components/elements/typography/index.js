@@ -1,6 +1,6 @@
 import { Link as GatsbyLink } from 'gatsby'
 import styled from 'styled-components'
-import { letterSpacing, colors, size, psize } from '../../../utils'
+import { letterSpacing, colors, size, psize, lineHeight } from '../../../utils'
 
 const { blueCharcoal, mineShaft } = colors
 
@@ -58,31 +58,31 @@ export const CapsHeadingSmall = styled.h3`
 
 export const XLP = styled.p`
   font-size: ${psize.xl};
-  line-height: 3.3rem;
+  line-height: ${lineHeight.xl};
   font-weight: 400;
 `
 
 export const LP = styled.p`
   font-size: ${psize.l};
-  line-height: 3rem;
+  line-height: ${lineHeight.l};
   font-weight: 400;
 `
 
 export const MP = styled.p`
   font-size: ${psize.m};
-  line-height: 2.7rem;
+  line-height: ${lineHeight.m};
   font-weight: 400;
 `
 
 export const BoldMP = styled.p`
   font-size: ${psize.m};
-  line-height: 3rem;
+  line-height: ${lineHeight.l};
   font-weight: 700;
 `
 
 export const SP = styled.p`
   font-size: ${psize.s};
-  line-height: 2.1rem;
+  line-height: ${lineHeight.s};
   font-weight: 300;
 `
 
