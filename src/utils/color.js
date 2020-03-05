@@ -1,13 +1,14 @@
 export default {
-  darkestGray: '#181818',
-  darkGray: '#2F2F2F',
-  gray: '#858585',
-  lightGray: '#C4C4C4',
-  lighterGray: '#E1E0E0',
-  lightestGray: ' #F4F4F4',
-  white: '#ffffff',
+  gray1: '#181818',
+  gray2: '#2F2F2F',
+  gray3: '#858585',
+  gray4: '#C4C4C4',
+  gray5: '#E1E0E0',
+  gray6: ' #EEEEEE',
+  gray7: '#F9F9F9',
+  gray8: '#FCFCFC',
+  white: '#FFFFFF',
   primary: '#020F1D',
   accent: '#C73E46',
-  lightAccent: '#E66767',
-  black: '#000000',
+  accentLight: '#E66767'
 }

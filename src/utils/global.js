@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 import normalize from 'polished/lib/mixins/normalize'
 import { font } from './typography'
-import colors from './color'
+import { white, gray2, gray3 } from './color'
 
 export default createGlobalStyle`
   ${normalize()}
@@ -18,14 +18,14 @@ export default createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    background: ${colors.white};
-    color: ${colors.darkGray};
+    background: ${white};
+    color: ${gray2};
     ${font};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   p {
-    color: ${colors.gray}
+    color: ${gray3}
   }
 `
