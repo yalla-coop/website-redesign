@@ -2,7 +2,7 @@ import { Link as GatsbyLink } from 'gatsby'
 import styled from 'styled-components'
 import { letterSpacing, colors, size, psize, lineHeight } from '../../../utils'
 
-const { blueCharcoal, mineShaft } = colors
+const { blue, darkGray } = colors
 
 export const H1 = styled.h1`
   font-size: ${size.xl};
@@ -31,8 +31,7 @@ export const H4 = styled.h4`
 
 export const CapsHeadingLarge = styled.h1`
   font-size: ${size.s};
-  letter-spacing: ${letterSpacing.huge};
-  white-space: nowrap;
+  letter-spacing: ${letterSpacing.large};
   font-weight: ${({ w = 700 }) => w};
   text-transform: uppercase;
 `
@@ -40,15 +39,13 @@ export const CapsHeadingLarge = styled.h1`
 export const CapsHeadingMedium = styled.h2`
   font-size: ${size.xs};
   letter-spacing: ${letterSpacing.medium};
-  white-space: nowrap;
   text-transform: uppercase;
-  color: ${mineShaft};
+  color: ${darkGray};
 `
 
 export const CapsHeadingSmall = styled.h3`
   font-size: ${size.xxs};
   letter-spacing: ${({ l = letterSpacing.medium }) => l};
-  white-space: nowrap;
   font-weight: 500;
   text-transform: uppercase;
 `
@@ -98,11 +95,6 @@ export const XSP = styled.p`
   font-weight: 300;
 `
 
-export const P = styled.p`
-  font-size: ${({ s = size.s }) => s};
-  font-weight: 400;
-`
-
 export const Link = styled(GatsbyLink)`
   font-size: ${size.xxs};
   font-weight: 400;
@@ -110,6 +102,6 @@ export const Link = styled(GatsbyLink)`
   transition: all 0.5s;
 
   &:hover {
-    color: ${blueCharcoal};
+    color: ${blue};
   }
 `
