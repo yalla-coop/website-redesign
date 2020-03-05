@@ -40,5 +40,7 @@ export const CapsHeadingSmallRegular = () => (
 )
 
 export const CapsHeadingSmallLetterSpacing = () => (
-  <CapsHeadingSmall l={letterSpacing.huge}>caps heading small</CapsHeadingSmall>
+  <CapsHeadingSmall l={letterSpacing.large}>
+    caps heading small
+  </CapsHeadingSmall>
 )

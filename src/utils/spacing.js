@@ -1,7 +1,7 @@
 export const letterSpacing = {
   small: '1px',
   medium: '2px',
-  huge: '5px',
+  large: '5px',
 }
 
 export const elementsSpacing = {
