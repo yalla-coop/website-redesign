@@ -2,7 +2,7 @@ import { Link as GatsbyLink } from 'gatsby'
 import styled from 'styled-components'
 import { letterSpacing, colors, size, psize, lineHeight } from '../../../utils'
 
-const { blue, darkGray } = colors
+const { primary, darkGray } = colors
 
 export const H1 = styled.h1`
   font-size: ${size.xl};
@@ -102,6 +102,6 @@ export const Link = styled(GatsbyLink)`
   transition: all 0.5s;
 
   &:hover {
-    color: ${blue};
+    color: ${primary};
   }
 `
