@@ -3,14 +3,14 @@ import Layout from '../components/layout'
 import Image from '../components/image'
 import SEO from '../components/seo'
 
-import { H1, Link, P } from '../components/elements'
+import { H1, Link, SP } from '../components/elements'
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <H1>Hi people</H1>
-    <P>Welcome to your new Yalla site.</P>
-    <P>Now go build something great.</P>
+    <SP>Welcome to your new Yalla site.</SP>
+    <SP>Now go build something great.</SP>
     <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
       <Image />
     </div>
