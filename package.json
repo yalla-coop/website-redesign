@@ -1,9 +1,8 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "yalla-website-redesign",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@mdx-js/mdx": "^1.5.7",
     "@mdx-js/react": "^1.5.7",
@@ -14,8 +13,10 @@
     "gatsby-plugin-offline": "^3.0.32",
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-plugin-sharp": "^2.4.3",
+    "gatsby-plugin-styled-components": "^3.1.19",
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-transformer-sharp": "^2.3.13",
+    "polished": "^3.4.4",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -31,6 +32,7 @@
     "@storybook/addons": "^5.3.14",
     "@storybook/react": "^5.3.14",
     "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.10.7",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.10.0",
@@ -55,7 +57,7 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "lint": " ./node_modules/.bin/eslint --fix src",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 -c .storybook watch-css -s ./src",
     "build-storybook": "build-storybook"
   },
   "repository": {
