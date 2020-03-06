@@ -10,5 +10,5 @@ export default {
   white: '#FFFFFF',
   primary: '#020F1D',
   accent: '#C73E46',
-  accentLight: '#E66767'
+  accentLight: '#E66767',
 }
