@@ -13,7 +13,6 @@ export const PrimaryButton = () => (
 
 export const CustomButton = () => (
   <Button
-    primary
     title={text('title', 'GET IN TOUCH')}
     hasArrow={boolean('hasArrow', true)}
     textColor={color('textColor')}
