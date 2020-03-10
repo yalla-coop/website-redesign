@@ -2,7 +2,7 @@ import { Link as GatsbyLink } from 'gatsby'
 import styled from 'styled-components'
 import { letterSpacing, colors, size, psize, lineHeight } from '../../../utils'
 
-const { primary, darkGray } = colors
+const { primary, gray2 } = colors
 
 export const H1 = styled.h1`
   font-size: ${size.xl};
@@ -40,7 +40,7 @@ export const CapsHeadingMedium = styled.h2`
   font-size: ${size.xs};
   letter-spacing: ${letterSpacing.medium};
   text-transform: uppercase;
-  color: ${darkGray};
+  color: ${gray2};
 `
 
 export const CapsHeadingSmall = styled.h3`

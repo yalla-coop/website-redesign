@@ -19,13 +19,13 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     background: ${colors.white};
-    color: ${colors.darkGray};
+    color: ${colors.gray2};
     ${font};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   p {
-    color: ${colors.gray}
+    color: ${colors.gray3}
   }
 `
