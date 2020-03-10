@@ -57,42 +57,49 @@ export const XLP = styled.p`
   font-size: ${psize.xl};
   line-height: ${lineHeight.xl};
   font-weight: 400;
+  letter-spacing: 0.03em;
 `
 
 export const LP = styled.p`
   font-size: ${psize.l};
   line-height: ${lineHeight.l};
   font-weight: 400;
+  letter-spacing: 0.03em;
 `
 
 export const MP = styled.p`
   font-size: ${psize.m};
   line-height: ${lineHeight.m};
   font-weight: 400;
+  letter-spacing: 0.03em;
 `
 
 export const BoldMP = styled.p`
   font-size: ${psize.m};
   line-height: ${lineHeight.l};
   font-weight: 700;
+  letter-spacing: 0.03em;
 `
 
 export const SP = styled.p`
   font-size: ${psize.s};
   line-height: ${lineHeight.s};
   font-weight: 300;
+  letter-spacing: 0.03em;
 `
 
 export const BoldXSP = styled.p`
   font-size: ${psize.xs};
   line-height: 1.8rem;
   font-weight: 700;
+  letter-spacing: 0.03em;
 `
 
 export const XSP = styled.p`
   font-size: ${psize.xs};
   line-height: 1.8rem;
   font-weight: 300;
+  letter-spacing: 0.03em;
 `
 
 export const Link = styled(GatsbyLink)`
