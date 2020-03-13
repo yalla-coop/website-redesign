@@ -5,4 +5,9 @@ export default {
   title: 'subtitle alternate',
 }
 
-export const Subtitle = () => <SubtitleAlternate />
+const sample =
+  ' earwig asked us to create a brand new reviews-based platform from scratch for them to do this. It would need to enable workers to share experiences and information, but importantly protect their identity while ensuring all input was verified. Working in partnership with their in-house resources, we took the product from a design prototype through to full implementation.'
+
+export const Subtitle = () => (
+  <SubtitleAlternate title="hi from SubtitleAlternate" content={sample} />
+)
