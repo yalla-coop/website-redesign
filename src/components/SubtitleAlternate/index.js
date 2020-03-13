@@ -1,13 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
+import { CapsHeadingMedium } from '../elements/typography/index'
 
 const AlternateContainer = styled.div`
   padding: 50px 90px;
+  background: rgba(247, 247, 247, 0.7);
 `
 
 const SubtitleAlternate = () => (
   <AlternateContainer>
-    <h1> hi from SubtitleAlternate</h1>
+    <CapsHeadingMedium> hi from SubtitleAlternate</CapsHeadingMedium>
   </AlternateContainer>
 )
 
