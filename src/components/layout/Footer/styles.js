@@ -51,8 +51,9 @@ export const AddressesBlock = styled.address`
   }
 `
 
-export const EmailLink = styled.p`
+export const EmailLink = styled.a`
   font-size: 12px;
   font-weight: 500;
   color: ${colors.white};
+  text-decoration: none;
 `

@@ -32,7 +32,12 @@ const Footer = () => (
     </SitemapSection>
     <ContactSection>
       <CapsHeadingSmall>contact</CapsHeadingSmall>
-      <EmailLink>hello@yallacooperative.com</EmailLink>
+      <EmailLink
+        href="mailto:hello@yallacooperative.com?Subject=Hello%20again"
+        target="_top"
+      >
+        hello@yallacooperative.com
+      </EmailLink>
       <AddressesBlock>
         <div>
           <CapsHeadingSmall>london</CapsHeadingSmall>
