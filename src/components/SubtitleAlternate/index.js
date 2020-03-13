@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const AlternateContainer = styled.div``
+const AlternateContainer = styled.div`
+  padding: 50px 90px;
+`
 
 const SubtitleAlternate = () => (
   <AlternateContainer>
