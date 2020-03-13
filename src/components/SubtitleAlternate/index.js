@@ -1,9 +1,12 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const AlternateContainer = styled.div``
 
 const SubtitleAlternate = () => (
-  <div>
+  <AlternateContainer>
     <h1> hi from SubtitleAlternate</h1>
-  </div>
+  </AlternateContainer>
 )
 
 export default SubtitleAlternate
