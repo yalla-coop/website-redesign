@@ -12,7 +12,7 @@ const Input = styled.input`
   border: 1px solid rgba(224, 224, 224, 0.5);
   background: rgba(196, 196, 196, 0.05);
   outline: none;
-  font-weight: 550;
+  font-weight: 700;
   font-size: ${size.xxs};
   letter-spacing: ${letterSpacing.medium};
   font-family: Karu;
