@@ -16,6 +16,8 @@ const StyledButton = styled.button`
   padding: 1rem 2rem;
   border-radius: 5px;
   border: none;
+  outline: none;
+  cursor: pointer;
   /* props */
   color: ${({ textColor }) => textColor};
   background-color: ${({ backgroundColor }) => backgroundColor};
@@ -33,7 +35,7 @@ const Button = ({
   hasArrow,
   textColor,
   backgroundColor,
-  onClick,
+  onClick = () => {},
   capitalize,
   primary,
 }) => {
@@ -55,7 +57,7 @@ const Button = ({
 Button.propTypes = {
   backgroundColor: PropTypes.string,
   hasArrow: PropTypes.bool,
-  onClick: PropTypes.func,
+  onClick: PropTypes.func.isRequired,
   textColor: PropTypes.string,
   title: PropTypes.string,
   capitalize: PropTypes.bool,
@@ -67,7 +69,6 @@ Button.defaultProps = {
   hasArrow: false,
   capitalize: false,
   primary: false,
-  onClick: () => {},
   textColor: colors.lightestGray,
   title: 'Click me',
 }
