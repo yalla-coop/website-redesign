@@ -7,7 +7,7 @@ const { black, gray3 } = colors
 
 const Input = styled.input`
   width: 100%;
-  padding: 16px;
+  padding: 1rem;
   box-sizing: border-box;
   border: 1px solid rgba(224, 224, 224, 0.5);
   background: rgba(196, 196, 196, 0.05);
