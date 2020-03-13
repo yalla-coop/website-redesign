@@ -6,7 +6,6 @@ export const WorkWrapper = styled.div`
   padding: 3.5rem;
   background-color: ${colors.primary};
   width: 100%;
-  height: 710;
   color: ${colors.white};
 `
 
