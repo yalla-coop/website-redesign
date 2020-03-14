@@ -5,10 +5,12 @@ import colors from './color'
 
 export default createGlobalStyle`
   ${normalize()}
+  * {
+    box-sizing: border-box;
+  }
 
   html {
     font-size: 10px;
-    box-sizing: border-box;
   }
 
   :before,
