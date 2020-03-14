@@ -72,8 +72,8 @@ const TextareaContainer = styled.div`
   }
 `
 
-const CustomInput = ({ big, name, label, placeholder, handleChange }) =>
-  !big ? (
+const CustomInput = ({ textarea, name, label, placeholder, handleChange }) =>
+  !textarea ? (
     <InputContainer>
       <Label htmlFor={name}>
         {label}
@@ -100,10 +100,10 @@ const CustomInput = ({ big, name, label, placeholder, handleChange }) =>
   )
 
 CustomInput.defaultProps = {
-  big: false,
+  textarea: false,
 }
 CustomInput.propTypes = {
-  big: PropTypes.bool,
+  textarea: PropTypes.bool,
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
