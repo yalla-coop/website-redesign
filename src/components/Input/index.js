@@ -14,7 +14,7 @@ const Input = styled.input`
   outline: none;
   font-weight: 500;
   font-size: ${size.xxs};
-  letter-spacing: ${letterSpacing.medium};
+  letter-spacing: ${letterSpacing.small};
   font-family: Karu;
   ::placeholder,
   ::-webkit-input-placeholder {
@@ -46,7 +46,7 @@ const Textarea = styled.textarea`
   outline: none;
   font-weight: 500;
   font-size: ${size.xxs};
-  letter-spacing: ${letterSpacing.medium};
+  letter-spacing: ${letterSpacing.small};
   font-family: Karu;
   ::placeholder,
   ::-webkit-input-placeholder {
