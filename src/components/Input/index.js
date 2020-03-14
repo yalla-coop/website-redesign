@@ -61,14 +61,14 @@ const Textarea = styled.textarea`
 
 const InputContainer = styled.div`
   width: 45%;
-  margin: 10px 0;
+  margin: 0.625rem 0;
 `
 const TextareaContainer = styled.div`
   width: 100%;
-  height: 230px;
-  margin: 10px 0;
+  height: 14.375rem;
+  margin: 0.625rem 0;
   @media (max-width: 800px) {
-    height: 180px;
+    height: 11.25rem;
   }
 `
 
