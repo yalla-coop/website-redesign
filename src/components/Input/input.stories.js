@@ -27,7 +27,7 @@ export const CustomInput = () => (
       />
     </div>
     <Input
-      big
+      textarea
       name="text area"
       label="message"
       placeholder="let is know your idea"
