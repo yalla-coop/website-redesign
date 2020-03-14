@@ -77,7 +77,7 @@ const CustomInput = ({ textarea, name, label, placeholder, handleChange }) => {
       <Label htmlFor={name}>
         {label}
         <Input
-          placeholder={`${placeholderText}...`}
+          placeholder={placeholderText}
           id={name}
           name={name}
           onChange={handleChange}
@@ -91,7 +91,7 @@ const CustomInput = ({ textarea, name, label, placeholder, handleChange }) => {
         {label}
         <Textarea
           id={name}
-          placeholder={`${placeholderText}...`}
+          placeholder={placeholderText}
           onChange={handleChange}
         />
       </Label>
