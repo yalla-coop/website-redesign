@@ -39,7 +39,7 @@ const Textarea = styled.textarea`
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  padding: 1rem;
+  padding: 1.6rem;
   border: 1px solid rgba(224, 224, 224, 0.5);
   resize: none;
   background: rgba(196, 196, 196, 0.05);
@@ -61,14 +61,14 @@ const Textarea = styled.textarea`
 
 const InputContainer = styled.div`
   width: 45%;
-  margin: 0.625rem 0;
+  margin: 1rem 0;
 `
 const TextareaContainer = styled.div`
   width: 100%;
-  height: 14.375rem;
-  margin: 0.625rem 0;
+  height: 23rem;
+  margin: 1rem 0;
   @media (max-width: 800px) {
-    height: 11.25rem;
+    height: 18rem;
   }
 `
 
