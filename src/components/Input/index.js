@@ -8,7 +8,6 @@ const { black, gray3 } = colors
 const Input = styled.input`
   width: 100%;
   padding: 1rem;
-  box-sizing: border-box;
   border: 1px solid rgba(224, 224, 224, 0.5);
   background: rgba(196, 196, 196, 0.05);
   outline: none;
@@ -38,7 +37,6 @@ const Label = styled.label`
 const Textarea = styled.textarea`
   width: 100%;
   height: 100%;
-  box-sizing: border-box;
   padding: 1.6rem;
   border: 1px solid rgba(224, 224, 224, 0.5);
   resize: none;
