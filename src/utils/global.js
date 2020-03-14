@@ -19,8 +19,6 @@ export default createGlobalStyle`
   }
 
   body {
-    margin: 0;
-    padding: 0;
     background: ${colors.white};
     color: ${colors.gray2};
     ${font};
