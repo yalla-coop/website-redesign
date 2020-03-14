@@ -32,7 +32,7 @@ const Label = styled.label`
   font-family: Karu;
   font-weight: 500;
   font-size: ${size.xxs};
-  letter-spacing: ${letterSpacing.medium};
+  letter-spacing: ${letterSpacing.small};
   color: ${gray3};
 `
 const Textarea = styled.textarea`
