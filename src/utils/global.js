@@ -8,11 +8,12 @@ export default createGlobalStyle`
 
   html {
     font-size: 10px;
+    box-sizing: border-box;
   }
 
   :before,
   :after {
-    box-sizing: inherit;
+    box-sizing: border-box;
   }
 
   body {
