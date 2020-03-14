@@ -5,7 +5,7 @@ import colors from './color'
 
 export default createGlobalStyle`
   ${normalize()}
-  * {
+  *, html, body {
     box-sizing: border-box;
   }
 
