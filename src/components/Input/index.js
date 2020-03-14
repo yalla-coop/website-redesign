@@ -72,13 +72,14 @@ const TextareaContainer = styled.div`
   }
 `
 
-const CustomInput = ({ textarea, name, label, placeholder, handleChange }) =>
-  !textarea ? (
+const CustomInput = ({ textarea, name, label, placeholder, handleChange }) => {
+  const placeholderText = placeholder || label
+  return !textarea ? (
     <InputContainer>
       <Label htmlFor={name}>
         {label}
         <Input
-          placeholder={`${placeholder}...`}
+          placeholder={`${placeholderText}...`}
           id={name}
           name={name}
           onChange={handleChange}
@@ -92,12 +93,13 @@ const CustomInput = ({ textarea, name, label, placeholder, handleChange }) =>
         {label}
         <Textarea
           id={name}
-          placeholder={`${placeholder}...`}
+          placeholder={`${placeholderText}...`}
           onChange={handleChange}
         />
       </Label>
     </TextareaContainer>
   )
+}
 
 CustomInput.defaultProps = {
   textarea: false,
