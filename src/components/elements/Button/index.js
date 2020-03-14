@@ -69,7 +69,7 @@ Button.defaultProps = {
   hasArrow: false,
   capitalize: false,
   primary: false,
-  textColor: colors.lightestGray,
+  textColor: colors.gray8,
   title: 'Click me',
 }
 
