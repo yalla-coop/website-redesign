@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { letterSpacing, colors, size } from '../../utils'
+import { letterSpacing, colors, size, font } from '../../utils'
 
 const { black, gray3 } = colors
 
@@ -14,7 +14,7 @@ const Input = styled.input`
   font-weight: 500;
   font-size: ${size.xxs};
   letter-spacing: ${letterSpacing.small};
-  font-family: Karu;
+  ${font};
   ::placeholder,
   ::-webkit-input-placeholder {
     color: ${black};
@@ -28,7 +28,7 @@ const Input = styled.input`
 const Label = styled.label`
   width: 100%;
   text-transform: uppercase;
-  font-family: Karu;
+  ${font};
   font-weight: 500;
   font-size: ${size.xxs};
   letter-spacing: ${letterSpacing.small};
@@ -45,7 +45,7 @@ const Textarea = styled.textarea`
   font-weight: 500;
   font-size: ${size.xxs};
   letter-spacing: ${letterSpacing.small};
-  font-family: Karu;
+  ${font};
   ::placeholder,
   ::-webkit-input-placeholder {
     color: ${black};
