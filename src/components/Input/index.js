@@ -12,7 +12,7 @@ const Input = styled.input`
   border: 1px solid rgba(224, 224, 224, 0.5);
   background: rgba(196, 196, 196, 0.05);
   outline: none;
-  font-weight: 700;
+  font-weight: 500;
   font-size: ${size.xxs};
   letter-spacing: ${letterSpacing.medium};
   font-family: Karu;
@@ -30,7 +30,7 @@ const Label = styled.label`
   width: 100%;
   text-transform: uppercase;
   font-family: Karu;
-  font-weight: 550;
+  font-weight: 500;
   font-size: ${size.xxs};
   letter-spacing: ${letterSpacing.medium};
   color: ${gray3};
@@ -44,7 +44,7 @@ const Textarea = styled.textarea`
   resize: none;
   background: rgba(196, 196, 196, 0.05);
   outline: none;
-  font-weight: 550;
+  font-weight: 500;
   font-size: ${size.xxs};
   letter-spacing: ${letterSpacing.medium};
   font-family: Karu;
