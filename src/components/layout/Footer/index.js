@@ -16,6 +16,7 @@ const Footer = () => (
       <H1>Get in touch!</H1>
     </HeadingSection>
     <SitemapSection>
+      {/* todo: make the sitemap items as Gatsby links */}
       <CapsHeadingSmall>sitemap</CapsHeadingSmall>
       <H4>
         <span>1.0</span>Our Approach + Services
