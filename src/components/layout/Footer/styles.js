@@ -56,4 +56,6 @@ export const EmailLink = styled.a`
   font-weight: 500;
   color: ${colors.white};
   text-decoration: none;
+  margin: 2rem 0 3rem 0;
+  display: inline-block;
 `
