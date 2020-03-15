@@ -5,4 +5,4 @@ export default {
   title: 'components',
 }
 
-export const Navbar = () => <Nav />
+export const Navbar = () => <Nav menuColor="black" logoColor="black" />
