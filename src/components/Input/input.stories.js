@@ -1,37 +1,24 @@
 import React from 'react'
-import Input from './index'
+import { text } from '@storybook/addon-knobs'
+import InputComponent from './index'
 
 export default {
   title: 'Input',
 }
 
-export const CustomInput = () => (
-  <>
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-      }}
-    >
-      <Input
-        name="username"
-        label="full name"
-        placeholder="add you dull name"
-        onChange={() => null}
-      />
-      <Input
-        name="password"
-        label="company"
-        placeholder="add your company name"
-        onChange={() => null}
-      />
-    </div>
-    <Input
-      textarea
-      name="text area"
-      label="message"
-      placeholder="let is know your idea"
-      onChange={() => null}
-    />
-  </>
+export const Input = () => (
+  <InputComponent
+    name="username"
+    label={text('label', 'Username')}
+    placeholder={text('placeholder', 'Add your username')}
+  />
+)
+
+export const TextArea = () => (
+  <InputComponent
+    textarea
+    name="textarea"
+    label={text('label', 'message')}
+    placeholder={text('placeholder', 'let us know your idea')}
+  />
 )
