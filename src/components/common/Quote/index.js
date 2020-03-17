@@ -12,7 +12,7 @@ import {
   CapsHeadingMediumModifier,
 } from './styles'
 
-const index = ({ headline, children, person, position }) => (
+const Quote = ({ headline, children, person, position }) => (
   <QuoteWrapper>
     <HeadlineWrapper>
       <QuoteIcon>“</QuoteIcon>
@@ -26,11 +26,11 @@ const index = ({ headline, children, person, position }) => (
   </QuoteWrapper>
 )
 
-index.propTypes = {
+Quote.propTypes = {
   children: PropTypes.arrayOf.isRequired,
   headline: PropTypes.string.isRequired,
   person: PropTypes.string.isRequired,
   position: PropTypes.string.isRequired,
 }
 
-export default index
+export default Quote

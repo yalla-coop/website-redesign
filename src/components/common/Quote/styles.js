@@ -8,7 +8,7 @@ export const QuoteWrapper = styled.div`
 
 export const H3Modifier = styled(H3)`
   color: #000000;
-  margin-bottom: 50px; /* the space between it and the paragraph */
+  margin-bottom: 5rem; /* the space between it and the paragraph */
 `
 
 export const QuoteIcon = styled.span`
@@ -17,7 +17,7 @@ export const QuoteIcon = styled.span`
   font-weight: 700;
 
   /* and these spacings: */
-  margin: 0 20px 15px 0;
+  margin: 0 2rem 1.5rem 0;
 `
 
 export const HeadlineWrapper = styled.div`
@@ -30,12 +30,12 @@ export const BodyWrapper = styled.div`
 
 export const XLPModifier = styled(XLP)`
   color: #858585;
-  margin-bottom: 8px;
+  margin-bottom: 0.8rem;
 `
 
 export const CapsHeadingLargeModifier = styled(CapsHeadingLarge)`
   color: #000000;
-  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
 `
 
 export const CapsHeadingMediumModifier = styled(CapsHeadingMedium)`
