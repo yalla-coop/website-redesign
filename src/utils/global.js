@@ -1,11 +1,14 @@
-import { createGlobalStyle } from 'styled-components'
 import normalize from 'polished/lib/mixins/normalize'
-import { font } from './typography'
+import { createGlobalStyle } from 'styled-components'
+
 import colors from './color'
+import { font } from './typography'
 
 export default createGlobalStyle`
   ${normalize()}
   * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
   }
 
@@ -27,6 +30,6 @@ export default createGlobalStyle`
   }
 
   p {
-    color: ${colors.gray3}
+    color: ${colors.gray3};
   }
 `
