@@ -70,7 +70,13 @@ const TextareaContainer = styled.div`
   }
 `
 
-const CustomInput = ({ textarea, name, label, placeholder, handleChange }) => {
+const CustomInput = ({
+  textarea,
+  name,
+  label,
+  placeholder,
+  onCLick = () => {},
+}) => {
   const placeholderText = placeholder || label
   return !textarea ? (
     <InputContainer>
@@ -80,7 +86,7 @@ const CustomInput = ({ textarea, name, label, placeholder, handleChange }) => {
           placeholder={placeholderText}
           id={name}
           name={name}
-          onChange={handleChange}
+          onChange={onCLick}
           required
         />
       </Label>
@@ -89,11 +95,7 @@ const CustomInput = ({ textarea, name, label, placeholder, handleChange }) => {
     <TextareaContainer>
       <Label htmlFor={name}>
         {label}
-        <Textarea
-          id={name}
-          placeholder={placeholderText}
-          onChange={handleChange}
-        />
+        <Textarea id={name} placeholder={placeholderText} onChange={onCLick} />
       </Label>
     </TextareaContainer>
   )
@@ -107,7 +109,7 @@ CustomInput.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
-  handleChange: PropTypes.func.isRequired,
+  onCLick: PropTypes.func.isRequired,
 }
 
 export default CustomInput
