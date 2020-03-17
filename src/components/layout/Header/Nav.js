@@ -14,7 +14,7 @@ const Nav = styled.nav`
   padding: 50px;
 `
 const NavContainer = styled.div`
-  position: 'absolute';
+  position: absolute;
   top: 0;
 `
 
