@@ -6,10 +6,9 @@ import { ExtraSmall as Accent } from '../elements/Accent'
 import { CapsHeadingMedium, MP } from '../elements/typography'
 
 const AlternateContainer = styled.div`
-  box-sizing: border-box;
-  margin-top: 30px;
+  margin-top: 3rem;
   position: relative;
-  padding: 50px 90px;
+  padding: 5rem 9rem;
   background: rgba(247, 247, 247, 0.7);
 `
 
@@ -18,8 +17,8 @@ const PragraphContainer = styled.div`
 `
 const AccentContainer = styled.div`
   position: absolute;
-  top: -21px;
-  left: 60px;
+  top: -2.1rem;
+  left: 6rem;
 `
 const SubtitleAlternate = ({ title, content }) => (
   <AlternateContainer>
