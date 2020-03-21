@@ -34,9 +34,13 @@ const Subtitle = ({ title, size }) =>
       </AccentContainer>
     </SubtitleContainer>
   )
+
+Subtitle.defaultProps = {
+  size: 'small',
+}
 Subtitle.propTypes = {
   title: PropTypes.string.isRequired,
-  size: PropTypes.string.isRequired,
+  size: PropTypes.string,
 }
 
 export default Subtitle
