@@ -7,7 +7,7 @@ import { CapsHeadingMedium, H2 } from '../elements/typography'
 
 const SubtitleContainer = styled.div`
   box-sizing: border-box;
-  margin-top: 30px;
+  margin-top: 3rem;
   position: relative;
   background: transparent;
   padding-left: 3.5rem;
