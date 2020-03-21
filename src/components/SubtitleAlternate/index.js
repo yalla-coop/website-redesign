@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import { ExtraSmall as Accent } from '../elements/Accent'
 
 import { CapsHeadingMedium, MP } from '../elements/typography/index'
 
@@ -15,12 +16,7 @@ const AlternateContainer = styled.div`
 const PragraphContainer = styled.div`
   width: 90%;
 `
-const Accent = styled.span`
-  width: 4px;
-  transform: rotate(180deg);
-  height: 42px;
-  background: #e66767;
-  display: inline-block;
+const AccentContainer = styled.div`
   position: absolute;
   top: -21px;
   left: 60px;
@@ -31,7 +27,9 @@ const SubtitleAlternate = ({ title, content }) => (
     <PragraphContainer>
       <MP>{content}</MP>
     </PragraphContainer>
-    <Accent />
+    <AccentContainer>
+      <Accent />
+    </AccentContainer>
   </AlternateContainer>
 )
 SubtitleAlternate.propTypes = {
