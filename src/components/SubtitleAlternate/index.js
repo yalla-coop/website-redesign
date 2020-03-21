@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { ExtraSmall as Accent } from '../elements/Accent'
 
-import { CapsHeadingMedium, MP } from '../elements/typography/index'
+import { CapsHeadingMedium, MP } from '../elements/typography'
 
 const AlternateContainer = styled.div`
   box-sizing: border-box;
