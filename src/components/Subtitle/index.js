@@ -36,6 +36,7 @@ const Subtitle = ({ title, size }) =>
   )
 Subtitle.propTypes = {
   title: PropTypes.string.isRequired,
+  size: PropTypes.string.isRequired,
 }
 
 export default Subtitle
