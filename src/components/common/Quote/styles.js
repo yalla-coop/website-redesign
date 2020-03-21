@@ -1,19 +1,20 @@
 import styled from 'styled-components'
 
 import { H3, XLP, CapsHeadingLarge, CapsHeadingMedium } from '../../elements'
+import { colors } from '../../../utils'
 
 export const QuoteWrapper = styled.div`
   width: 80%;
 `
 
 export const H3Modifier = styled(H3)`
-  color: #000000;
+  color: ${colors.black};
   margin-bottom: 5rem; /* the space between it and the paragraph */
 `
 
 export const QuoteIcon = styled.span`
   font-size: 100px;
-  color: #c73e46;
+  color: ${colors.accent};
   font-weight: 700;
 
   /* and these spacings: */
@@ -29,15 +30,15 @@ export const BodyWrapper = styled.div`
 `
 
 export const XLPModifier = styled(XLP)`
-  color: #858585;
+  color: ${colors.gray3};
   margin-bottom: 0.8rem;
 `
 
 export const CapsHeadingLargeModifier = styled(CapsHeadingLarge)`
-  color: #000000;
+  color: ${colors.black};
   margin-bottom: 0.5rem;
 `
 
 export const CapsHeadingMediumModifier = styled(CapsHeadingMedium)`
-  color: #c4c4c4;
+  color: ${colors.gray4};
 `
