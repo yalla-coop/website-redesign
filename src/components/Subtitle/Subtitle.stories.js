@@ -6,3 +6,6 @@ export default {
 }
 
 export const SubtitleSample = () => <Subtitle title="hi from Subtitle" />
+export const SubtitleLarge = () => (
+  <Subtitle title="Interested in working with us?" size="large" />
+)
