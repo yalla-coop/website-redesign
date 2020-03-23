@@ -16,6 +16,7 @@ const Nav = styled.nav`
 const NavContainer = styled.div`
   position: absolute;
   top: 0;
+  width: 100%;
 `
 
 const Span = styled.span`
