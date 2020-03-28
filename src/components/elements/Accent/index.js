@@ -4,27 +4,27 @@ import { colors } from '../../../utils'
 
 export const ExtraSmall = styled.div`
   display: inline-block;
-  height: 4.2rem;
+  height: 42px;
   width: 4px;
   background-color: ${colors.accentLight};
 `
 
 export const Small = styled.div`
   display: inline-block;
-  height: 5.8rem;
+  height: 58px;
   width: 5px;
   background-color: ${colors.accentLight};
 `
 export const Medium = styled.div`
   display: inline-block;
-  height: 7.1rem;
+  height: 71px;
   width: 5px;
   background-color: ${colors.accentLight};
 `
 
 export const Large = styled.div`
   display: inline-block;
-  height: 20rem;
+  height: 200px;
   width: 8px;
   background-color: ${colors.accentLight};
 `
