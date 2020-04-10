@@ -75,7 +75,10 @@ const CustomInput = ({
   name,
   label,
   placeholder,
-  onCLick = () => {},
+  value,
+  required,
+  type,
+  onChange = () => {},
 }) => {
   const placeholderText = placeholder || label
   return !textarea ? (
@@ -86,8 +89,10 @@ const CustomInput = ({
           placeholder={placeholderText}
           id={name}
           name={name}
-          onChange={onCLick}
-          required
+          required={required}
+          type={type}
+          value={value}
+          onChange={onChange}
         />
       </Label>
     </InputContainer>
@@ -95,7 +100,7 @@ const CustomInput = ({
     <TextareaContainer>
       <Label htmlFor={name}>
         {label}
-        <Textarea id={name} placeholder={placeholderText} onChange={onCLick} />
+        <Textarea id={name} placeholder={placeholderText} onChange={onChange} />
       </Label>
     </TextareaContainer>
   )
@@ -103,13 +108,17 @@ const CustomInput = ({
 
 CustomInput.defaultProps = {
   textarea: false,
+  required: true,
 }
 CustomInput.propTypes = {
   textarea: PropTypes.bool,
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
-  onCLick: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
+  type: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  required: PropTypes.bool,
 }
 
 export default CustomInput
