@@ -6,9 +6,6 @@ module.exports = {
     author: '@yalla',
   },
   plugins: [
-    `gatsby-plugin-mdx`,
-    `gatsby-plugin-styled-components`,
-    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -19,12 +16,15 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'posts',
-        path: `${__dirname}/content/case-studies/`,
+        name: 'case-studies',
+        path: `${__dirname}/case-studies`,
       },
     },
+    `gatsby-plugin-styled-components`,
+    'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    `gatsby-plugin-mdx`,
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

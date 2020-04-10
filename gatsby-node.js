@@ -25,7 +25,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   caseStudies.forEach(({ node }) => {
     createPage({
-      path: node.frontmatter.slug,
+      path: `/case-studies/${node.frontmatter.slug}`,
       component: path.resolve(`./src/components/layout/case-studies.js`),
       context: { id: node.id },
     })
