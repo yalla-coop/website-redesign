@@ -1,20 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { H1, H2 } from '../elements'
+import { MP } from '../elements'
 import Footer from './Footer'
-
 import { GlobalStyle } from '../../utils'
 
-const commonComponents = { Link, h1: H1, h2: H2 }
+const commonComponents = {
+  p: MP,
+}
 
 export default function PageTemplate({ data: { mdx } }) {
   return (
     <>
       <GlobalStyle />
-      <H1>{mdx.frontmatter.title}</H1>
       <MDXProvider components={commonComponents}>
         <MDXRenderer>{mdx.body}</MDXRenderer>
       </MDXProvider>
