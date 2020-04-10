@@ -31,7 +31,7 @@ import {
   AllWorkLink,
   TestimonialsSection,
   StoriesSection,
-} from './landing.styles'
+} from '../styles/landing'
 import {
   Medium as AccentMedium,
   Large as AccentLarge,
