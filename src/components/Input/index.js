@@ -109,14 +109,16 @@ const CustomInput = ({
 CustomInput.defaultProps = {
   textarea: false,
   required: true,
+  type: 'text',
+  placeholder: '',
 }
 CustomInput.propTypes = {
   textarea: PropTypes.bool,
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  placeholder: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
   onChange: PropTypes.func.isRequired,
-  type: PropTypes.string.isRequired,
+  type: PropTypes.string,
   value: PropTypes.string.isRequired,
   required: PropTypes.bool,
 }
