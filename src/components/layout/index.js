@@ -8,12 +8,12 @@ import Footer from './Footer'
 
 const PageContainer = styled.div``
 
-const Layout = ({ children }) => (
+const Layout = ({ children, noFooter }) => (
   <>
     <GlobalStyle />
     <Header />
     <PageContainer>{children}</PageContainer>
-    <Footer />
+    {noFooter ? null : <Footer />}
   </>
 )
 
@@ -22,6 +22,7 @@ Layout.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
+  noFooter: PropTypes.bool.isRequired,
 }
 
 export default Layout
