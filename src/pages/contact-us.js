@@ -3,37 +3,50 @@ import styled from 'styled-components'
 import Layout from '../components/layout'
 import Input from '../components/Input'
 import Subtitle from '../components/Subtitle'
+import { colors } from '../utils'
 
 const FlexDiv = styled.div`
   display: flex;
   width: 100%;
+`
+const FlexDivWrap = styled(FlexDiv)`
   justify-content: space-between;
   flex-flow: wrap;
 `
+const SidePanel = styled.div`
+  width: 17.5vw;
+  background-color: ${colors.primary};
+  height: 100vh;
+`
 const CHANGE = 'CHANGE'
-const Form = () => {
-  const [state, dispatch] = useReducer((s, action) => {
-    switch (action.type) {
-      case CHANGE: {
-        const { key, value } = action
-        return { ...s, [key]: value }
-      }
-      default:
-        return s
+
+const fields = [
+  { name: 'name', label: 'Full name' },
+  { name: 'org', label: 'Company or organisation' },
+  { name: 'email', type: 'email', label: 'Email address' },
+  { name: 'phone', type: 'tel', label: 'Phone number' },
+]
+
+const reducer = (s, action) => {
+  switch (action.type) {
+    case CHANGE: {
+      const { key, value } = action
+      return { ...s, [key]: value }
     }
-  }, {})
+    default:
+      return s
+  }
+}
+
+const Form = () => {
+  const [state, dispatch] = useReducer(reducer, {})
 
   return (
     <div>
       <Subtitle title="Interested in working with us?" size="large" />
       <div>
-        <FlexDiv>
-          {[
-            { name: 'name', label: 'Full name' },
-            { name: 'org', label: 'Company or organisation' },
-            { name: 'email', type: 'email', label: 'Email address' },
-            { name: 'phone', type: 'tel', label: 'Phone number' },
-          ].map(({ name, label, type = 'text' }) => (
+        <FlexDivWrap>
+          {fields.map(({ name, label, type = 'text' }) => (
             <Input
               key={name}
               type={type}
@@ -45,7 +58,7 @@ const Form = () => {
               }
             />
           ))}
-        </FlexDiv>
+        </FlexDivWrap>
         <Input
           textarea
           name="project"
@@ -62,8 +75,11 @@ const Form = () => {
 }
 
 const ContactUs = () => (
-  <Layout>
-    <Form />
+  <Layout noFooter>
+    <FlexDiv>
+      <Form />
+      <SidePanel />
+    </FlexDiv>
   </Layout>
 )
 
