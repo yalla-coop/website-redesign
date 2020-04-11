@@ -14,7 +14,7 @@ import Img from 'gatsby-image'
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = ({ fileName, altText }) => {
+const Image = ({ fileName, altText, style }) => {
   const data = useStaticQuery(graphql`
     query {
       images: allFile {
@@ -38,15 +38,19 @@ const Image = ({ fileName, altText }) => {
   )
 
   return image ? (
-    <Img fluid={image.node.childImageSharp.fluid} alt={altText} />
+    <Img fluid={image.node.childImageSharp.fluid} alt={altText} style={style} />
   ) : (
     'Image does not exist'
   )
 }
 
+Image.defaultProps = {
+  style: {},
+}
 Image.propTypes = {
   altText: PropTypes.string.isRequired,
   fileName: PropTypes.string.isRequired,
+  style: PropTypes.objectOf,
 }
 
 export default Image
