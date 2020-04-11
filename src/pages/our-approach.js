@@ -15,7 +15,7 @@ import {
   ArrowImage,
   Introduction,
   StrategySection,
-  StrategyHeadings,
+  Headings,
   HeadingWithAccent,
   StartagyContnet,
   StartagyImages,
@@ -25,6 +25,8 @@ import {
   StrategyBlock,
   DesignBlock,
   DesignImages,
+  DigitalSection,
+  DigitalImages,
 } from '../styles/ourApproach'
 
 import {
@@ -66,6 +68,9 @@ const OurApproachPage = () => {
           </TextWrapper>
         </ImageBackground>
       </Header>
+
+      {/* Introduction */}
+
       <Introduction>
         <AccentMedium
           css={css`
@@ -98,9 +103,12 @@ const OurApproachPage = () => {
           </MP>
         </div>
       </Introduction>
+
+      {/* strategy section */}
+
       <StrategySection>
         <StartagyContnet>
-          <StrategyHeadings>
+          <Headings>
             <HeadingWithAccent>
               <H1
                 css={css`
@@ -116,7 +124,7 @@ const OurApproachPage = () => {
                 `}
               />
             </HeadingWithAccent>
-          </StrategyHeadings>
+          </Headings>
           <StrategyBlock>
             <div>
               <CapsHeadingLarge
@@ -184,13 +192,12 @@ const OurApproachPage = () => {
 
       <DesignSection>
         <DesignContent>
-          <StrategyHeadings>
+          <Headings>
             <HeadingWithAccentDesign>
               <H1
                 css={css`
                   color: ${colors.primary};
                   transform: rotate(-90deg);
-                  padding: 100px 0px;
                 `}
               >
                 Design
@@ -201,7 +208,7 @@ const OurApproachPage = () => {
                 `}
               />
             </HeadingWithAccentDesign>
-          </StrategyHeadings>
+          </Headings>
           <DesignBlock>
             <div>
               <CapsHeadingLarge
@@ -261,6 +268,90 @@ const OurApproachPage = () => {
           />
         </DesignImages>
       </DesignSection>
+      {/* Digital developments section */}
+      <DigitalSection>
+        <StartagyContnet>
+          <Headings>
+            <HeadingWithAccent>
+              <H1
+                css={css`
+                  color: ${colors.primary};
+                  transform: rotate(-90deg);
+                `}
+              >
+                Digital development
+              </H1>
+              <AccentExtraLarge
+                css={css`
+                  transform: translate(-20rem, -50%);
+                `}
+              />
+            </HeadingWithAccent>
+          </Headings>
+          <StrategyBlock>
+            <div>
+              <CapsHeadingLarge
+                css={css`
+                  color: ${colors.primary};
+                `}
+                w={800}
+              >
+                Next, we’ll build and user test the features to make up your
+                product
+              </CapsHeadingLarge>
+              <MP
+                css={css`
+                  width: 90%;
+                `}
+              >
+                The internet means we are all connected regardless of where we
+                come from and at Yalla we want to make the most of that! We are
+                made up of talented designers, developers, project managers and
+                strategists, all focused on building digital products with an
+                emphasis on driving social good through everything we do.
+              </MP>
+              <MP
+                css={css`
+                  width: 90%;
+                  margin-top: 2rem;
+                `}
+              >
+                The internet means we are all connected regardless of where we
+                come from and at Yalla we want to make the most of that! We are
+                made up of talented
+              </MP>
+            </div>
+            <div>
+              <CapsHeadingLarge
+                css={css`
+                  color: ${colors.primary};
+                `}
+                w={800}
+              >
+                What we offer
+              </CapsHeadingLarge>
+              <LP>
+                <ul style={{ listStyle: 'none' }}>
+                  <li>Full stack development</li>
+                  <li>Information Architecture</li>
+                  <li>Content Management Systems</li>
+                  <li>iOS Applications</li>
+                  <li>Web Applications</li>
+                  <li>Android Applications</li>
+                  <li>Prototypes</li>
+                </ul>
+              </LP>
+            </div>
+          </StrategyBlock>
+        </StartagyContnet>
+        <DigitalImages>
+          <Img
+            fileName="digital"
+            altText="digital"
+            style={{ height: 'auto', width: 750 }}
+          />
+        </DigitalImages>
+      </DigitalSection>
     </Layout>
   )
 }
