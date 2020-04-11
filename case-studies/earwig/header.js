@@ -1,39 +1,26 @@
-// import React from 'react'
-// import { useStaticQuery, graphql } from 'gatsby'
-// import BackgroundImage from 'gatsby-background-image'
-// import styled, { css } from 'styled-components'
-// import Navbar from '../../src/components/layout/Header/Nav'
+import React from 'react'
+import styled, { css } from 'styled-components'
+import Image from '../../src/components/image'
+import Navbar from '../../src/components/layout/Header/Nav'
 
-// const ImageBackground = styled(BackgroundImage)`
-//   background-image: url('../../../src/images/earwig-header.png') no-repeat;
-//   background-size: cover;
-//   height: 100vh;
-//   max-width: 100%;
-//   position: relative;
-// `
+const BackgroundImage = styled(Image)`
+  background-image: url('../../src/images/earwig-header.png') no-repeat;
+  background-size: cover;
+  height: 100vh;
+  max-width: 100%;
+  position: relative;
+  z-index: -1;
+`
 
-// const Header = () => {
-//   const { image } = useStaticQuery(graphql`
-//     query {
-//       image: file(relativePath: { eq: "earwig-header.png" }) {
-//         sharp: childImageSharp {
-//           fluid {
-//             ...GatsbyImageSHarpFluid
-//           }
-//         }
-//       }
-//     }
-//   `)
-//   return (
-//     <div
-//       css={css`
-//         height: 100vh;
-//       `}
-//     >
-//       <ImageBackground tag="section" fluid={image.sharp.fluid} />
-//       <Navbar logoColor="black" menuColor="black" />
-//     </div>
-//   )
-// }
+const Header = () => (
+  <div
+    css={css`
+      height: 100vh;
+    `}
+  >
+    <BackgroundImage fileName="earwig-header" altText="earwig wire frames" />
+    <Navbar logoColor="black" menuColor="#000" />
+  </div>
+)
 
-// export default Header
+export default Header
