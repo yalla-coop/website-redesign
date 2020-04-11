@@ -25,6 +25,7 @@ const Input = styled.input`
     }
   }
 `
+
 const Label = styled.label`
   width: 100%;
   text-transform: uppercase;
@@ -33,6 +34,11 @@ const Label = styled.label`
   font-size: ${size.xxs};
   letter-spacing: ${letterSpacing.small};
   color: ${gray3};
+  margin-bottom: 1rem;
+  input,
+  textarea {
+    margin-top: 0.6rem;
+  }
 `
 const Textarea = styled.textarea`
   width: 100%;
@@ -110,6 +116,7 @@ CustomInput.defaultProps = {
   textarea: false,
   required: true,
   type: 'text',
+  value: '',
   placeholder: '',
 }
 CustomInput.propTypes = {
@@ -119,7 +126,7 @@ CustomInput.propTypes = {
   placeholder: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   type: PropTypes.string,
-  value: PropTypes.string.isRequired,
+  value: PropTypes.string,
   required: PropTypes.bool,
 }
 

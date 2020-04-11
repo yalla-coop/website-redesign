@@ -1,9 +1,10 @@
 import React, { useReducer } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import Layout from '../components/layout'
 import Input from '../components/Input'
 import Subtitle from '../components/Subtitle'
 import { colors } from '../utils'
+import { Button } from '../components/elements'
 
 const FlexDiv = styled.div`
   display: flex;
@@ -37,47 +38,80 @@ const reducer = (s, action) => {
       return s
   }
 }
-
 const Form = () => {
-  const [state, dispatch] = useReducer(reducer, {})
+  const [state, dispatch] = useReducer(reducer, {
+    name: 'ss',
+    org: 'ss',
+    email: 'ssss',
+    phone: 'ss',
+  })
+  const handleSubmit = event => {
+    event.preventDefault()
+  }
 
   return (
-    <div>
-      <Subtitle title="Interested in working with us?" size="large" />
-      <div>
-        <FlexDivWrap>
-          {fields.map(({ name, label, type = 'text' }) => (
-            <Input
-              key={name}
-              type={type}
-              label={label}
-              name={name}
-              value={state[name]}
-              onChange={({ target: { value } }) =>
-                dispatch({ type: CHANGE, key: name, value })
-              }
-            />
-          ))}
-        </FlexDivWrap>
-        <Input
-          textarea
-          name="project"
-          label="message"
-          placeholder="Let us know your project details"
-          value={state.message}
-          onChange={({ target: { value } }) =>
-            dispatch({ type: CHANGE, key: 'message', value })
-          }
-        />
-      </div>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <FlexDivWrap>
+        {fields.map(({ name, label, type }) => (
+          <Input
+            key={name}
+            type={type}
+            label={label}
+            name={name}
+            value={state[name]}
+            onChange={({ target: { value } }) =>
+              dispatch({ type: CHANGE, key: name, value })
+            }
+          />
+        ))}
+      </FlexDivWrap>
+      <Input
+        textarea
+        name="project"
+        label="message"
+        placeholder="Let us know your project details"
+        value={state.message}
+        onChange={({ target: { value } }) =>
+          dispatch({ type: CHANGE, key: 'message', value })
+        }
+      />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <Button
+        title="Send message"
+        hasArrow
+        capitalize
+        type="submit"
+        onClick={() => {}}
+      />
+    </form>
   )
 }
 
 const ContactUs = () => (
   <Layout noFooter>
     <FlexDiv>
-      <Form />
+      <div
+        css={css`
+          padding: 7.5rem;
+          width: 100%;
+        `}
+      >
+        <Subtitle title="Interested in working with us?" size="large" />
+        <div
+          css={css`
+            padding: 7.5rem 2rem;
+            width: 55%;
+          `}
+        >
+          <Form />
+        </div>
+      </div>
+
       <SidePanel />
     </FlexDiv>
   </Layout>
