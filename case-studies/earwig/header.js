@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import Image from '../../src/components/image'
 import Navbar from '../../src/components/layout/Header/Nav'
 
@@ -9,15 +9,10 @@ const BackgroundImage = styled(Image)`
   height: 100vh;
   max-width: 100%;
   position: relative;
-  z-index: -1;
 `
 
 const Header = () => (
-  <div
-    css={css`
-      height: 100vh;
-    `}
-  >
+  <div>
     <BackgroundImage fileName="earwig-header" altText="earwig wire frames" />
     <Navbar logoColor="black" menuColor="#000" />
   </div>
