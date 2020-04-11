@@ -40,11 +40,10 @@ const Span = styled.span`
     transition: all 0.3s;
   }
 
-  ,
   &:after {
     top: 0.8rem;
   }
-  ,
+
   &:before {
     top: -0.8rem;
   }
