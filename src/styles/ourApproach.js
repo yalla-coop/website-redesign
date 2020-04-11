@@ -9,6 +9,7 @@ export const ImageBackground = styled(BackgroundImage)`
   width: 100%;
   position: relative;
 `
+// header style //
 
 export const Header = styled.header`
   height: 100vh;
@@ -41,6 +42,8 @@ export const ArrowImage = styled.img`
   margin-top: 100px;
 `
 
+// introduction style //
+
 export const Introduction = styled.section`
   padding: 14rem 12.5rem 14rem;
   width: 70%;
@@ -56,8 +59,17 @@ export const Introduction = styled.section`
     font-weight: 700;
   }
 `
+
+// strategy section style //
+
 export const StrategySection = styled.section`
   margin-top: 12rem;
+`
+
+export const HeadingWithAccent = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: -120px;
 `
 
 export const StartagyContnet = styled.div`
@@ -78,18 +90,17 @@ export const StartagyImages = styled.div`
   display: flex;
   justify-content: flex-end;
   div {
-    height: 400px;
-    width: 400px;
     margin-left: 30px;
   }
 `
+
+// design section style //
 
 export const DesignSection = styled.section`
   margin-top: 22rem;
 `
 export const DesignContent = styled.div`
-  // background: rgba(247, 247, 247, 0.7);
-  background: gray;
+  background: rgba(247, 247, 247, 0.7);
   display: flex;
   flex-direction: row-reverse;
   margin-left: 21.1rem;
@@ -97,25 +108,20 @@ export const DesignContent = styled.div`
 `
 export const HeadingWithAccentDesign = styled.div`
   display: flex;
-  align-items: flex-start;
-  transform: translateY(-2rem);
+  align-items: center;
+  transform: translateY(-5rem);
   h1 {
-    margin-top: -8rem;
+    margin-top: -12rem;
+    margin-right: 10rem;
   }
 `
 
-export const StrategyHeadings = styled.div``
-
-export const HeadingWithAccent = styled.div`
-  display: flex;
-  align-items: center;
-  margin-left: -120px;
-`
+export const Headings = styled.div``
 
 export const DesignBlock = styled.div`
   flex: 2;
   margin: 8rem 0 11rem 0;
-  padding: 0 15rem;
+  padding: 0 10rem;
 
   div:not(:last-child) {
     margin-bottom: 4.8rem;
@@ -127,8 +133,17 @@ export const DesignImages = styled.div`
   display: flex;
   justify-content: flex-start;
   div {
-    height: 400px;
-    width: 400px;
     margin-right: 30px;
   }
+`
+
+// digital development section style //
+
+export const DigitalSection = styled.section`
+  margin-top: 28rem;
+`
+export const DigitalImages = styled.div`
+  margin: 22rem 0;
+  display: flex;
+  justify-content: flex-end;
 `
