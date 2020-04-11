@@ -1,14 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import styled from 'styled-components'
 import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { MP } from '../elements'
+import { MP, H2, H3 } from '../elements'
 import Footer from './Footer'
-import { GlobalStyle } from '../../utils'
+import { GlobalStyle, colors } from '../../utils'
+
+const H2Modifier = styled(H2)`
+  color: ${colors.black};
+`
+
+const H3Modifier = styled(H3)`
+  color: ${colors.primary};
+`
 
 const commonComponents = {
   p: MP,
+  h2: H2Modifier,
+  h3: H3Modifier,
 }
 
 export default function PageTemplate({ data: { mdx } }) {
