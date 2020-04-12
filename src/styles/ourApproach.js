@@ -31,7 +31,7 @@ export const CapsHeadingSmallModifier = styled(CapsHeadingSmall)`
 export const TextWrapper = styled.div`
   width: 100%;
   position: absolute;
-  top: 50%;
+  top: 60%;
   right: 0;
   transform: translate(0, -50%);
   padding: 1.5rem 0;
