@@ -1,6 +1,7 @@
 import BackgroundImage from 'gatsby-background-image'
 import styled from 'styled-components'
 import { H2, CapsHeadingSmall } from '../components/elements'
+import { psize, lineHeight } from '../utils'
 
 export const ImageBackground = styled(BackgroundImage)`
   background-image: url('/images/our-approach.png') no-repeat;
@@ -8,6 +9,14 @@ export const ImageBackground = styled(BackgroundImage)`
   height: 100vh;
   width: 100%;
   position: relative;
+`
+
+export const List = styled.ul`
+  font-size: ${psize.l};
+  line-height: ${lineHeight.l};
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  list-style: none;
 `
 // header style //
 
