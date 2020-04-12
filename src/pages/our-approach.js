@@ -120,7 +120,7 @@ const OurApproachPage = () => {
               </H1>
               <AccentExtraLarge
                 css={css`
-                  transform: translate(-20rem, 30%);
+                  transform: translate(-20rem, -50%);
                 `}
               />
             </HeadingWithAccent>
