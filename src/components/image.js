@@ -45,12 +45,12 @@ const Image = ({ fileName, altText, style }) => {
 }
 
 Image.defaultProps = {
-  style: {},
+  style: null,
 }
 Image.propTypes = {
   altText: PropTypes.string.isRequired,
   fileName: PropTypes.string.isRequired,
-  style: PropTypes.objectOf,
+  style: PropTypes.shape(),
 }
 
 export default Image
