@@ -4,11 +4,12 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { css } from 'styled-components'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import { H1, H3, MP, CapsHeadingLarge, LP } from '../components/elements'
+import { H1, H3, MP, CapsHeadingLarge } from '../components/elements'
 
 import {
   Header,
   ImageBackground,
+  List,
   CapsHeadingSmallModifier,
   PageTitle,
   TextWrapper,
@@ -161,16 +162,14 @@ const OurApproachPage = () => {
               >
                 What we offer
               </CapsHeadingLarge>
-              <LP>
-                <ul style={{ listStyle: 'none' }}>
-                  <li>Strategy</li>
-                  <li>Discovery & Research</li>
-                  <li>User Experience</li>
-                  <li>Brand Strategy & Architecture</li>
-                  <li>Positioning</li>
-                  <li>Content Strategy</li>
-                </ul>
-              </LP>
+              <List>
+                <li>Strategy</li>
+                <li>Discovery & Research</li>
+                <li>User Experience</li>
+                <li>Brand Strategy & Architecture</li>
+                <li>Positioning</li>
+                <li>Content Strategy</li>
+              </List>
             </div>
           </StrategyBlock>
         </StartagyContnet>
@@ -243,15 +242,13 @@ const OurApproachPage = () => {
               >
                 What we offer
               </CapsHeadingLarge>
-              <LP>
-                <ul style={{ listStyle: 'none' }}>
-                  <li>UI/UX Design</li>
-                  <li>Stylescapes</li>
-                  <li>Wireframing/Mockups</li>
-                  <li>Prototypes</li>
-                  <li>UI Kits/Design Systems</li>
-                </ul>
-              </LP>
+              <List>
+                <li>UI/UX Design</li>
+                <li>Stylescapes</li>
+                <li>Wireframing/Mockups</li>
+                <li>Prototypes</li>
+                <li>UI Kits/Design Systems</li>
+              </List>
             </div>
           </DesignBlock>
         </DesignContent>
@@ -330,17 +327,15 @@ const OurApproachPage = () => {
               >
                 What we offer
               </CapsHeadingLarge>
-              <LP>
-                <ul style={{ listStyle: 'none' }}>
-                  <li>Full stack development</li>
-                  <li>Information Architecture</li>
-                  <li>Content Management Systems</li>
-                  <li>iOS Applications</li>
-                  <li>Web Applications</li>
-                  <li>Android Applications</li>
-                  <li>Prototypes</li>
-                </ul>
-              </LP>
+              <List>
+                <li>Full stack development</li>
+                <li>Information Architecture</li>
+                <li>Content Management Systems</li>
+                <li>iOS Applications</li>
+                <li>Web Applications</li>
+                <li>Android Applications</li>
+                <li>Prototypes</li>
+              </List>
             </div>
           </StrategyBlock>
         </StartagyContnet>
