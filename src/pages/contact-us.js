@@ -47,18 +47,18 @@ const Form = () => {
   })
 
   return (
-    <form data-netlify="true" netlify-honeypot="bot-field">
+    <form
+      method="post"
+      name="contact-us"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+    >
       <FlexDivWrap>
-        <label
-          htmlFor="bot-field"
-          css={css`
-            display: none;
-          `}
-        >
+        <label htmlFor="bot-field" hidden>
           Don’t fill this out if you&apos;re human:
           <input name="bot-field" id="bot-field" />
         </label>
-
+        <input type="hidden" name="form-name" value="contact" />
         {fields.map(({ name, label, type }) => (
           <Input
             key={name}
