@@ -40,10 +40,10 @@ const reducer = (s, action) => {
 }
 const Form = () => {
   const [state, dispatch] = useReducer(reducer, {
-    name: 'ss',
-    org: 'ss',
-    email: 'ssss',
-    phone: 'ss',
+    name: '',
+    org: '',
+    email: '',
+    phone: '',
   })
 
   return (
