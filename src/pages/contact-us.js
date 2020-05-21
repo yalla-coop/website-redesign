@@ -50,7 +50,7 @@ const Form = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} data-netlify="true">
       <FlexDivWrap>
         {fields.map(({ name, label, type }) => (
           <Input
