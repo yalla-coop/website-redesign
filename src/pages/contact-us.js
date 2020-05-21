@@ -45,16 +45,9 @@ const Form = () => {
     email: 'ssss',
     phone: 'ss',
   })
-  const handleSubmit = event => {
-    event.preventDefault()
-  }
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-    >
+    <form data-netlify="true" netlify-honeypot="bot-field">
       <FlexDivWrap>
         <label
           htmlFor="bot-field"
