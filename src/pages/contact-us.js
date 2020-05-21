@@ -104,8 +104,8 @@ const ContactUs = () => (
         <Subtitle title="Interested in working with us?" size="large" />
         <div
           css={css`
-            padding: 7.5rem 2rem;
-            width: 55%;
+            padding: 7.5rem 2rem 7.5rem 3.5rem;
+            width: 65%;
           `}
         >
           <Form />
