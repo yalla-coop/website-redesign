@@ -23,9 +23,9 @@ const CHANGE = 'CHANGE'
 
 const fields = [
   { name: 'name', label: 'Full name' },
-  { name: 'org', label: 'Company or organisation' },
+  { name: 'organization', label: 'Company or organisation' },
   { name: 'email', type: 'email', label: 'Email address' },
-  { name: 'phone', type: 'tel', label: 'Phone number' },
+  { name: 'phone-number', type: 'tel', label: 'Phone number' },
 ]
 
 const reducer = (s, action) => {
@@ -50,8 +50,22 @@ const Form = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} data-netlify="true">
+    <form
+      onSubmit={handleSubmit}
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+    >
       <FlexDivWrap>
+        <label
+          htmlFor="bot-field"
+          css={css`
+            display: none;
+          `}
+        >
+          Don’t fill this out if you&apos;re human:
+          <input name="bot-field" id="bot-field" />
+        </label>
+
         {fields.map(({ name, label, type }) => (
           <Input
             key={name}
