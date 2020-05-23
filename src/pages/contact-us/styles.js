@@ -30,3 +30,5 @@ export const H1Inverted = styled(H1)`
   transform: rotate(-90deg) translateX(-30%);
   color: ${colors.white};
 `
+
+export default () => null
