@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import Input from '../components/Input'
 import Subtitle from '../components/Subtitle'
 import { colors } from '../utils'
-import { Button } from '../components/elements'
+import { Button, H1 } from '../components/elements'
 
 const FlexDiv = styled.div`
   display: flex;
@@ -98,7 +98,20 @@ const Form = () => {
     </form>
   )
 }
+export const HeadingSection = styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: baseline;
+`
 
+const H1Inverted = styled(H1)`
+  margin-top: 40%;
+  margin-left: -40%;
+  transform: rotate(-90deg) translateX(-30%);
+  color: ${colors.white};
+`
 const ContactUs = () => (
   <Layout noFooter>
     <FlexDiv>
@@ -119,7 +132,11 @@ const ContactUs = () => (
         </div>
       </div>
 
-      <SidePanel />
+      <SidePanel>
+        <HeadingSection>
+          <H1Inverted>Get in touch!</H1Inverted>
+        </HeadingSection>
+      </SidePanel>
     </FlexDiv>
   </Layout>
 )
