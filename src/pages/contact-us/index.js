@@ -1,24 +1,17 @@
 import React, { useReducer } from 'react'
-import styled, { css } from 'styled-components'
-import Layout from '../components/layout'
-import Input from '../components/Input'
-import Subtitle from '../components/Subtitle'
-import { colors } from '../utils'
-import { Button, H1 } from '../components/elements'
+import { css } from 'styled-components'
+import { Button } from '../../components/elements'
+import Input from '../../components/Input'
+import Layout from '../../components/layout'
+import Subtitle from '../../components/Subtitle'
+import {
+  FlexDiv,
+  FlexDivWrap,
+  SidePanel,
+  H1Inverted,
+  HeadingSection,
+} from './styles'
 
-const FlexDiv = styled.div`
-  display: flex;
-  width: 100%;
-`
-const FlexDivWrap = styled(FlexDiv)`
-  justify-content: space-between;
-  flex-flow: wrap;
-`
-const SidePanel = styled.div`
-  width: 17.5vw;
-  background-color: ${colors.primary};
-  height: 100vh;
-`
 const CHANGE = 'CHANGE'
 
 const fields = [
@@ -50,7 +43,8 @@ const Form = () => {
     <form
       method="post"
       name="contact-us"
-      data-netlify="true"
+      action="/contact-us/success"
+      netlify
       netlify-honeypot="bot-field"
     >
       <FlexDivWrap>
@@ -98,20 +92,6 @@ const Form = () => {
     </form>
   )
 }
-export const HeadingSection = styled.div`
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: baseline;
-`
-
-const H1Inverted = styled(H1)`
-  margin-top: 40%;
-  margin-left: -40%;
-  transform: rotate(-90deg) translateX(-30%);
-  color: ${colors.white};
-`
 const ContactUs = () => (
   <Layout noFooter>
     <FlexDiv>
