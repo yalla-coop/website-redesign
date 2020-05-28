@@ -9,24 +9,28 @@ export const H1 = styled.h1`
   letter-spacing: ${letterSpacing.medium};
   white-space: nowrap;
   font-weight: 800;
+  color: ${({ color }) => color};
 `
 
 export const H2 = styled.h2`
   font-size: ${size.lg};
   letter-spacing: ${letterSpacing.medium};
   font-weight: 700;
+  color: ${({ color }) => color};
 `
 
 export const H3 = styled.h3`
   font-size: ${size.md};
   letter-spacing: ${letterSpacing.small};
   font-weight: 700;
+  color: ${({ color }) => color};
 `
 
 export const H4 = styled.h4`
   font-size: ${size.xs};
   letter-spacing: ${letterSpacing.small};
   font-weight: 700;
+  color: ${({ color }) => color};
 `
 
 export const CapsHeadingLarge = styled.h1`
@@ -34,13 +38,14 @@ export const CapsHeadingLarge = styled.h1`
   letter-spacing: ${letterSpacing.large};
   font-weight: ${({ w = 700 }) => w};
   text-transform: uppercase;
+  color: ${({ color }) => color};
 `
 
 export const CapsHeadingMedium = styled.h2`
   font-size: ${size.xs};
   letter-spacing: ${letterSpacing.medium};
   text-transform: uppercase;
-  color: ${gray2};
+  color: ${({ color = gray2 }) => color};
 `
 
 export const CapsHeadingSmall = styled.h3`
@@ -48,6 +53,7 @@ export const CapsHeadingSmall = styled.h3`
   letter-spacing: ${({ l = letterSpacing.medium }) => l};
   font-weight: 500;
   text-transform: uppercase;
+  color: ${({ color }) => color};
 `
 
 // Paragraphs
@@ -58,6 +64,7 @@ export const XLP = styled.p`
   line-height: ${lineHeight.xl};
   font-weight: 400;
   letter-spacing: 0.03em;
+  color: ${({ color }) => color};
 `
 
 export const LP = styled.p`
@@ -65,6 +72,7 @@ export const LP = styled.p`
   line-height: ${lineHeight.l};
   font-weight: 400;
   letter-spacing: 0.03em;
+  color: ${({ color }) => color};
 `
 
 export const MP = styled.p`
@@ -72,6 +80,7 @@ export const MP = styled.p`
   line-height: ${lineHeight.m};
   font-weight: 400;
   letter-spacing: 0.03em;
+  color: ${({ color }) => color};
 `
 
 export const BoldMP = styled.p`
@@ -79,6 +88,7 @@ export const BoldMP = styled.p`
   line-height: ${lineHeight.l};
   font-weight: 700;
   letter-spacing: 0.03em;
+  color: ${({ color }) => color};
 `
 
 export const SP = styled.p`
@@ -86,6 +96,7 @@ export const SP = styled.p`
   line-height: ${lineHeight.s};
   font-weight: 300;
   letter-spacing: 0.03em;
+  color: ${({ color }) => color};
 `
 
 export const BoldXSP = styled.p`
@@ -93,6 +104,7 @@ export const BoldXSP = styled.p`
   line-height: 1.8rem;
   font-weight: 700;
   letter-spacing: 0.03em;
+  color: ${({ color }) => color};
 `
 
 export const XSP = styled.p`
@@ -100,6 +112,7 @@ export const XSP = styled.p`
   line-height: 1.8rem;
   font-weight: 300;
   letter-spacing: 0.03em;
+  color: ${({ color }) => color};
 `
 
 export const Link = styled(GatsbyLink)`
