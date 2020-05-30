@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { css } from 'styled-components'
+import ScrollContainer from 'react-indiana-drag-scroll'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import {
@@ -46,6 +47,7 @@ import { WorkCard, Quote, StoryCard } from '../components/common'
 import { colors } from '../utils'
 
 const IndexPage = () => {
+  const [cursor, setCursor] = useState('grab')
   const { image } = useStaticQuery(graphql`
     query {
       image: file(relativePath: { eq: "landing-image.png" }) {
@@ -359,17 +361,23 @@ const IndexPage = () => {
             />
           </HeadingWithAccent>
         </div>
-        <div
+        <ScrollContainer
           css={css`
             display: flex;
-            width: 120%;
             margin-top: 4rem;
-
             overflow: hidden;
+            outline: none;
             div {
               margin-right: 4rem;
             }
+            cursor: ${cursor};
           `}
+          onStartScroll={() => {
+            setCursor('grabbing')
+          }}
+          onEndScroll={() => {
+            setCursor('grab')
+          }}
         >
           {/* for displaying the stories */}
           <StoryCard
@@ -390,7 +398,37 @@ const IndexPage = () => {
             fileName="mask-group"
             altText="mask group"
           />
-        </div>
+          <StoryCard
+            smallHeading="RESET - DIGITAL FOR GOOD"
+            bigHeading="Yalla Cooperative: Coding for Impact Between Europe and Gaza"
+            fileName="mask-group"
+            altText="mask group"
+          />
+          <StoryCard
+            smallHeading="RESET - DIGITAL FOR GOOD"
+            bigHeading="Yalla Cooperative: Coding for Impact Between Europe and Gaza"
+            fileName="mask-group"
+            altText="mask group"
+          />
+          <StoryCard
+            smallHeading="RESET - DIGITAL FOR GOOD"
+            bigHeading="Yalla Cooperative: Coding for Impact Between Europe and Gaza"
+            fileName="mask-group"
+            altText="mask group"
+          />
+          <StoryCard
+            smallHeading="RESET - DIGITAL FOR GOOD"
+            bigHeading="Yalla Cooperative: Coding for Impact Between Europe and Gaza"
+            fileName="mask-group"
+            altText="mask group"
+          />
+          <StoryCard
+            smallHeading="RESET - DIGITAL FOR GOOD"
+            bigHeading="Yalla Cooperative: Coding for Impact Between Europe and Gaza"
+            fileName="mask-group"
+            altText="mask group"
+          />
+        </ScrollContainer>
       </StoriesSection>
     </Layout>
   )
