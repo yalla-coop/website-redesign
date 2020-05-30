@@ -7,6 +7,7 @@ export const WorkWrapper = styled.div`
   background-color: ${colors.primary};
   width: 100%;
   color: ${colors.white};
+  opacity: ${props => (props.light ? 1 : 0.5)};
 `
 
 export const TextWrapper = styled.div`
