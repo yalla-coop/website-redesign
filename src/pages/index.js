@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { css } from 'styled-components'
@@ -48,6 +48,13 @@ import { colors } from '../utils'
 
 const IndexPage = () => {
   const [cursor, setCursor] = useState('grab')
+  const [top, setTop] = useState(0)
+  useEffect(() => {
+    document.addEventListener('scroll', () => {
+      setTop(window.scrollY)
+    })
+  }, [])
+
   const { image } = useStaticQuery(graphql`
     query {
       image: file(relativePath: { eq: "landing-image.png" }) {
@@ -265,12 +272,16 @@ const IndexPage = () => {
           {/* First Column */}
           <div>
             <WorkCard
+              topDestance={top}
+              cardNumber={1}
               smallHeading="EARWIG - CONSTRUCTION"
               bigHeading="Building a powerful reviews platform setting new standards for workers in the construction industry"
               fileName="mask-group"
               altText="mask group"
             />
             <WorkCard
+              topDestance={top}
+              cardNumber={3}
               smallHeading="EARWIG - CONSTRUCTION"
               bigHeading="Building a powerful reviews platform setting new standards for workers in the construction industry"
               fileName="mask-group"
@@ -297,12 +308,16 @@ const IndexPage = () => {
             `}
           >
             <WorkCard
+              topDestance={top}
+              cardNumber={2}
               smallHeading="EARWIG - CONSTRUCTION"
               bigHeading="Building a powerful reviews platform setting new standards for workers in the construction industry"
               fileName="mask-group"
               altText="mask group"
             />
             <WorkCard
+              topDestance={top}
+              cardNumber={4}
               smallHeading="EARWIG - CONSTRUCTION"
               bigHeading="Building a powerful reviews platform setting new standards for workers in the construction industry"
               fileName="mask-group"
