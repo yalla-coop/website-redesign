@@ -31,7 +31,6 @@ const Span = styled.span`
   &,
   &:after,
   &:before {
-    mix-blend-mode: difference;
     width: 3rem;
     height: 2px;
     background-color: ${props =>
@@ -47,11 +46,10 @@ const Span = styled.span`
     transition: all 0.3s;
   }
 
-  ,
   &:after {
     top: 0.8rem;
   }
-  ,
+
   &:before {
     top: -0.8rem;
   }
