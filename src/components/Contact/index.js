@@ -8,19 +8,20 @@ const Contact = () => (
   <div
     css={css`
       background-color: ${colors.gray7};
-      padding: 7rem 0;
-      height: 276px;
       display: flex;
     `}
   >
     <div
       css={css`
-        flex: 1;
+        width: 50%;
+        margin-left: 18rem;
+        padding: 7rem 0;
       `}
     >
       <H3
         css={css`
           color: ${colors.primary} !important;
+          margin-bottom: 4rem;
         `}
       >
         Interested in working with us?
@@ -34,7 +35,9 @@ const Contact = () => (
     </div>
     <div
       css={css`
-        flex: 2;
+        width: 50%;
+
+        opacity: 0.1;
       `}
     >
       <Image fileName="logo-contact" altText="Yalla logo" />
