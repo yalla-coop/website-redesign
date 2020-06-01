@@ -8,6 +8,8 @@ export const WorkWrapper = styled.div`
   width: 100%;
   color: ${colors.white};
   opacity: ${props => (props.light ? 1 : 0.5)};
+
+  transition: all 0.3s ease;
 `
 
 export const TextWrapper = styled.div`
