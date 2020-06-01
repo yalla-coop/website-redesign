@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { css } from 'styled-components'
 import {
   FooterWrapper,
   HeadingSection,
@@ -17,7 +18,13 @@ const Footer = () => (
     </HeadingSection>
     <SitemapSection>
       {/* todo: make the sitemap items as Gatsby links */}
-      <CapsHeadingSmall>sitemap</CapsHeadingSmall>
+      <CapsHeadingSmall
+        css={css`
+          margin-bottom: 2rem;
+        `}
+      >
+        sitemap
+      </CapsHeadingSmall>
       <H4>
         <span>1.0</span>Our Approach + Services
       </H4>

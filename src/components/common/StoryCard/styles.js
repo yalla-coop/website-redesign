@@ -4,8 +4,9 @@ import { colors } from '../../../utils'
 
 export const StoryCardWrapper = styled.div`
   background-color: ${colors.white};
-  width: 100%;
+  min-width: 30%;
   color: ${colors.primary};
+  cursor: pointer;
 `
 
 export const TextWrapper = styled.div`

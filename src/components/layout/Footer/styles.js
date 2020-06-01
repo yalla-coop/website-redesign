@@ -28,6 +28,10 @@ export const HeadingSection = styled.div`
 export const SitemapSection = styled.div`
   flex: 2;
 
+  h4 {
+    margin-bottom: 1.7rem;
+  }
+
   h4 span {
     margin-right: 1rem;
     color: rgba(255, 255, 255, 0.2);
@@ -46,6 +50,7 @@ export const AddressesBlock = styled.address`
     width: 30%;
 
     p {
+      margin-top: 0.5rem;
       color: ${colors.white};
     }
   }
