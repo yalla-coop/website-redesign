@@ -25,6 +25,7 @@ const Input = styled.input`
     }
   }
 `
+
 const Label = styled.label`
   width: 100%;
   text-transform: uppercase;
@@ -33,6 +34,11 @@ const Label = styled.label`
   font-size: ${size.xxs};
   letter-spacing: ${letterSpacing.small};
   color: ${gray3};
+  margin-bottom: 1rem;
+  input,
+  textarea {
+    margin-top: 0.6rem;
+  }
 `
 const Textarea = styled.textarea`
   width: 100%;
@@ -75,7 +81,10 @@ const CustomInput = ({
   name,
   label,
   placeholder,
-  onCLick = () => {},
+  value,
+  required,
+  type,
+  onChange = () => {},
 }) => {
   const placeholderText = placeholder || label
   return !textarea ? (
@@ -86,8 +95,10 @@ const CustomInput = ({
           placeholder={placeholderText}
           id={name}
           name={name}
-          onChange={onCLick}
-          required
+          required={required}
+          type={type}
+          value={value}
+          onChange={onChange}
         />
       </Label>
     </InputContainer>
@@ -95,7 +106,7 @@ const CustomInput = ({
     <TextareaContainer>
       <Label htmlFor={name}>
         {label}
-        <Textarea id={name} placeholder={placeholderText} onChange={onCLick} />
+        <Textarea id={name} placeholder={placeholderText} onChange={onChange} />
       </Label>
     </TextareaContainer>
   )
@@ -103,13 +114,20 @@ const CustomInput = ({
 
 CustomInput.defaultProps = {
   textarea: false,
+  required: true,
+  type: 'text',
+  value: '',
+  placeholder: '',
 }
 CustomInput.propTypes = {
   textarea: PropTypes.bool,
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  placeholder: PropTypes.string.isRequired,
-  onCLick: PropTypes.func.isRequired,
+  placeholder: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
+  type: PropTypes.string,
+  value: PropTypes.string,
+  required: PropTypes.bool,
 }
 
 export default CustomInput

@@ -38,6 +38,7 @@ const Button = ({
   onClick = () => {},
   capitalize,
   primary,
+  ...props
 }) => {
   const bgColor = (primary && colors.primary) || backgroundColor
   return (
@@ -46,6 +47,8 @@ const Button = ({
       backgroundColor={bgColor}
       onClick={onClick}
       capitalize={primary || capitalize}
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...props}
     >
       {title}
       {primary || hasArrow ? (
