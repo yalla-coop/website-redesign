@@ -22,20 +22,20 @@ const Wrapper = styled.div`
   }
 `
 
-const ContentWrapper = ({ children, fullWidth }) =>
-  fullWidth ? (
-    <Wrapper fullWidth>{children}</Wrapper>
-  ) : (
-    <Wrapper>{children}</Wrapper>
-  )
+const ContentWrapper = ({ children, fullWidth }) => (
+  <Wrapper fullWidth={fullWidth}>{children}</Wrapper>
+)
 
 ContentWrapper.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
-  // eslint-disable-next-line react/require-default-props
   fullWidth: PropTypes.bool,
+}
+
+ContentWrapper.defaultProps = {
+  fullWidth: false,
 }
 
 export default ContentWrapper
