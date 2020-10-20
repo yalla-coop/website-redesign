@@ -29,6 +29,7 @@ export const H2Modifier = styled(H2)`
     font-size: ${size.sm};
     line-height: ${spacings[5]};
     letter-spacing: 1px;
+    padding: 0 ${spacings[1]};
   }
 
   ${breakpoints.mobileMedium} {

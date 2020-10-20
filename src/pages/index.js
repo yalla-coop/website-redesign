@@ -82,8 +82,8 @@ const IndexPage = () => {
                 Web design and development agency
               </CapsHeadingSmallModifier>
               <H2Modifier>
-                We help non-profits <br /> and impact-driven businesses drive
-                positive social change in the tech sphere.
+                We help non-profits and impact-driven businesses drive positive
+                social change in the tech sphere.
               </H2Modifier>
             </TextWrapper>
           </Wrapper>
