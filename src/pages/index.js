@@ -20,7 +20,9 @@ import {
   ImageBackground,
   CapsHeadingSmallModifier,
   H2Modifier,
+  Wrapper,
   TextWrapper,
+  ArrowWrapper,
   ArrowImage,
   OurStorySection,
   OurApproachSection,
@@ -74,16 +76,20 @@ const IndexPage = () => {
       <Header>
         <ImageBackground tag="section" fluid={image.sharp.fluid}>
           <NavBar menuColor="white" logoColor="white" />
-          <TextWrapper>
-            <CapsHeadingSmallModifier>
-              Web design and development agency
-            </CapsHeadingSmallModifier>
-            <H2Modifier>
-              We help non-profits and impact-driven businesses drive positive
-              social change in the tech sphere
-            </H2Modifier>
-          </TextWrapper>
-          <ArrowImage src={ArrowDown} alt="arrow down" />
+          <Wrapper>
+            <TextWrapper>
+              <CapsHeadingSmallModifier>
+                Web design and development agency
+              </CapsHeadingSmallModifier>
+              <H2Modifier>
+                We help non-profits <br /> and impact-driven businesses drive
+                positive social change in the tech sphere.
+              </H2Modifier>
+            </TextWrapper>
+          </Wrapper>
+          <ArrowWrapper>
+            <ArrowImage src={ArrowDown} alt="arrow down" />
+          </ArrowWrapper>
         </ImageBackground>
       </Header>
       <OurStorySection>

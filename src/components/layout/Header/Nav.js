@@ -5,28 +5,39 @@ import PropTypes from 'prop-types'
 import Logo from '../../../../static/svg/yalla-logo.svg'
 import LogoBlack from '../../../../static/svg/yall-logo-black.svg'
 import ContentWrapper from '../../contentWrapper'
+import { breakpoints, spacings } from '../../../utils'
 
 const MenuContainer = styled.div`
   cursor: pointer;
 `
 
-const Nav = styled(ContentWrapper)``
+const Nav = styled(ContentWrapper)`
+  justify-content: space-between;
+`
 
-const NavContainer = styled.div``
+const NavContainer = styled.div`
+  ${breakpoints.mobileSmall} {
+    padding-top: ${spacings[4]};
+    padding-bottom: ${spacings[4]};
+  }
+`
 
 const Img = styled.img`
-  width: 6rem;
-  height: 6rem;
+  ${breakpoints.mobileSmall} {
+    width: ${spacings[6]};
+    height: ${spacings[6]};
+  }
 `
 
 const Span = styled.span`
   position: relative;
-  margin-top: 3.5rem;
+  margin-top: ${spacings[3]};
+
   &,
   &:after,
   &:before {
     width: 3rem;
-    height: 2px;
+    height: 1px;
     background-color: ${props =>
       props.menuColor === 'white' ? '#FFF' : '#000'};
     display: inline-block;
@@ -52,7 +63,7 @@ const LogoContainer = styled(MenuContainer)``
 
 const Navbar = ({ menuColor, logoColor }) => (
   <NavContainer>
-    <Nav>
+    <Nav direction="row" justifyContent="space-between">
       <Link to="/">
         <LogoContainer>
           {logoColor === 'black' ? (

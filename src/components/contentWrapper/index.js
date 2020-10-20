@@ -6,7 +6,8 @@ import { breakpoints } from '../../utils'
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: ${({ direction }) => direction};
+  justify-content: ${({ justifyContent }) => justifyContent};
   margin: 0 auto;
 
   ${breakpoints.mobileSmall} {
@@ -22,8 +23,14 @@ const Wrapper = styled.div`
   }
 `
 
-const ContentWrapper = ({ children, fullWidth }) => (
-  <Wrapper fullWidth={fullWidth}>{children}</Wrapper>
+const ContentWrapper = ({ children, fullWidth, direction, justifyContent }) => (
+  <Wrapper
+    fullWidth={fullWidth}
+    direction={direction}
+    justifyContent={justifyContent}
+  >
+    {children}
+  </Wrapper>
 )
 
 ContentWrapper.propTypes = {
@@ -32,10 +39,14 @@ ContentWrapper.propTypes = {
     PropTypes.node,
   ]).isRequired,
   fullWidth: PropTypes.bool,
+  direction: PropTypes.string,
+  justifyContent: PropTypes.string,
 }
 
 ContentWrapper.defaultProps = {
   fullWidth: false,
+  direction: 'column',
+  justifyContent: 'flex-start',
 }
 
 export default ContentWrapper

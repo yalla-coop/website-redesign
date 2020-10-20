@@ -50,7 +50,7 @@ export const CapsHeadingMedium = styled.h2`
 
 export const CapsHeadingSmall = styled.h3`
   font-size: ${size.xxs};
-  letter-spacing: ${({ l = letterSpacing.medium }) => l};
+  letter-spacing: ${({ l = letterSpacing.small }) => l};
   font-weight: 500;
   text-transform: uppercase;
   color: ${({ color }) => color};

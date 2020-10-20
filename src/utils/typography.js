@@ -6,6 +6,7 @@ export const size = {
   xxs: '1.2rem',
   xs: '1.8rem',
   s: '2rem',
+  sm: '2.4rem',
   md: '3rem',
   lg: '4rem',
   xl: '6rem',

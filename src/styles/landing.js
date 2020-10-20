@@ -2,49 +2,67 @@ import BackgroundImage from 'gatsby-background-image'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { H2, CapsHeadingSmall } from '../components/elements'
-import { colors } from '../utils'
+import { colors, breakpoints, spacings, size } from '../utils'
+import ContentWrapper from '../components/contentWrapper'
 
 export const ImageBackground = styled(BackgroundImage)`
-  background-image: url('/images/landing-image.png') no-repeat;
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
-  position: relative;
+  ${breakpoints.mobileSmall} {
+    height: 85vh;
+    background-image: url('/images/landing-image.png') no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+  }
 `
 
 export const Header = styled.header`
-  height: 100vh;
+  ${breakpoints.mobileSmall} {
+    height: 85vh;
+  }
 `
 
 export const H2Modifier = styled(H2)`
   color: #fff;
-  text-align: center;
-  transform: translateX(-5rem);
+
+  ${breakpoints.mobileSmall} {
+    text-align: center;
+    font-size: ${size.sm};
+    line-height: ${spacings[5]};
+    letter-spacing: 1px;
+  }
 `
 
 export const CapsHeadingSmallModifier = styled(CapsHeadingSmall)`
   color: #fff;
-  position: absolute;
-  top: -5%;
-  left: 50%;
-  transform: translate(-50%, 5%);
+
+  ${breakpoints.mobileSmall} {
+    text-align: center;
+    padding-bottom: ${spacings[3]};
+    margin-top: -30px;
+  }
 `
 
-export const TextWrapper = styled.div`
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   background: rgba(196, 196, 196, 0.15);
-  width: 80%;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(0, -50%);
-  padding: 1.5rem 0;
+  width: 100vw;
+
+  ${breakpoints.mobileSmall} {
+    padding: ${spacings[4]} 0;
+    margin-top: ${spacings[6]};
+    margin-bottom: 5.6rem;
+  }
 `
-export const ArrowImage = styled.img`
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
+
+export const TextWrapper = styled(ContentWrapper)``
+
+export const ArrowWrapper = styled.div`
+  display: flex;
+  justify-content: center;
 `
+
+export const ArrowImage = styled.img``
 
 export const OurStorySection = styled.section`
   padding: 14rem 12.5rem 14rem;
