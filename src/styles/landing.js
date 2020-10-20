@@ -13,6 +13,10 @@ export const ImageBackground = styled(BackgroundImage)`
     width: 100%;
     position: relative;
   }
+
+  ${breakpoints.mobileLarge} {
+    height: 55vh;
+  }
 `
 
 export const Header = styled.header`
@@ -62,6 +66,10 @@ export const Wrapper = styled.div`
 
   ${breakpoints.mobileMedium} {
     margin-bottom: 96px;
+  }
+
+  ${breakpoints.mobileLarge} {
+    margin: ${spacings[9]} 0;
   }
 `
 
