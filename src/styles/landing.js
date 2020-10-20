@@ -30,6 +30,11 @@ export const H2Modifier = styled(H2)`
     line-height: ${spacings[5]};
     letter-spacing: 1px;
   }
+
+  ${breakpoints.mobileMedium} {
+    font-size: ${size.md};
+    line-height: 4rem;
+  }
 `
 
 export const CapsHeadingSmallModifier = styled(CapsHeadingSmall)`
@@ -52,6 +57,10 @@ export const Wrapper = styled.div`
     padding: ${spacings[4]} 0;
     margin-top: ${spacings[6]};
     margin-bottom: 5.6rem;
+  }
+
+  ${breakpoints.mobileMedium} {
+    margin-bottom: 96px;
   }
 `
 
@@ -76,6 +85,11 @@ export const OurStorySection = styled.section`
   p {
     margin-bottom: 4rem;
   }
+`
+
+export const Main = styled.div`
+  height: 65vh;
+  position: relative;
 `
 export const OurApproachSection = styled.section`
   margin-top: 30.6rem;
