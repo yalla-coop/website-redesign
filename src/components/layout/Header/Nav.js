@@ -4,21 +4,15 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import Logo from '../../../../static/svg/yalla-logo.svg'
 import LogoBlack from '../../../../static/svg/yall-logo-black.svg'
+import ContentWrapper from '../../contentWrapper'
 
 const MenuContainer = styled.div`
   cursor: pointer;
 `
 
-const Nav = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  padding: 50px;
-`
-const NavContainer = styled.div`
-  position: absolute;
-  top: 0;
-  width: 100%;
-`
+const Nav = styled(ContentWrapper)``
+
+const NavContainer = styled.div``
 
 const Img = styled.img`
   width: 6rem;
