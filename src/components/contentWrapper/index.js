@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import styled from 'styled-components'
-import { breakpoints } from '../../utils'
+import { breakpoints, spacings } from '../../utils'
 
-const Wrapper = styled.div`
+export const Wrapper = styled.section`
   display: flex;
   flex-direction: ${({ direction }) => direction};
   justify-content: ${({ justifyContent }) => justifyContent};
@@ -12,6 +12,8 @@ const Wrapper = styled.div`
 
   ${breakpoints.mobileSmall} {
     width: ${({ fullWidth }) => (fullWidth ? '100vw' : 'calc(100vw - 48px)')};
+    padding-top: ${spacings[5]};
+    padding-bottom: ${spacings[5]};
   }
 
   ${breakpoints.mobileMedium} {

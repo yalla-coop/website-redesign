@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import Logo from '../../../../static/svg/yalla-logo.svg'
 import LogoBlack from '../../../../static/svg/yall-logo-black.svg'
-import ContentWrapper from '../../contentWrapper'
+import { Wrapper as ContentWrapper } from '../../contentWrapper'
 import { breakpoints, spacings } from '../../../utils'
 
 const MenuContainer = styled.div`
@@ -12,7 +12,7 @@ const MenuContainer = styled.div`
 `
 
 const Nav = styled(ContentWrapper)`
-  justify-content: space-between;
+  padding: 0;
 `
 
 const NavContainer = styled.div`

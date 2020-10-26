@@ -2,8 +2,8 @@ import BackgroundImage from 'gatsby-background-image'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { H2, CapsHeadingSmall } from '../components/elements'
-import { colors, breakpoints, spacings, size } from '../utils'
-import ContentWrapper from '../components/contentWrapper'
+import { colors, breakpoints, spacings, size, lineHeight } from '../utils'
+import { Wrapper as ContentWrapper } from '../components/contentWrapper'
 
 export const ImageBackground = styled(BackgroundImage)`
   ${breakpoints.mobileSmall} {
@@ -73,7 +73,10 @@ export const Wrapper = styled.div`
   }
 `
 
-export const TextWrapper = styled(ContentWrapper)``
+export const TextWrapper = styled(ContentWrapper)`
+  flex-direction: column;
+  padding: 0;
+`
 
 export const ArrowWrapper = styled.div`
   display: flex;
@@ -82,17 +85,24 @@ export const ArrowWrapper = styled.div`
 
 export const ArrowImage = styled.img``
 
-export const OurStorySection = styled.section`
-  padding: 14rem 12.5rem 14rem;
-  width: 65%;
-  display: flex;
-
-  h3 {
-    margin-bottom: 4.5rem;
-  }
-
-  p {
-    margin-bottom: 4rem;
+export const OurStorySection = styled(ContentWrapper)`
+  ${breakpoints.mobileSmall} {
+    h3 {
+      font-size: ${size.sm};
+      line-height: ${lineHeight.xl};
+      margin-left: 28px;
+      margin-bottom: ${spacings[4]};
+      padding-right: ${spacings[2]};
+    }
+    p {
+      margin-left: 28px;
+      padding-bottom: ${spacings[3]};
+      padding-right: ${spacings[2]};
+    }
+    button {
+      margin-top: ${spacings[3]};
+      margin-left: 28px;
+    }
   }
 `
 

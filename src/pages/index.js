@@ -9,7 +9,7 @@ import {
   H1,
   H2,
   H3,
-  MP,
+  P,
   Button,
   CapsHeadingLarge,
   LP,
@@ -93,29 +93,25 @@ const IndexPage = () => {
         </ImageBackground>
       </Header>
       <OurStorySection>
-        <AccentMedium
-          css={css`
-            transform: translate(-3rem, -2.5rem);
-          `}
-        />
+        <AccentMedium />
         <div>
           <H3>
             Yalla is a collective of web developers, designers, project managers
             and strategists.
           </H3>
-          <MP>
+          <P>
             We work together across the UK, Gaza and Germany, united in our
             desire to build quality products that deliver social good.
-          </MP>
-          <MP>
+          </P>
+          <P>
             Collaborating with non-profits, start ups and impact-driven
             businesses, we harness the power of technology to solve societal
             challenges, spread knowledge and transcend borders.
-          </MP>
-          <MP>
+          </P>
+          <P>
             So if you&apos;re looking for us to build a website, app, help your
             understand your users or anything in between, give us a shout!
-          </MP>
+          </P>
           <Button
             title="Our Story"
             hasArrow

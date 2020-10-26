@@ -15,6 +15,7 @@ export const size = {
 export const psize = {
   xs: '1.2rem',
   s: '1.4rem',
+  r: '1.6rem',
   m: '1.8rem',
   l: '2rem',
   xl: '2.2rem',

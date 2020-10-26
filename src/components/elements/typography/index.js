@@ -27,7 +27,7 @@ export const H3 = styled.h3`
 `
 
 export const H4 = styled.h4`
-  font-size: ${size.xs};
+  font-size: ${size.sm};
   letter-spacing: ${letterSpacing.small};
   font-weight: 700;
   color: ${({ color }) => color};
@@ -63,7 +63,6 @@ export const XLP = styled.p`
   font-size: ${psize.xl};
   line-height: ${lineHeight.xl};
   font-weight: 400;
-  letter-spacing: 0.03em;
   color: ${({ color }) => color};
 `
 
@@ -71,7 +70,6 @@ export const LP = styled.p`
   font-size: ${psize.l};
   line-height: ${lineHeight.l};
   font-weight: 400;
-  letter-spacing: 0.03em;
   color: ${({ color }) => color};
 `
 
@@ -79,7 +77,6 @@ export const MP = styled.p`
   font-size: ${psize.m};
   line-height: ${lineHeight.m};
   font-weight: 400;
-  letter-spacing: 0.03em;
   color: ${({ color }) => color};
 `
 
@@ -87,7 +84,12 @@ export const BoldMP = styled.p`
   font-size: ${psize.m};
   line-height: ${lineHeight.l};
   font-weight: 700;
-  letter-spacing: 0.03em;
+  color: ${({ color }) => color};
+`
+
+export const P = styled.p`
+  font-size: ${psize.r};
+  line-height: ${lineHeight.r};
   color: ${({ color }) => color};
 `
 
@@ -95,7 +97,6 @@ export const SP = styled.p`
   font-size: ${psize.s};
   line-height: ${lineHeight.s};
   font-weight: 300;
-  letter-spacing: 0.03em;
   color: ${({ color }) => color};
 `
 
@@ -103,7 +104,6 @@ export const BoldXSP = styled.p`
   font-size: ${psize.xs};
   line-height: 1.8rem;
   font-weight: 700;
-  letter-spacing: 0.03em;
   color: ${({ color }) => color};
 `
 
@@ -111,7 +111,6 @@ export const XSP = styled.p`
   font-size: ${psize.xs};
   line-height: 1.8rem;
   font-weight: 300;
-  letter-spacing: 0.03em;
   color: ${({ color }) => color};
 `
 
