@@ -6,49 +6,41 @@ import { breakpoints, spacings } from '../../utils'
 
 export const Wrapper = styled.section`
   display: flex;
-  flex-direction: ${({ direction }) => direction};
-  justify-content: ${({ justifyContent }) => justifyContent};
+  flex-direction: column;
   margin: 0 auto;
 
   ${breakpoints.mobileSmall} {
-    width: ${({ fullWidth }) => (fullWidth ? '100vw' : 'calc(100vw - 48px)')};
-    padding-top: ${spacings[5]};
-    padding-bottom: ${spacings[5]};
+    padding: ${spacings[5]} ${spacings[4]};
   }
 
   ${breakpoints.mobileMedium} {
-    width: ${({ fullWidth }) => (fullWidth ? '100vw' : 'calc(100vw - 40px)')};
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   ${breakpoints.tablet} {
-    width: ${({ fullWidth }) => (fullWidth ? '100vw' : 'calc(100vw - 80px)')};
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 `
 
-const ContentWrapper = ({ children, fullWidth, direction, justifyContent }) => (
-  <Wrapper
-    fullWidth={fullWidth}
-    direction={direction}
-    justifyContent={justifyContent}
-  >
-    {children}
-  </Wrapper>
-)
+export const TextContentWrapper = styled(Wrapper)`
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    padding-left: 2.8rem;
+  }
+`
+
+const ContentWrapper = ({ children }) => <Wrapper>{children}</Wrapper>
 
 ContentWrapper.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
-  fullWidth: PropTypes.bool,
-  direction: PropTypes.string,
-  justifyContent: PropTypes.string,
-}
-
-ContentWrapper.defaultProps = {
-  fullWidth: false,
-  direction: 'column',
-  justifyContent: 'flex-start',
 }
 
 export default ContentWrapper

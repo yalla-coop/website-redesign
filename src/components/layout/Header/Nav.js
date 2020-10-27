@@ -12,7 +12,10 @@ const MenuContainer = styled.div`
 `
 
 const Nav = styled(ContentWrapper)`
-  padding: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  flex-direction: row;
+  justify-content: space-between;
 `
 
 const NavContainer = styled.div`

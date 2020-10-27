@@ -1,66 +1,44 @@
 import styled from 'styled-components'
-import { colors } from '../../../utils'
+import { colors, breakpoints, spacings, size, psize } from '../../../utils'
 
 export const FooterWrapper = styled.footer`
-  max-width: 100%;
-  height: 50.2rem;
+  display: flex;
+  flex-direction: column;
   background: ${colors.primary};
+  background: linear-gradient(
+    90deg,
+    rgba(183, 21, 64, 1) 0%,
+    rgba(199, 62, 70, 1) 100%
+  );
   color: ${colors.white};
-  display: flex;
-  padding: 8rem 30rem 12rem 8rem;
-  justify-content: center;
-  align-items: flex-start;
 
-  @media (min-width: 1024px) {
-    padding: 4rem 8rem 4rem 4rem;
-  }
-`
+  ${breakpoints.mobileSmall} {
+    padding-top: ${spacings[6]};
+    padding-left: 5.2rem;
+    padding-bottom: ${spacings[6]};
 
-export const HeadingSection = styled.div`
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: baseline;
-  transform: rotate(-90deg) translateX(-30%);
-`
-
-export const SitemapSection = styled.div`
-  flex: 2;
-
-  h4 {
-    margin-bottom: 1.7rem;
-  }
-
-  h4 span {
-    margin-right: 1rem;
-    color: rgba(255, 255, 255, 0.2);
-  }
-`
-
-export const ContactSection = styled.div`
-  flex: 3;
-`
-
-export const AddressesBlock = styled.address`
-  display: flex;
-  font-style: normal;
-
-  div {
-    width: 30%;
-
-    p {
-      margin-top: 0.5rem;
-      color: ${colors.white};
+    h2 {
+      font-size: ${size.md};
+      padding-bottom: ${spacings[3]};
     }
   }
 `
 
+export const Copyright = styled.div`
+  background: #020f1d;
+  padding-top: ${spacings[4]};
+  padding-bottom: ${spacings[4]};
+  padding-left: 5.2rem;
+
+  p {
+    color: white;
+    font-size: ${psize.m};
+  }
+`
+
 export const EmailLink = styled.a`
-  font-size: 12px;
-  font-weight: 500;
+  font-size: ${psize.l};
+  letter-spacing: 0.5px;
+
   color: ${colors.white};
-  text-decoration: none;
-  margin: 2rem 0 3rem 0;
-  display: inline-block;
 `
