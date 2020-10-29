@@ -18,5 +18,5 @@ export const psize = {
   r: '1.6rem',
   m: '1.8rem',
   l: '2rem',
-  xl: '2.2rem',
+  xl: '2.4rem',
 }
