@@ -20,6 +20,8 @@ import {
 } from '../components/contentWrapper'
 
 export const Dev = styled.div`
+  height: 5px;
+
   ${breakpoints.mobileSmall} {
     background: cyan;
   }
@@ -71,8 +73,6 @@ export const ImageBackground = styled(BackgroundImage)`
   }
 `
 
-export const Header = styled.header``
-
 export const H1Modifier = styled.h1`
   color: #fff;
   margin: 0;
@@ -89,6 +89,9 @@ export const H1Modifier = styled.h1`
     font-size: ${size.md};
     line-height: 4rem;
   }
+  ${breakpoints.tabletVertical} {
+    transform: translateX(-5rem);
+  }
 `
 
 export const CapsHeadingSmallModifier = styled(CapsHeadingSmall)`
@@ -97,6 +100,12 @@ export const CapsHeadingSmallModifier = styled(CapsHeadingSmall)`
   ${breakpoints.mobileSmall} {
     text-align: center;
     padding-bottom: ${spacings[3]};
+  }
+  ${breakpoints.tabletVertical} {
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    transform: translate(-50%, 5%);
   }
 `
 
@@ -108,6 +117,16 @@ export const Wrapper = styled(ContentWrapper)`
 
 export const TextWrapper = styled(ContentWrapper)`
   padding-bottom: 0;
+
+  ${breakpoints.tabletVertical} {
+    background: rgba(196, 196, 196, 0.15);
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    padding: 1.5rem 0;
+  }
 `
 
 export const ArrowWrapper = styled.div`
@@ -143,6 +162,9 @@ export const OurStorySection = styled(TextContentWrapper)`
     }
   }
   ${breakpoints.tabletVertical} {
+    padding: 14rem 12.5rem 14rem;
+    width: 65%;
+
     h2 {
       font-size: ${size.md};
     }
@@ -161,6 +183,11 @@ export const OurApproachSection = styled(TextContentWrapper)`
       color: ${colors.primary};
       font-size: ${size.md};
     }
+  }
+  ${breakpoints.tabletVertical} {
+    margin-top: 30.6rem;
+    margin-right: 7.6rem;
+    background: rgba(247, 247, 247, 0.7);
   }
 `
 
@@ -181,15 +208,23 @@ export const OurApproachWrapper = styled.div`
     display: flex;
     flex-direction: row-reverse;
     margin-top: -200px;
+    height: 786px;
   }
 `
 
 export const OurApproachHeadings = styled.div`
-  flex: 3;
+  ${breakpoints.tabletVertical} {
+    flex: 3;
+    padding-right: 10rem;
+  }
 `
 
 export const HeadingWithAccent = styled.div`
   ${breakpoints.tabletVertical} {
+    display: flex;
+    align-items: center;
+    transform: translate(0, -50%);
+
     h2 {
       font-size: ${size.lg};
       transform: rotate(-90deg) translate(0, -300px);
@@ -215,17 +250,26 @@ export const LearnMoreBlock = styled.div`
     width: 300px;
     margin-right: ${spacings[7]};
 
+    margin-top: 20rem;
+    padding-left: 14rem;
+
     h3 {
       font-size: ${size.md};
+      margin-bottom: 3.6rem;
     }
   }
 `
 export const ServicesBlock = styled.div`
-  flex: 2;
-
   ${breakpoints.mobileSmall} {
     margin-top: ${spacings[5]};
     margin-bottom: ${spacings[3]};
+  }
+
+  ${breakpoints.tabletVertical} {
+    margin: 8rem 0 11rem 0;
+    div:not(:last-child) {
+      margin-bottom: 4.8rem;
+    }
   }
 `
 
@@ -270,6 +314,12 @@ export const WorkSection = styled(TextContentWrapper)`
       margin-bottom: ${spacings[5]};
     }
   }
+  ${breakpoints.tabletVertical} {
+    height: 2459px;
+    margin-top: 11rem;
+    padding: 15rem 13rem 30rem 6rem;
+    position: relative;
+  }
 `
 
 export const WorkCards = styled.div`
@@ -303,6 +353,9 @@ export const TestimonialsSection = styled(TextContentWrapper)`
     h4 {
       font-size: ${size.md};
     }
+
+    margin-top: 20.4rem;
+    padding: 0 30.5rem 0 11rem;
   }
 `
 
@@ -322,4 +375,17 @@ export const CapsHeadingLargeModifier = styled(CapsHeadingLarge)`
 
 export const CapsHeadingMediumModifier = styled(CapsHeadingMedium)`
   color: ${colors.gray4};
+  ${breakpoints.tabletVertical} {
+    margin-top: ${spacings[3]};
+    margin-bottom: ${spacings[2]};
+    color: ${colors.black};
+    font-size: ${size.xs};
+  }
+`
+
+export const StoriesSection = styled.section`
+  margin-top: 7rem;
+  margin-bottom: 30rem;
+  padding-left: 11rem;
+  overflow: hidden;
 `

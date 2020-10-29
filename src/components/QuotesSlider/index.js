@@ -11,6 +11,7 @@ const StyledButton = styled.button`
   border: none;
   outline: none;
   cursor: pointer;
+
   border: 2px solid ${colors.accent};
   background: ${({ currnet }) => (currnet ? colors.accent : 'transparent')};
 `
@@ -105,6 +106,7 @@ export default function App() {
           display: flex;
           align-items: center;
           justify-content: center;
+
           button {
             margin-right: 1rem;
           }

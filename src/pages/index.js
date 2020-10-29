@@ -1,5 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import { css } from 'styled-components'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -14,7 +15,6 @@ import {
 
 import {
   Dev,
-  Header,
   ImageBackground,
   CapsHeadingSmallModifier,
   CapsHeadingMediumModifier,
@@ -42,10 +42,10 @@ import NavBar from '../components/layout/Header/Nav'
 import ArrowDown from '../../static/svg/arrow-down.svg'
 
 import { WorkCard } from '../components/common'
-// import {
-//   Medium as AccentMedium,
-//   ExtraLarge as AccentExtraLarge,
-// } from '../components/elements/Accent'
+import {
+  // Medium as AccentMedium,
+  ExtraLarge as AccentExtraLarge,
+} from '../components/elements/Accent'
 
 const IndexPage = () => {
   const { image } = useStaticQuery(graphql`
@@ -63,8 +63,8 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Dev style={{ height: '5px' }} />
-      <Header>
+      <Dev />
+      <header>
         <ImageBackground tag="section" fluid={image.sharp.fluid}>
           <NavBar menuColor="white" logoColor="white" />
           <Wrapper>
@@ -80,7 +80,7 @@ const IndexPage = () => {
             <ArrowImage src={ArrowDown} alt="arrow down" />
           </ArrowWrapper>
         </ImageBackground>
-      </Header>
+      </header>
       <OurStorySection>
         <H2>
           Yalla is a collective of web developers, designers, project managers
@@ -114,11 +114,11 @@ const IndexPage = () => {
             <H2>
               Our Approach <br />+ Services
             </H2>
-            {/* <AccentExtraLarge
+            <AccentExtraLarge
               css={css`
                 transform: translate(13rem, 12rem);
               `}
-            /> */}
+            />
           </HeadingWithAccent>
         </OurApproachHeadings>
         <OurApproachWrapper>
