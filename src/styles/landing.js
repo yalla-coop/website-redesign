@@ -19,25 +19,59 @@ import {
   TextContentWrapper,
 } from '../components/contentWrapper'
 
-export const ImageBackground = styled(BackgroundImage)`
+export const Dev = styled.div`
   ${breakpoints.mobileSmall} {
-    height: 85vh;
-    background-image: url('/images/landing-image.png') no-repeat;
-    background-size: cover;
-    width: 100%;
-    position: relative;
+    background: cyan;
+  }
+
+  ${breakpoints.mobileMedium} {
+    background: orange;
   }
 
   ${breakpoints.mobileLarge} {
-    height: 55vh;
+    background: blueviolet;
+  }
+
+  ${breakpoints.tabletVertical} {
+    background: pink;
+  }
+
+  ${breakpoints.laptop} {
+    background: red;
+  }
+
+  ${breakpoints.laptopLarge} {
+    background: green;
+  }
+
+  ${breakpoints.desktop} {
+    background: brown;
   }
 `
 
-export const Header = styled.header`
+export const ImageBackground = styled(BackgroundImage)`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
   ${breakpoints.mobileSmall} {
+    background-image: url('/images/landing-image.png') no-repeat;
+    background-size: cover;
+    opacity: 1 !important;
+    background: rgba(3, 24, 47, 0.8);
+    height: 85vh;
+  }
+
+  ${breakpoints.tabletVertical} {
+    height: 50vh;
+  }
+
+  ${breakpoints.laptop} {
     height: 85vh;
   }
 `
+
+export const Header = styled.header``
 
 export const H1Modifier = styled.h1`
   color: #fff;
@@ -63,28 +97,12 @@ export const CapsHeadingSmallModifier = styled(CapsHeadingSmall)`
   ${breakpoints.mobileSmall} {
     text-align: center;
     padding-bottom: ${spacings[3]};
-    margin-top: -6.2rem;
   }
 `
 
-export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  background: rgba(196, 196, 196, 0.15);
-  width: 100vw;
-
-  ${breakpoints.mobileSmall} {
-    padding: ${spacings[4]} 0;
-    margin-top: ${spacings[6]};
-    margin-bottom: 5.6rem;
-  }
-
+export const Wrapper = styled(ContentWrapper)`
   ${breakpoints.mobileMedium} {
-    margin-bottom: 96px;
-  }
-
-  ${breakpoints.mobileLarge} {
-    margin: ${spacings[9]} 0;
+    margin-top: 2rem;
   }
 `
 
@@ -97,7 +115,13 @@ export const ArrowWrapper = styled.div`
   justify-content: center;
 `
 
-export const ArrowImage = styled.img``
+export const ArrowImage = styled.img`
+  position: absolute;
+
+  ${breakpoints.mobileSmall} {
+    bottom: ${spacings[5]};
+  }
+`
 
 export const OurStorySection = styled(TextContentWrapper)`
   ${breakpoints.mobileSmall} {
@@ -118,6 +142,11 @@ export const OurStorySection = styled(TextContentWrapper)`
       width: 200px;
     }
   }
+  ${breakpoints.tabletVertical} {
+    h2 {
+      font-size: ${size.md};
+    }
+  }
 `
 
 export const Main = styled.div`
@@ -125,18 +154,33 @@ export const Main = styled.div`
   position: relative;
 `
 export const OurApproachSection = styled(TextContentWrapper)`
+  position: relative;
+
   ${breakpoints.mobileSmall} {
     h2 {
       color: ${colors.primary};
       font-size: ${size.md};
     }
   }
+`
 
-  ${breakpoints.mobileLarge} {
-    h2 {
-      transform: rotate(-90deg);
-      font-size: ${size.lg};
-    }
+export const OurApproachBackground = styled.div`
+  ${breakpoints.tabletVertical} {
+    background: #f7f7f7;
+    height: 90%;
+    width: 90%;
+    position: absolute;
+    top: 210px;
+    left: 0;
+    z-index: -10;
+  }
+`
+
+export const OurApproachWrapper = styled.div`
+  ${breakpoints.tabletVertical} {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: -200px;
   }
 `
 
@@ -144,7 +188,14 @@ export const OurApproachHeadings = styled.div`
   flex: 3;
 `
 
-export const HeadingWithAccent = styled.div``
+export const HeadingWithAccent = styled.div`
+  ${breakpoints.tabletVertical} {
+    h2 {
+      font-size: ${size.lg};
+      transform: rotate(-90deg) translate(0, -300px);
+    }
+  }
+`
 
 export const LearnMoreBlock = styled.div`
   ${breakpoints.mobileSmall} {
@@ -157,6 +208,15 @@ export const LearnMoreBlock = styled.div`
       margin-left: 2.8rem;
       margin-bottom: ${spacings[3]};
       width: 200px;
+    }
+  }
+  ${breakpoints.tabletVertical} {
+    align-self: flex-end;
+    width: 300px;
+    margin-right: ${spacings[7]};
+
+    h3 {
+      font-size: ${size.md};
     }
   }
 `
@@ -239,6 +299,11 @@ export const TestimonialsSection = styled(TextContentWrapper)`
       margin-bottom: ${spacings[3]};
     }
   }
+  ${breakpoints.tabletVertical} {
+    h4 {
+      font-size: ${size.md};
+    }
+  }
 `
 
 export const QuoteIcon = styled.span`
@@ -252,6 +317,7 @@ export const CapsHeadingLargeModifier = styled(CapsHeadingLarge)`
   margin-top: ${spacings[3]};
   margin-bottom: ${spacings[2]};
   color: ${colors.black};
+  font-size: ${size.xs};
 `
 
 export const CapsHeadingMediumModifier = styled(CapsHeadingMedium)`

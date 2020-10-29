@@ -18,9 +18,19 @@ export const Wrapper = styled.section`
     padding-right: 2rem;
   }
 
-  ${breakpoints.tablet} {
-    padding-left: 4rem;
-    padding-right: 4rem;
+  ${breakpoints.tabletVertical} {
+    padding: 6rem;
+  }
+
+  ${breakpoints.laptop} {
+    padding-left: 20rem;
+    padding-right: 20rem;
+  }
+
+  ${breakpoints.laptopLarge} {
+  }
+
+  ${breakpoints.desktop} {
   }
 `
 

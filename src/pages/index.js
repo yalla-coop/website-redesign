@@ -13,6 +13,7 @@ import {
 } from '../components/elements'
 
 import {
+  Dev,
   Header,
   ImageBackground,
   CapsHeadingSmallModifier,
@@ -20,11 +21,12 @@ import {
   CapsHeadingLargeModifier,
   H1Modifier,
   Wrapper,
-  TextWrapper,
   ArrowWrapper,
   ArrowImage,
   OurStorySection,
   OurApproachSection,
+  OurApproachBackground,
+  OurApproachWrapper,
   OurApproachHeadings,
   HeadingWithAccent,
   LearnMoreBlock,
@@ -40,6 +42,10 @@ import NavBar from '../components/layout/Header/Nav'
 import ArrowDown from '../../static/svg/arrow-down.svg'
 
 import { WorkCard } from '../components/common'
+// import {
+//   Medium as AccentMedium,
+//   ExtraLarge as AccentExtraLarge,
+// } from '../components/elements/Accent'
 
 const IndexPage = () => {
   const { image } = useStaticQuery(graphql`
@@ -57,19 +63,18 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
+      <Dev style={{ height: '5px' }} />
       <Header>
         <ImageBackground tag="section" fluid={image.sharp.fluid}>
           <NavBar menuColor="white" logoColor="white" />
           <Wrapper>
-            <TextWrapper>
-              <CapsHeadingSmallModifier>
-                Web design and development agency
-              </CapsHeadingSmallModifier>
-              <H1Modifier>
-                We help non-profits and impact-driven businesses drive positive
-                social change in the tech sphere.
-              </H1Modifier>
-            </TextWrapper>
+            <CapsHeadingSmallModifier>
+              Web design and development agency
+            </CapsHeadingSmallModifier>
+            <H1Modifier>
+              We help non-profits and impact-driven businesses drive positive
+              social change in the tech sphere.
+            </H1Modifier>
           </Wrapper>
           <ArrowWrapper>
             <ArrowImage src={ArrowDown} alt="arrow down" />
@@ -103,58 +108,68 @@ const IndexPage = () => {
         />
       </OurStorySection>
       <OurApproachSection>
+        <OurApproachBackground />
         <OurApproachHeadings>
           <HeadingWithAccent>
             <H2>
               Our Approach <br />+ Services
             </H2>
+            {/* <AccentExtraLarge
+              css={css`
+                transform: translate(13rem, 12rem);
+              `}
+            /> */}
           </HeadingWithAccent>
         </OurApproachHeadings>
-        <ServicesBlock>
-          <Service>
-            <CapsHeadingLarge>DISCOVERY</CapsHeadingLarge>
-            <MP>
-              Strategy
-              <br /> Discovery & Research
-              <br /> User Experience
-              <br /> Brand Strategy & Architecture
-              <br /> Positioning
-              <br /> Content Strategy
-            </MP>
-          </Service>
-          <Service>
-            <CapsHeadingLarge>Design</CapsHeadingLarge>
-            <MP>
-              UI/UX Design
-              <br /> Stylescapes
-              <br /> Wireframing / Mockups
-              <br /> Prototypes
-              <br /> UI Kits/Design Systems
-            </MP>
-          </Service>
-          <Service>
-            <CapsHeadingLarge>DIGITAL DEVELOPMENT</CapsHeadingLarge>
-            <MP>
-              Full stack development
-              <br /> Information Architecture
-              <br /> Prototypes
-              <br /> Content Management Systems
-              <br /> iOS Applications
-              <br /> Web Applications
-              <br /> Android Applications
-            </MP>
-          </Service>
-        </ServicesBlock>
-        <LearnMoreBlock>
-          <H3>A user-centred approach is at the heart of everything we do.</H3>
-          <Button
-            title="Learn More"
-            hasArrow
-            onClick={() => null}
-            capitalize
-            primary
-          />
-        </LearnMoreBlock>
+        <OurApproachWrapper>
+          <ServicesBlock>
+            <Service>
+              <CapsHeadingLarge>DISCOVERY</CapsHeadingLarge>
+              <MP>
+                Strategy
+                <br /> Discovery & Research
+                <br /> User Experience
+                <br /> Brand Strategy & Architecture
+                <br /> Positioning
+                <br /> Content Strategy
+              </MP>
+            </Service>
+            <Service>
+              <CapsHeadingLarge>Design</CapsHeadingLarge>
+              <MP>
+                UI/UX Design
+                <br /> Stylescapes
+                <br /> Wireframing / Mockups
+                <br /> Prototypes
+                <br /> UI Kits/Design Systems
+              </MP>
+            </Service>
+            <Service>
+              <CapsHeadingLarge>DIGITAL DEVELOPMENT</CapsHeadingLarge>
+              <MP>
+                Full stack development
+                <br /> Information Architecture
+                <br /> Prototypes
+                <br /> Content Management Systems
+                <br /> iOS Applications
+                <br /> Web Applications
+                <br /> Android Applications
+              </MP>
+            </Service>
+          </ServicesBlock>
+          <LearnMoreBlock>
+            <H3>
+              A user-centred approach is at the heart of everything we do.
+            </H3>
+            <Button
+              title="Learn More"
+              hasArrow
+              onClick={() => null}
+              capitalize
+              primary
+            />
+          </LearnMoreBlock>
+        </OurApproachWrapper>
       </OurApproachSection>
       <Callout>
         <H3>

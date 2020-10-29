@@ -43,7 +43,7 @@ export const CapsHeadingLarge = styled.h3`
 
 export const CapsHeadingMedium = styled.h2`
   font-size: ${psize.r};
-  letter-spacing: ${letterSpacing.small};
+  letter-spacing: ${letterSpacing.medium};
   text-transform: uppercase;
   color: ${({ color = gray2 }) => color};
 `

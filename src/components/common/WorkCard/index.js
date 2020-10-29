@@ -8,7 +8,7 @@ import Image from '../../image'
 
 const WorkCard = ({ smallHeading, bigHeading, fileName, altText }) => (
   <WorkWrapper>
-    <Image fileName={fileName} altText={altText} />
+    <Image fileName={fileName} altText={altText} style={{ height: '400px' }} />
     <TextWrapper>
       <CapsHeadingSmall>{smallHeading}</CapsHeadingSmall>
       <H4>{bigHeading}</H4>
