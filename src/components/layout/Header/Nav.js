@@ -16,6 +16,11 @@ const Nav = styled(ContentWrapper)`
   padding-bottom: 0;
   flex-direction: row;
   justify-content: space-between;
+
+  ${breakpoints.tabletVertical} {
+    padding-left: ${spacings[3]};
+    padding-right: ${spacings[4]};
+  }
 `
 
 const NavContainer = styled.div`
@@ -29,6 +34,10 @@ const Img = styled.img`
   ${breakpoints.mobileSmall} {
     width: ${spacings[6]};
     height: ${spacings[6]};
+  }
+  ${breakpoints.laptopLarge} {
+    width: 8rem;
+    height: auto;
   }
 `
 

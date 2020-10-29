@@ -11,6 +11,7 @@ export const FooterWrapper = styled.footer`
     rgba(183, 21, 64, 1) 0%,
     rgba(199, 62, 70, 1) 100%
   );
+  background: #03182f;
   color: ${colors.white};
 
   ${breakpoints.mobileSmall} {
@@ -19,9 +20,20 @@ export const FooterWrapper = styled.footer`
       padding-bottom: ${spacings[3]};
     }
   }
+
+  ${breakpoints.laptopLarge} {
+    h2 {
+      font-size: ${size.lg};
+    }
+  }
 `
 export const ContentWrapper = styled(TextContentWrapper)`
   margin: 0;
+
+  ${breakpoints.laptopLarge} {
+    padding-top: ${spacings[7]};
+    padding-bottom: ${spacings[7]};
+  }
 `
 
 export const Copyright = styled(TextContentWrapper)`
@@ -42,4 +54,9 @@ export const EmailLink = styled.a`
   padding-left: 2.8rem;
 
   color: ${colors.white};
+
+  ${breakpoints.laptopLarge} {
+    margin-top: ${spacings[4]};
+    font-size: ${size.sm};
+  }
 `

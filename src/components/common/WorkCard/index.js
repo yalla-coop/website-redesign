@@ -1,18 +1,20 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import { WorkWrapper, TextWrapper } from './styles'
+import { WorkWrapper } from './styles'
 import { CapsHeadingSmall, H4 } from '../../elements'
 
 import Image from '../../image'
 
 const WorkCard = ({ smallHeading, bigHeading, fileName, altText }) => (
   <WorkWrapper>
-    <Image fileName={fileName} altText={altText} style={{ height: '400px' }} />
-    <TextWrapper>
-      <CapsHeadingSmall>{smallHeading}</CapsHeadingSmall>
-      <H4>{bigHeading}</H4>
-    </TextWrapper>
+    <Image
+      fileName={fileName}
+      altText={altText}
+      style={{ width: '100%', height: 'auto' }}
+    />
+    <CapsHeadingSmall>{smallHeading}</CapsHeadingSmall>
+    <H4>{bigHeading}</H4>
   </WorkWrapper>
 )
 

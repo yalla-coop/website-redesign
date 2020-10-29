@@ -17,7 +17,6 @@ import {
   Dev,
   ImageBackground,
   CapsHeadingSmallModifier,
-  CapsHeadingMediumModifier,
   CapsHeadingLargeModifier,
   H1Modifier,
   Wrapper,
@@ -42,10 +41,10 @@ import NavBar from '../components/layout/Header/Nav'
 import ArrowDown from '../../static/svg/arrow-down.svg'
 
 import { WorkCard } from '../components/common'
-import {
-  // Medium as AccentMedium,
-  ExtraLarge as AccentExtraLarge,
-} from '../components/elements/Accent'
+// import {
+//   // Medium as AccentMedium,
+//   ExtraLarge as AccentExtraLarge,
+// } from '../components/elements/Accent'
 
 const IndexPage = () => {
   const { image } = useStaticQuery(graphql`
@@ -99,26 +98,27 @@ const IndexPage = () => {
           So if you&apos;re looking for us to build a website, app, help your
           understand your users or anything in between, give us a shout!
         </MP>
-        <Button
+
+        {/* hide story button for first release */}
+
+        {/* <Button
           title="Our Story"
           hasArrow
           onClick={() => null}
           capitalize
           primary
-        />
+        /> */}
       </OurStorySection>
       <OurApproachSection>
         <OurApproachBackground />
         <OurApproachHeadings>
           <HeadingWithAccent>
-            <H2>
-              Our Approach <br />+ Services
-            </H2>
-            <AccentExtraLarge
+            <H2>Our Approach + Services</H2>
+            {/* <AccentExtraLarge
               css={css`
                 transform: translate(13rem, 12rem);
               `}
-            />
+            /> */}
           </HeadingWithAccent>
         </OurApproachHeadings>
         <OurApproachWrapper>
@@ -178,10 +178,7 @@ const IndexPage = () => {
         </H3>
       </Callout>
       <WorkSection>
-        <H2>
-          Featured Work
-          <br /> + Case Studies
-        </H2>
+        <H2>Featured Work + Case Studies</H2>
         <WorkCards>
           <WorkCard
             smallHeading="EARWIG - CONSTRUCTION"
@@ -195,12 +192,12 @@ const IndexPage = () => {
             fileName="work-presspad"
             altText="work-presspad"
           />
-          <WorkCard
+          {/* <WorkCard
             smallHeading="CONNECT 5 - PUBLIC HEALTH"
             bigHeading="Creating an end-to-end management and reporting tool to improve delivery of training in mental health"
             fileName="work-connect5"
             altText="work-connect5"
-          />
+          /> */}
         </WorkCards>
       </WorkSection>
       <TestimonialsSection>
@@ -228,9 +225,7 @@ const IndexPage = () => {
           hesitate to work with them again.
         </MP>
         <CapsHeadingLargeModifier>LAURA JENNER</CapsHeadingLargeModifier>
-        <CapsHeadingMediumModifier>
-          DIGITAL PROJECT MANAGER
-        </CapsHeadingMediumModifier>
+        <MP>Digital Project Manager</MP>
       </TestimonialsSection>
     </Layout>
   )

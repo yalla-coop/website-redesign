@@ -12,6 +12,7 @@ import {
   spacings,
   letterSpacing,
   size,
+  psize,
   lineHeight,
 } from '../utils'
 import {
@@ -69,7 +70,11 @@ export const ImageBackground = styled(BackgroundImage)`
   }
 
   ${breakpoints.laptop} {
-    height: 85vh;
+    height: 70vh;
+  }
+
+  ${breakpoints.laptopLarge} {
+    height: 100vh;
   }
 `
 
@@ -81,7 +86,7 @@ export const H1Modifier = styled.h1`
     text-align: center;
     font-size: ${size.sm};
     line-height: ${spacings[5]};
-    letter-spacing: 1px;
+    letter-spacing: ${letterSpacing.small};
     padding: 0 ${spacings[2]};
   }
 
@@ -89,8 +94,10 @@ export const H1Modifier = styled.h1`
     font-size: ${size.md};
     line-height: 4rem;
   }
-  ${breakpoints.tabletVertical} {
-    transform: translateX(-5rem);
+
+  ${breakpoints.laptopLarge} {
+    font-size: ${size.xl};
+    line-height: 6.4rem;
   }
 `
 
@@ -101,11 +108,10 @@ export const CapsHeadingSmallModifier = styled(CapsHeadingSmall)`
     text-align: center;
     padding-bottom: ${spacings[3]};
   }
-  ${breakpoints.tabletVertical} {
-    position: absolute;
-    top: -5%;
-    left: 50%;
-    transform: translate(-50%, 5%);
+
+  ${breakpoints.laptopLarge} {
+    font-size: ${size.xs};
+    padding-bottom: ${spacings[5]};
   }
 `
 
@@ -140,6 +146,10 @@ export const ArrowImage = styled.img`
   ${breakpoints.mobileSmall} {
     bottom: ${spacings[5]};
   }
+
+  ${breakpoints.laptopLarge} {
+    bottom: ${spacings[9]};
+  }
 `
 
 export const OurStorySection = styled(TextContentWrapper)`
@@ -151,22 +161,35 @@ export const OurStorySection = styled(TextContentWrapper)`
       margin-bottom: ${spacings[4]};
       padding-right: ${spacings[2]};
     }
-    p {
+    p:not(:last-child) {
       padding-bottom: ${spacings[3]};
       padding-right: ${spacings[2]};
     }
     button {
       margin-left: 2.8rem;
       margin-top: ${spacings[3]};
-      width: 200px;
+      width: 20rem;
     }
   }
   ${breakpoints.tabletVertical} {
-    padding: 14rem 12.5rem 14rem;
-    width: 65%;
-
     h2 {
       font-size: ${size.md};
+    }
+  }
+
+  ${breakpoints.laptopLarge} {
+    padding-top: 16rem;
+    padding-bottom: 16rem;
+
+    h2 {
+      font-size: 4.8rem;
+      line-height: 4.8rem;
+      margin-bottom: ${spacings[6]};
+    }
+
+    p {
+      font-size: ${psize.xl};
+      line-height: 3.6rem;
     }
   }
 `
@@ -177,17 +200,13 @@ export const Main = styled.div`
 `
 export const OurApproachSection = styled(TextContentWrapper)`
   position: relative;
+  background: rgba(247, 247, 247, 0.7);
 
   ${breakpoints.mobileSmall} {
     h2 {
       color: ${colors.primary};
       font-size: ${size.md};
     }
-  }
-  ${breakpoints.tabletVertical} {
-    margin-top: 30.6rem;
-    margin-right: 7.6rem;
-    background: rgba(247, 247, 247, 0.7);
   }
 `
 
@@ -197,7 +216,7 @@ export const OurApproachBackground = styled.div`
     height: 90%;
     width: 90%;
     position: absolute;
-    top: 210px;
+    top: 21rem;
     left: 0;
     z-index: -10;
   }
@@ -207,33 +226,28 @@ export const OurApproachWrapper = styled.div`
   ${breakpoints.tabletVertical} {
     display: flex;
     flex-direction: row-reverse;
-    margin-top: -200px;
-    height: 786px;
+    justify-content: space-between;
+  }
+
+  ${breakpoints.laptopLarge} {
+    padding-right: 30rem;
   }
 `
 
 export const OurApproachHeadings = styled.div`
-  ${breakpoints.tabletVertical} {
-    flex: 3;
-    padding-right: 10rem;
-  }
-`
-
-export const HeadingWithAccent = styled.div`
-  ${breakpoints.tabletVertical} {
-    display: flex;
-    align-items: center;
-    transform: translate(0, -50%);
-
+  ${breakpoints.laptopLarge} {
     h2 {
-      font-size: ${size.lg};
-      transform: rotate(-90deg) translate(0, -300px);
+      font-size: 4.8rem;
     }
   }
 `
 
+export const HeadingWithAccent = styled.div``
+
 export const LearnMoreBlock = styled.div`
   ${breakpoints.mobileSmall} {
+    margin-top: ${spacings[6]};
+
     h3 {
       color: ${colors.primary};
       font-size: ${size.sm};
@@ -242,20 +256,24 @@ export const LearnMoreBlock = styled.div`
     button {
       margin-left: 2.8rem;
       margin-bottom: ${spacings[3]};
-      width: 200px;
+      width: 20rem;
     }
   }
   ${breakpoints.tabletVertical} {
     align-self: flex-end;
-    width: 300px;
+    width: 30rem;
     margin-right: ${spacings[7]};
-
-    margin-top: 20rem;
-    padding-left: 14rem;
 
     h3 {
       font-size: ${size.md};
-      margin-bottom: 3.6rem;
+    }
+  }
+
+  ${breakpoints.laptopLarge} {
+    width: 60rem;
+
+    h3 {
+      font-size: ${size.lg};
     }
   }
 `
@@ -266,19 +284,32 @@ export const ServicesBlock = styled.div`
   }
 
   ${breakpoints.tabletVertical} {
-    margin: 8rem 0 11rem 0;
-    div:not(:last-child) {
-      margin-bottom: 4.8rem;
-    }
   }
 `
 
 export const Service = styled.div`
   ${breakpoints.mobileSmall} {
-    margin-bottom: ${spacings[5]};
+    :not(:last-child) {
+      margin-bottom: ${spacings[5]};
+    }
 
     h3 {
       margin-bottom: ${spacings[1]};
+    }
+  }
+  ${breakpoints.laptopLarge} {
+    :not(:last-child) {
+      margin-bottom: ${spacings[6]};
+    }
+
+    h3 {
+      font-size: ${size.sm};
+      margin-bottom: ${spacings[2]};
+    }
+
+    p {
+      font-size: ${psize.xl};
+      line-height: 3.2rem;
     }
   }
 `
@@ -299,6 +330,19 @@ export const Callout = styled(ContentWrapper)`
       margin-bottom: ${spacings[3]};
     }
   }
+
+  ${breakpoints.tabletVertical} {
+    h3 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  ${breakpoints.laptopLarge} {
+    h3 {
+      font-size: 4.8rem;
+    }
+  }
 `
 
 export const WorkSection = styled(TextContentWrapper)`
@@ -314,17 +358,30 @@ export const WorkSection = styled(TextContentWrapper)`
       margin-bottom: ${spacings[5]};
     }
   }
+
   ${breakpoints.tabletVertical} {
-    height: 2459px;
-    margin-top: 11rem;
-    padding: 15rem 13rem 30rem 6rem;
-    position: relative;
+    padding-top: ${spacings[7]};
+    padding-bottom: ${spacings[7]};
+  }
+
+  ${breakpoints.laptopLarge} {
+    padding-top: ${spacings[9]};
+    padding-bottom: ${spacings[9]};
+
+    h2 {
+      font-size: 4.8rem;
+      margin-bottom: ${spacings[8]};
+    }
   }
 `
 
 export const WorkCards = styled.div`
   ${breakpoints.mobileSmall} {
     padding-left: 2.8rem;
+  }
+
+  ${breakpoints.tabletVertical} {
+    display: flex;
   }
 `
 
@@ -345,25 +402,41 @@ export const TestimonialsSection = styled(TextContentWrapper)`
       margin-top: -0.8rem;
     }
 
-    p {
+    p:not(:last-child) {
       margin-bottom: ${spacings[3]};
     }
   }
+
   ${breakpoints.tabletVertical} {
+    margin-bottom: 0;
+
     h4 {
       font-size: ${size.md};
     }
+  }
 
-    margin-top: 20.4rem;
-    padding: 0 30.5rem 0 11rem;
+  ${breakpoints.laptopLarge} {
+    padding-top: ${spacings[7]};
+    padding-bottom: ${spacings[8]};
+
+    h4 {
+      font-size: 4.8rem;
+      margin-top: ${spacings[3]};
+      margin-bottom: ${spacings[5]};
+    }
+
+    p {
+      font-size: ${psize.xl};
+      line-height: 3.6rem;
+    }
   }
 `
 
 export const QuoteIcon = styled.span`
-  font-size: 100px;
+  font-size: 10rem;
   color: ${colors.accent};
   font-weight: 700;
-  line-height: 50px;
+  line-height: 5rem;
 `
 
 export const CapsHeadingLargeModifier = styled(CapsHeadingLarge)`

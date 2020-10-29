@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { colors, breakpoints, spacings } from '../../../utils'
+import { colors, breakpoints, spacings, size } from '../../../utils'
 
 export const WorkWrapper = styled.div`
   color: ${colors.white};
@@ -17,6 +17,17 @@ export const WorkWrapper = styled.div`
     }
 
     margin-bottom: ${spacings[6]};
+  }
+
+  ${breakpoints.tabletVertical} {
+    width: 100%;
+    margin-right: ${spacings[6]};
+  }
+
+  ${breakpoints.laptopLarge} {
+    h4 {
+      font-size: ${size.md};
+    }
   }
 `
 
