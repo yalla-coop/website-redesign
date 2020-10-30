@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import BackgroundImage from 'gatsby-background-image'
 import { H2, CapsHeadingSmall } from '../components/elements'
 import {
   psize,
@@ -13,7 +14,7 @@ import { TextContentWrapper } from '../components/contentWrapper'
 import { OurStorySection } from './landing'
 
 export const List = styled.ul`
-  font-size: ${psize.l};
+  font-size: ${psize.m};
   line-height: ${lineHeight.l};
   font-weight: 400;
   list-style: none;
@@ -31,6 +32,30 @@ export const CapsHeadingSmallModifier = styled(CapsHeadingSmall)`
   top: -5%;
   left: 50%;
   transform: translate(-50%, 5%);
+`
+
+export const ImageBackground = styled(BackgroundImage)`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  ${breakpoints.mobileSmall} {
+    background-image: url('/images/our-approach.png') no-repeat;
+    background-size: cover;
+    height: 85vh;
+  }
+
+  ${breakpoints.tabletVertical} {
+    height: 50vh;
+  }
+
+  ${breakpoints.laptop} {
+    height: 70vh;
+  }
+
+  ${breakpoints.laptopLarge} {
+    height: 100vh;
+  }
 `
 
 // introduction style //

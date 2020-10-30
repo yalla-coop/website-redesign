@@ -52,7 +52,7 @@ export const Dev = styled.div`
   }
 `
 
-export const ImageBackground = styled(BackgroundImage)`
+export const ImageBackgroundWithGradient = styled(BackgroundImage)`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -117,7 +117,10 @@ export const CapsHeadingSmallModifier = styled(CapsHeadingSmall)`
 
 export const Wrapper = styled(ContentWrapper)`
   ${breakpoints.mobileMedium} {
-    margin-top: 2rem;
+    margin-top: 20vh;
+  }
+  ${breakpoints.tabletVertical} {
+    margin-top: 6vh;
   }
 `
 

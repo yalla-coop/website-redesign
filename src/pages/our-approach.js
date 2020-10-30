@@ -9,6 +9,7 @@ import { H2, MP, CapsHeadingLarge } from '../components/elements'
 import {
   List,
   Introduction,
+  ImageBackground,
   StrategySection,
   Headings,
   StartagyContnet,

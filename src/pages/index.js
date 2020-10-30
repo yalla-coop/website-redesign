@@ -14,8 +14,7 @@ import {
 } from '../components/elements'
 
 import {
-  Dev,
-  ImageBackground,
+  ImageBackgroundWithGradient,
   CapsHeadingSmallModifier,
   CapsHeadingLargeModifier,
   H1Modifier,
@@ -64,7 +63,7 @@ const IndexPage = () => {
       <SEO title="Home" />
       <Dev />
       <header>
-        <ImageBackground tag="section" fluid={image.sharp.fluid}>
+        <ImageBackgroundWithGradient tag="section" fluid={image.sharp.fluid}>
           <NavBar menuColor="white" logoColor="white" />
           <Wrapper>
             <CapsHeadingSmallModifier>
@@ -78,7 +77,7 @@ const IndexPage = () => {
           <ArrowWrapper>
             <ArrowImage src={ArrowDown} alt="arrow down" />
           </ArrowWrapper>
-        </ImageBackground>
+        </ImageBackgroundWithGradient>
       </header>
       <OurStorySection>
         <H2>
