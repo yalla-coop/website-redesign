@@ -4,41 +4,45 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { css } from 'styled-components'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import { H1, H3, MP, CapsHeadingLarge } from '../components/elements'
+import { H2, MP, CapsHeadingLarge } from '../components/elements'
 
 import {
-  Header,
-  ImageBackground,
   List,
-  CapsHeadingSmallModifier,
-  PageTitle,
-  TextWrapper,
-  ArrowImage,
   Introduction,
   StrategySection,
   Headings,
-  HeadingWithAccent,
   StartagyContnet,
   StartagyImages,
   DesignSection,
   DesignContent,
+  HeadingWithAccent,
   HeadingWithAccentDesign,
   StrategyBlock,
+  WhatWeOffer,
   DesignBlock,
   DesignImages,
   DigitalSection,
   DigitalImages,
+  Description,
 } from '../styles/ourApproach'
 
 import {
-  Medium as AccentMedium,
-  ExtraLarge as AccentExtraLarge,
-} from '../components/elements/Accent'
+  Dev,
+  ImageBackground,
+  Wrapper,
+  CapsHeadingSmallModifier,
+  H1Modifier,
+  ArrowWrapper,
+  ArrowImage,
+} from '../styles/landing'
+
+// import {
+//   Medium as AccentMedium,
+//   ExtraLarge as AccentExtraLarge,
+// } from '../components/elements/Accent'
 
 import NavBar from '../components/layout/Header/Nav'
 import ArrowDown from '../../static/svg/arrow-down.svg'
-
-import { colors } from '../utils'
 
 import Img from '../components/image'
 
@@ -57,108 +61,91 @@ const OurApproachPage = () => {
   return (
     <Layout>
       <SEO title="Our Approach" />
-      <Header>
+      <Dev />
+      <header>
         <ImageBackground tag="section" fluid={image.sharp.fluid}>
           <NavBar menuColor="white" logoColor="white" />
-          <TextWrapper>
+          <Wrapper>
             <CapsHeadingSmallModifier>
               Web design and development agency
             </CapsHeadingSmallModifier>
-            <PageTitle>Our Approach + Services</PageTitle>
-            <ArrowImage src={ArrowDown} alt="arrow down" />
-          </TextWrapper>
+            <H1Modifier>Our Approach + Services</H1Modifier>
+            <ArrowWrapper>
+              <ArrowImage src={ArrowDown} alt="arrow down" />
+            </ArrowWrapper>
+          </Wrapper>
         </ImageBackground>
-      </Header>
-
+      </header>
       {/* Introduction */}
-
       <Introduction>
-        <AccentMedium
+        {/* <AccentMedium
           css={css`
             transform: translate(-3rem, -2.5rem);
           `}
-        />
-        <div>
-          <H3>A user-centred approach is at the heart of everything we do.</H3>
-          <MP>
-            Whether it&apos;s building a website, an app, carrying out user
-            research or running design thinking workshops for you and your team,
-            we make sure we work with you to truly understand your users and
-            what they need. After all, if we don’t help you build something that
-            your users truly want, then we’re not helping you build something
-            you need.
-          </MP>
-          <MP>
-            So, how do we get there? We go through three phases:{' '}
-            <small>Discovery, Design and Develop.</small>
-          </MP>
-          <MP>
-            And then we go around again! Taking the product back to the users,
-            to discover more about how they need the product to develop and so
-            on.
-          </MP>
-          <MP>
-            This tight, cyclical approach ensures we build your product in the
-            most efficient way, with you fully in control and secure that
-            you&lsquo;re creating something that will be used.
-          </MP>
-        </div>
+        /> */}
+        <H2>A user-centred approach is at the heart of everything we do.</H2>
+        <MP>
+          Whether it&apos;s building a website, an app, carrying out user
+          research or running design thinking workshops for you and your team,
+          we make sure we work with you to truly understand your users and what
+          they need. After all, if we don’t help you build something that your
+          users truly want, then we’re not helping you build something you need.
+        </MP>
+        <MP>
+          So, how do we get there? We go through three phases:{' '}
+          <span>Discovery, Design and Develop.</span>
+        </MP>
+        <MP>
+          And then we go around again! Taking the product back to the users, to
+          discover more about how they need the product to develop and so on.
+        </MP>
+        <MP>
+          This tight, cyclical approach ensures we build your product in the
+          most efficient way, with you fully in control and secure that
+          you&lsquo;re creating something that will be used.
+        </MP>
       </Introduction>
-
       {/* strategy section */}
-
       <StrategySection>
         <StartagyContnet>
           <Headings>
             <HeadingWithAccent>
-              <H1
-                css={css`
-                  color: ${colors.primary};
-                  transform: rotate(-90deg);
-                `}
-              >
-                Strategy + Discovery
-              </H1>
-              <AccentExtraLarge
+              <H2>Discovery</H2>
+              {/* <AccentExtraLarge
                 css={css`
                   transform: translate(-20rem, -50%);
                 `}
-              />
+              /> */}
             </HeadingWithAccent>
           </Headings>
           <StrategyBlock>
-            <div>
+            <Description>
               <CapsHeadingLarge
-                css={css`
-                  color: ${colors.primary};
-                `}
-                w={800}
+              // css={css`
+              //   color: ${colors.primary};
+              // `}
+              // w={800}
               >
                 We’ll start with understanding your problems, your users and
                 ideate on solutions
               </CapsHeadingLarge>
-              <MP
-                css={css`
-                  width: 90%;
-                `}
-              >
-                The internet means we are all connected regardless of where we
-                come from and at Yalla we want to make the most of that! We are
-                made up of talented designers, developers, project The internet
-                means we are all connected regardless of where we come from and
-                at Yalla we want to make the most of that! We are made up of
-                talented designers, developers, project The internet means we
-                are all connected regardless of where we come from and at Yalla
-                we want to make the most of that! We are made up of talented
-                designers, developers, project
+              <MP>
+                With our UX and UI designers we are able to work with you to
+                break down the problems you are looking to solve, really
+                understand the people you are solving these problems for and
+                reach initial ideas to take and test in the design phase. We are
+                able to work out where you are on your journey, delivering the
+                exercises needed to pick up from your work on develop it
+                further.
               </MP>
-            </div>
-            <div>
+            </Description>
+
+            <WhatWeOffer>
               <CapsHeadingLarge
-                css={css`
-                  color: ${colors.primary};
-                `}
-                w={800}
+              // css={css`
+              //   color: ${colors.primary};
+              // `}
+              // w={800}
               >
                 What we offer
               </CapsHeadingLarge>
@@ -170,51 +157,42 @@ const OurApproachPage = () => {
                 <li>Positioning</li>
                 <li>Content Strategy</li>
               </List>
-            </div>
+            </WhatWeOffer>
           </StrategyBlock>
         </StartagyContnet>
         <StartagyImages>
           <Img
             fileName="strategy"
             altText="strategy"
-            style={{ height: 440, width: 580 }}
+            style={{ marginBottom: '24px' }}
           />
           <Img
             fileName="discovery"
             altText="discovery"
-            style={{ height: 440, width: 660 }}
+            style={{ marginBottom: '32px' }}
           />
         </StartagyImages>
       </StrategySection>
-
       {/* Design section */}
-
       <DesignSection>
         <DesignContent>
           <Headings>
             <HeadingWithAccentDesign>
-              <H1
-                css={css`
-                  color: ${colors.primary};
-                  transform: rotate(-90deg);
-                `}
-              >
-                Design
-              </H1>
-              <AccentExtraLarge
+              <H2>Design</H2>
+              {/* <AccentExtraLarge
                 css={css`
                   transform: translate(-15rem, -30%);
                 `}
-              />
+              /> */}
             </HeadingWithAccentDesign>
           </Headings>
           <DesignBlock>
-            <div>
+            <Description>
               <CapsHeadingLarge
-                css={css`
-                  color: ${colors.primary};
-                `}
-                w={800}
+              // css={css`
+              //   color: ${colors.primary};
+              // `}
+              // w={800}
               >
                 We’ll then prioritise your users needs, create wireframes and
                 design prototypes to shape the product
@@ -224,21 +202,20 @@ const OurApproachPage = () => {
                   width: 90%;
                 `}
               >
-                The internet means we are all connected regardless of where we
-                come from and at Yalla we want to make the most of that! We are
-                made up of talented designers, developers, project The internet
-                means we are all connected regardless of where we come from and
-                at Yalla we want to make the most of that! We are made up of
-                talented designers, developers, project The internet means we
-                are all connected regardless of where we come from and at Yalla
+                Before we write even a line of code we want to make sure you
+                have confidence in the digital solution you are building.
+                Through wireframes, interactive prototypes and user testing we
+                will be able to test key ideas and assumptions to ensure what
+                you are building truly meets the problems you are looking to
+                solve.
               </MP>
-            </div>
-            <div>
+            </Description>
+            <WhatWeOffer>
               <CapsHeadingLarge
-                css={css`
-                  color: ${colors.primary};
-                `}
-                w={800}
+              // css={css`
+              //   color: ${colors.primary};
+              // `}
+              // w={800}
               >
                 What we offer
               </CapsHeadingLarge>
@@ -249,19 +226,20 @@ const OurApproachPage = () => {
                 <li>Prototypes</li>
                 <li>UI Kits/Design Systems</li>
               </List>
-            </div>
+            </WhatWeOffer>
           </DesignBlock>
         </DesignContent>
         <DesignImages>
           <Img
             fileName="design2"
             altText="design"
-            style={{ height: 625, width: 625 }}
+            style={{ marginBottom: '32px' }}
           />
           <Img
             fileName="design1"
             altText="design2"
-            style={{ height: 625, width: 485 }}
+            style={{ marginBottom: '32px' }}
+            // style={{ height: 625, width: 485 }}
           />
         </DesignImages>
       </DesignSection>
@@ -270,60 +248,42 @@ const OurApproachPage = () => {
         <StartagyContnet>
           <Headings>
             <HeadingWithAccent>
-              <H1
-                css={css`
-                  color: ${colors.primary};
-                  transform: rotate(-90deg);
-                `}
-              >
-                Digital development
-              </H1>
-              <AccentExtraLarge
+              <H2>Digital development</H2>
+              {/* <AccentExtraLarge
                 css={css`
                   transform: translate(-20rem, -50%);
                 `}
-              />
+              /> */}
             </HeadingWithAccent>
           </Headings>
           <StrategyBlock>
-            <div>
+            <Description>
               <CapsHeadingLarge
-                css={css`
-                  color: ${colors.primary};
-                `}
-                w={800}
+              // css={css`
+              //   color: ${colors.primary};
+              // `}
+              // w={800}
               >
                 Next, we’ll build and user test the features to make up your
                 product
               </CapsHeadingLarge>
               <MP
-                css={css`
-                  width: 90%;
-                `}
+              // css={css`
+              //   width: 90%;
+              // `}
               >
-                The internet means we are all connected regardless of where we
-                come from and at Yalla we want to make the most of that! We are
-                made up of talented designers, developers, project managers and
-                strategists, all focused on building digital products with an
-                emphasis on driving social good through everything we do.
+                Through short, very targeted periods of development work, we
+                will look to build your product in the most efficient way
+                possible, constantly bringing it back to test with your users to
+                ensure the product is always built in a truly use-centred way.
               </MP>
-              <MP
-                css={css`
-                  width: 90%;
-                  margin-top: 2rem;
-                `}
-              >
-                The internet means we are all connected regardless of where we
-                come from and at Yalla we want to make the most of that! We are
-                made up of talented
-              </MP>
-            </div>
-            <div>
+            </Description>
+            <WhatWeOffer>
               <CapsHeadingLarge
-                css={css`
-                  color: ${colors.primary};
-                `}
-                w={800}
+              // css={css`
+              //   color: ${colors.primary};
+              // `}
+              // w={800}
               >
                 What we offer
               </CapsHeadingLarge>
@@ -336,15 +296,11 @@ const OurApproachPage = () => {
                 <li>Android Applications</li>
                 <li>Prototypes</li>
               </List>
-            </div>
+            </WhatWeOffer>
           </StrategyBlock>
         </StartagyContnet>
         <DigitalImages>
-          <Img
-            fileName="digital"
-            altText="digital"
-            style={{ height: 'auto', width: 750 }}
-          />
+          <Img fileName="digital" altText="digital" />
         </DigitalImages>
       </DigitalSection>
     </Layout>

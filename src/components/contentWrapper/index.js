@@ -45,7 +45,8 @@ export const TextContentWrapper = styled(Wrapper)`
   h2,
   h3,
   h4,
-  p {
+  p,
+  li {
     padding-left: 2.8rem;
   }
 `
