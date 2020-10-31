@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import styled from 'styled-components'
 import Img from 'gatsby-image'
 
 /*
@@ -13,6 +14,10 @@ import Img from 'gatsby-image'
  * - `gatsby-image`: https://gatsby.dev/gatsby-image
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
+
+export const StyledImg = styled(Img)`
+  background: red;
+`
 
 const Image = ({ fileName, altText, style }) => {
   const data = useStaticQuery(graphql`
