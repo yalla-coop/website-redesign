@@ -4,6 +4,7 @@ module.exports = {
     description:
       ' Web design and development agency. We help non-profits and impact-driven businesses drive positive social change in the tech sphere.',
     author: '@yalla',
+    url: 'https://yalla-site.netlify.app',
     image: '/images/yalla-logo.png',
   },
   plugins: [
