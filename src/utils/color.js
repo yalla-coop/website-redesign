@@ -9,6 +9,7 @@ export default {
   gray8: '#FCFCFC',
   white: '#FFFFFF',
   primary: '#020F1D',
+  secondary: '#B71540',
   accent: '#C73E46',
   accentLight: '#E66767',
   black: '#000000',
