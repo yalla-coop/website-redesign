@@ -6,15 +6,15 @@ const { primary, gray2 } = colors
 
 export const H1 = styled.h1`
   font-size: ${size.xl};
-  letter-spacing: ${letterSpacing.small};
+  letter-spacing: ${letterSpacing.medium};
   white-space: nowrap;
+  font-weight: 800;
   color: ${({ color }) => color};
-  margin: 0;
 `
 
 export const H2 = styled.h2`
   font-size: ${size.lg};
-  letter-spacing: ${letterSpacing.small};
+  letter-spacing: ${letterSpacing.medium};
   font-weight: 700;
   color: ${({ color }) => color};
 `
@@ -27,22 +27,22 @@ export const H3 = styled.h3`
 `
 
 export const H4 = styled.h4`
-  font-size: ${size.sm};
+  font-size: ${size.xs};
   letter-spacing: ${letterSpacing.small};
   font-weight: 700;
   color: ${({ color }) => color};
 `
 
-export const CapsHeadingLarge = styled.h3`
+export const CapsHeadingLarge = styled.h1`
   font-size: ${size.s};
-  letter-spacing: ${letterSpacing.medium};
-  font-weight: bold;
+  letter-spacing: ${letterSpacing.large};
+  font-weight: ${({ w = 700 }) => w};
   text-transform: uppercase;
   color: ${({ color }) => color};
 `
 
 export const CapsHeadingMedium = styled.h2`
-  font-size: ${psize.r};
+  font-size: ${size.xs};
   letter-spacing: ${letterSpacing.medium};
   text-transform: uppercase;
   color: ${({ color = gray2 }) => color};
@@ -50,7 +50,7 @@ export const CapsHeadingMedium = styled.h2`
 
 export const CapsHeadingSmall = styled.h3`
   font-size: ${size.xxs};
-  letter-spacing: ${({ l = letterSpacing.small }) => l};
+  letter-spacing: ${({ l = letterSpacing.medium }) => l};
   font-weight: 500;
   text-transform: uppercase;
   color: ${({ color }) => color};
@@ -63,6 +63,7 @@ export const XLP = styled.p`
   font-size: ${psize.xl};
   line-height: ${lineHeight.xl};
   font-weight: 400;
+  letter-spacing: 0.03em;
   color: ${({ color }) => color};
 `
 
@@ -70,6 +71,7 @@ export const LP = styled.p`
   font-size: ${psize.l};
   line-height: ${lineHeight.l};
   font-weight: 400;
+  letter-spacing: 0.03em;
   color: ${({ color }) => color};
 `
 
@@ -77,6 +79,7 @@ export const MP = styled.p`
   font-size: ${psize.m};
   line-height: ${lineHeight.m};
   font-weight: 400;
+  letter-spacing: 0.03em;
   color: ${({ color }) => color};
 `
 
@@ -84,12 +87,7 @@ export const BoldMP = styled.p`
   font-size: ${psize.m};
   line-height: ${lineHeight.l};
   font-weight: 700;
-  color: ${({ color }) => color};
-`
-
-export const P = styled.p`
-  font-size: ${psize.r};
-  line-height: ${lineHeight.r};
+  letter-spacing: 0.03em;
   color: ${({ color }) => color};
 `
 
@@ -97,6 +95,7 @@ export const SP = styled.p`
   font-size: ${psize.s};
   line-height: ${lineHeight.s};
   font-weight: 300;
+  letter-spacing: 0.03em;
   color: ${({ color }) => color};
 `
 
@@ -104,6 +103,7 @@ export const BoldXSP = styled.p`
   font-size: ${psize.xs};
   line-height: 1.8rem;
   font-weight: 700;
+  letter-spacing: 0.03em;
   color: ${({ color }) => color};
 `
 
@@ -111,6 +111,7 @@ export const XSP = styled.p`
   font-size: ${psize.xs};
   line-height: 1.8rem;
   font-weight: 300;
+  letter-spacing: 0.03em;
   color: ${({ color }) => color};
 `
 

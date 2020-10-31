@@ -25,8 +25,7 @@ export const elementsSpacing = {
 export const lineHeight = {
   xs: '1.8rem',
   s: '2.1rem',
-  r: '2.4rem',
   m: '2.7rem',
   l: '3rem',
-  xl: '3.2rem',
+  xl: '3.3rem',
 }
