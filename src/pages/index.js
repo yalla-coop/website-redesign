@@ -61,7 +61,6 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Dev />
       <header>
         <ImageBackgroundWithGradient tag="section" fluid={image.sharp.fluid}>
           <NavBar menuColor="white" logoColor="white" />

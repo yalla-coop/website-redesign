@@ -1,7 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import { css } from 'styled-components'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { H2, MP, CapsHeadingLarge } from '../components/elements'
@@ -10,15 +9,18 @@ import {
   List,
   Introduction,
   ImageBackground,
-  StrategySection,
+  DiscoverySection,
   Headings,
-  StartagyContnet,
-  StartagyImages,
+  CapsHeadingLargeModifier,
+  DiscoveryContent,
+  DiscoveryImages,
   DesignSection,
   DesignContent,
   HeadingWithAccent,
   HeadingWithAccentDesign,
-  StrategyBlock,
+  AccentExtraLargeLeft,
+  AccentExtraLargeRight,
+  DiscoveryBlock,
   WhatWeOffer,
   DesignBlock,
   DesignImages,
@@ -29,7 +31,6 @@ import {
 
 import {
   Dev,
-  ImageBackground,
   Wrapper,
   CapsHeadingSmallModifier,
   H1Modifier,
@@ -37,15 +38,10 @@ import {
   ArrowImage,
 } from '../styles/landing'
 
-// import {
-//   Medium as AccentMedium,
-//   ExtraLarge as AccentExtraLarge,
-// } from '../components/elements/Accent'
-
 import NavBar from '../components/layout/Header/Nav'
 import ArrowDown from '../../static/svg/arrow-down.svg'
 
-import Img from '../components/image'
+// import Img from '../components/image'
 
 const OurApproachPage = () => {
   const { image } = useStaticQuery(graphql`
@@ -77,13 +73,9 @@ const OurApproachPage = () => {
           </Wrapper>
         </ImageBackground>
       </header>
+
       {/* Introduction */}
       <Introduction>
-        {/* <AccentMedium
-          css={css`
-            transform: translate(-3rem, -2.5rem);
-          `}
-        /> */}
         <H2>A user-centred approach is at the heart of everything we do.</H2>
         <MP>
           Whether it&apos;s building a website, an app, carrying out user
@@ -106,30 +98,22 @@ const OurApproachPage = () => {
           you&lsquo;re creating something that will be used.
         </MP>
       </Introduction>
-      {/* strategy section */}
-      <StrategySection>
-        <StartagyContnet>
+
+      {/* Discovery section */}
+      <DiscoverySection>
+        <DiscoveryContent>
           <Headings>
             <HeadingWithAccent>
               <H2>Discovery</H2>
-              {/* <AccentExtraLarge
-                css={css`
-                  transform: translate(-20rem, -50%);
-                `}
-              /> */}
+              <AccentExtraLargeLeft />
             </HeadingWithAccent>
           </Headings>
-          <StrategyBlock>
+          <DiscoveryBlock>
             <Description>
-              <CapsHeadingLarge
-              // css={css`
-              //   color: ${colors.primary};
-              // `}
-              // w={800}
-              >
+              <CapsHeadingLargeModifier>
                 We’ll start with understanding your problems, your users and
                 ideate on solutions
-              </CapsHeadingLarge>
+              </CapsHeadingLargeModifier>
               <MP>
                 With our UX and UI designers we are able to work with you to
                 break down the problems you are looking to solve, really
@@ -142,14 +126,7 @@ const OurApproachPage = () => {
             </Description>
 
             <WhatWeOffer>
-              <CapsHeadingLarge
-              // css={css`
-              //   color: ${colors.primary};
-              // `}
-              // w={800}
-              >
-                What we offer
-              </CapsHeadingLarge>
+              <CapsHeadingLargeModifier>What we offer</CapsHeadingLargeModifier>
               <List>
                 <li>Strategy</li>
                 <li>Discovery & Research</li>
@@ -159,10 +136,10 @@ const OurApproachPage = () => {
                 <li>Content Strategy</li>
               </List>
             </WhatWeOffer>
-          </StrategyBlock>
-        </StartagyContnet>
-        <StartagyImages>
-          <Img
+          </DiscoveryBlock>
+        </DiscoveryContent>
+        <DiscoveryImages>
+          {/* <Img
             fileName="strategy"
             altText="strategy"
             style={{ marginBottom: '24px' }}
@@ -171,38 +148,26 @@ const OurApproachPage = () => {
             fileName="discovery"
             altText="discovery"
             style={{ marginBottom: '32px' }}
-          />
-        </StartagyImages>
-      </StrategySection>
+          /> */}
+        </DiscoveryImages>
+      </DiscoverySection>
+
       {/* Design section */}
       <DesignSection>
         <DesignContent>
           <Headings>
             <HeadingWithAccentDesign>
               <H2>Design</H2>
-              {/* <AccentExtraLarge
-                css={css`
-                  transform: translate(-15rem, -30%);
-                `}
-              /> */}
+              <AccentExtraLargeRight />
             </HeadingWithAccentDesign>
           </Headings>
           <DesignBlock>
             <Description>
-              <CapsHeadingLarge
-              // css={css`
-              //   color: ${colors.primary};
-              // `}
-              // w={800}
-              >
+              <CapsHeadingLargeModifier>
                 We’ll then prioritise your users needs, create wireframes and
                 design prototypes to shape the product
-              </CapsHeadingLarge>
-              <MP
-                css={css`
-                  width: 90%;
-                `}
-              >
+              </CapsHeadingLargeModifier>
+              <MP>
                 Before we write even a line of code we want to make sure you
                 have confidence in the digital solution you are building.
                 Through wireframes, interactive prototypes and user testing we
@@ -212,14 +177,7 @@ const OurApproachPage = () => {
               </MP>
             </Description>
             <WhatWeOffer>
-              <CapsHeadingLarge
-              // css={css`
-              //   color: ${colors.primary};
-              // `}
-              // w={800}
-              >
-                What we offer
-              </CapsHeadingLarge>
+              <CapsHeadingLargeModifier>What we offer</CapsHeadingLargeModifier>
               <List>
                 <li>UI/UX Design</li>
                 <li>Stylescapes</li>
@@ -231,7 +189,7 @@ const OurApproachPage = () => {
           </DesignBlock>
         </DesignContent>
         <DesignImages>
-          <Img
+          {/* <Img
             fileName="design2"
             altText="design"
             style={{ marginBottom: '32px' }}
@@ -241,38 +199,26 @@ const OurApproachPage = () => {
             altText="design2"
             style={{ marginBottom: '32px' }}
             // style={{ height: 625, width: 485 }}
-          />
+          /> */}
         </DesignImages>
       </DesignSection>
+
       {/* Digital developments section */}
       <DigitalSection>
-        <StartagyContnet>
+        <DiscoveryContent>
           <Headings>
             <HeadingWithAccent>
               <H2>Digital development</H2>
-              {/* <AccentExtraLarge
-                css={css`
-                  transform: translate(-20rem, -50%);
-                `}
-              /> */}
+              <AccentExtraLargeLeft />
             </HeadingWithAccent>
           </Headings>
-          <StrategyBlock>
+          <DiscoveryBlock>
             <Description>
-              <CapsHeadingLarge
-              // css={css`
-              //   color: ${colors.primary};
-              // `}
-              // w={800}
-              >
+              <CapsHeadingLargeModifier>
                 Next, we’ll build and user test the features to make up your
                 product
-              </CapsHeadingLarge>
-              <MP
-              // css={css`
-              //   width: 90%;
-              // `}
-              >
+              </CapsHeadingLargeModifier>
+              <MP>
                 Through short, very targeted periods of development work, we
                 will look to build your product in the most efficient way
                 possible, constantly bringing it back to test with your users to
@@ -280,14 +226,7 @@ const OurApproachPage = () => {
               </MP>
             </Description>
             <WhatWeOffer>
-              <CapsHeadingLarge
-              // css={css`
-              //   color: ${colors.primary};
-              // `}
-              // w={800}
-              >
-                What we offer
-              </CapsHeadingLarge>
+              <CapsHeadingLarge>What we offer</CapsHeadingLarge>
               <List>
                 <li>Full stack development</li>
                 <li>Information Architecture</li>
@@ -298,10 +237,10 @@ const OurApproachPage = () => {
                 <li>Prototypes</li>
               </List>
             </WhatWeOffer>
-          </StrategyBlock>
-        </StartagyContnet>
+          </DiscoveryBlock>
+        </DiscoveryContent>
         <DigitalImages>
-          <Img fileName="digital" altText="digital" />
+          {/* <Img fileName="digital" altText="digital" /> */}
         </DigitalImages>
       </DigitalSection>
     </Layout>

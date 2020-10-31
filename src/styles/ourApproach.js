@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import BackgroundImage from 'gatsby-background-image'
-import { H2, CapsHeadingSmall } from '../components/elements'
+import { H2, CapsHeadingSmall, CapsHeadingLarge } from '../components/elements'
 import {
   psize,
   size,
@@ -12,6 +12,8 @@ import {
 
 import { TextContentWrapper } from '../components/contentWrapper'
 import { OurStorySection } from './landing'
+import { ExtraLarge } from '../components/elements/Accent'
+// import { Img } from '../components/image'
 
 export const List = styled.ul`
   font-size: ${psize.m};
@@ -58,6 +60,30 @@ export const ImageBackground = styled(BackgroundImage)`
   }
 `
 
+// export const Image = styled(Img)``
+
+export const CapsHeadingLargeModifier = styled(CapsHeadingLarge)`
+  color: ${colors.primary};
+
+  ${breakpoints.laptopLarge} {
+    width: 60%;
+    font-size: 30px;
+    line-height: 40px;
+  }
+`
+
+export const AccentExtraLargeLeft = styled(ExtraLarge)`
+  ${breakpoints.mobileSmall} {
+    display: none;
+  }
+`
+
+export const AccentExtraLargeRight = styled(AccentExtraLargeLeft)`
+  ${breakpoints.laptopLarge} {
+    transform: translate(-15rem, -30%);
+  }
+`
+
 // introduction style //
 
 export const Introduction = styled(OurStorySection)`
@@ -92,9 +118,9 @@ export const Introduction = styled(OurStorySection)`
   }
 `
 
-// strategy section style //
+// discovery section style //
 
-export const StrategySection = styled.section`
+export const DiscoverySection = styled.section`
   ${breakpoints.mobileSmall} {
     background: rgba(247, 247, 247, 0.7);
   }
@@ -118,12 +144,13 @@ export const HeadingWithAccent = styled.div`
     margin-left: -120px;
 
     h2 {
+      font-size: 60px;
       transform: rotate(-90deg);
     }
   }
 `
 
-export const StartagyContnet = styled.div`
+export const DiscoveryContent = styled.div`
   ${breakpoints.laptopLarge} {
     background: rgba(247, 247, 247, 0.7);
     display: flex;
@@ -131,7 +158,8 @@ export const StartagyContnet = styled.div`
     height: 550px;
   }
 `
-export const StrategyBlock = styled(TextContentWrapper)`
+
+export const DiscoveryBlock = styled(TextContentWrapper)`
   ${breakpoints.mobileSmall} {
     h3 {
       margin-bottom: ${spacings[3]};
@@ -139,14 +167,18 @@ export const StrategyBlock = styled(TextContentWrapper)`
   }
 
   ${breakpoints.laptopLarge} {
+    padding: 0;
     flex: 2;
     margin: 8rem 0 11rem 0;
+    width: 90%;
+
     div:not(:last-child) {
       margin-bottom: 4.8rem;
     }
   }
 `
-export const StartagyImages = styled.div`
+
+export const DiscoveryImages = styled.div`
   ${breakpoints.mobileSmall} {
     img {
       width: 100vw;
@@ -156,12 +188,13 @@ export const StartagyImages = styled.div`
   }
 
   ${breakpoints.laptopLarge} {
-    margin-top: 22rem;
     display: flex;
     justify-content: flex-end;
+
     div {
       margin-left: 30px;
     }
+
     img {
       height: 440px;
       width: 580px;
@@ -197,7 +230,9 @@ export const HeadingWithAccentDesign = styled.div`
     display: flex;
     align-items: center;
     transform: translateY(-5rem);
+
     h2 {
+      font-size: 60px;
       margin-top: -12rem;
       margin-right: 10rem;
       transform: rotate(-90deg);
@@ -213,10 +248,16 @@ export const WhatWeOffer = styled.div`
 
 export const Headings = styled(TextContentWrapper)`
   padding-bottom: 0;
+
+  ${breakpoints.laptopLarge} {
+    padding-left: 200px;
+    padding-right: 0;
+  }
 `
 
-export const DesignBlock = styled(StrategyBlock)`
+export const DesignBlock = styled(DiscoveryBlock)`
   ${breakpoints.laptopLarge} {
+    padding: 0;
     flex: 2;
     margin: 8rem 0 11rem 0;
     padding: 0 10rem;
@@ -277,6 +318,15 @@ export const Description = styled.div`
   ${breakpoints.mobileSmall} {
     p {
       margin-bottom: ${spacings[6]};
+    }
+  }
+
+  ${breakpoints.laptopLarge} {
+    p {
+      font-size: 24px;
+      line-height: 36px;
+      width: 60%;
+      margin-bottom: 0;
     }
   }
 `
