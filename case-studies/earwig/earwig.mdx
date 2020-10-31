@@ -1,5 +1,5 @@
 ---
-title: Earwig Case Study
+title: Earwig Case Study--
 slug: earwig
 ---
 
@@ -14,9 +14,7 @@ import Image from '../../src/components/image'
 import Button from '../../src/components/elements/Button'
 import Quote  from '../../src/components/common/Quote'
 import MetaData  from '../../src/components/common/MetaData'
-import { HeadingsWrapper, SecondSection, PointsSection } from "./styles";
-
-<Header />
+import { HeadingsWrapper, SecondSection, MetaDataWrapper, PointsSection } from "./styles";
 
 <HeadingsWrapper>
 
@@ -28,7 +26,7 @@ import { HeadingsWrapper, SecondSection, PointsSection } from "./styles";
 
 <SecondSection>
 
-<div style={{ width: '80%' }}>
+<div>
 <Subtitle title="WHERE IT ALL STARTED" size="small" />
 
 <br />
@@ -42,7 +40,7 @@ Here's a video explaining that problem they're looking to solve:
 
 <iframe
   width="100%"
-  height="420"
+  height="186"
   src="https://www.youtube.com/embed/x0Kv_QRWR-I"
   frameborder="0"
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -52,13 +50,15 @@ Here's a video explaining that problem they're looking to solve:
      marginBottom: '6rem'
   }}
 ></iframe>
-</div>  
-<div style={{ width: '10%'}}>
+</div>
+
+<MetaDataWrapper>
 <MetaData title="client" text={["earwig"]} />
 <MetaData title="SECTOR" text={["Construction"]} />
 <MetaData title="DELIVERABLES" text={["User Experience", "UI Kits/Design", "Systems Prototypes", "Full stack development", "Information Architecture", "Content Management Systems", "Web Applications"]} />
-</div>
-</SecondSection> 
+</MetaDataWrapper>
+
+</SecondSection>
 
 <div style={{ width: '80%', margin: '0 auto' }}>
 <SubtitleAlternate
@@ -71,8 +71,8 @@ Here's a video explaining that problem they're looking to solve:
   fileName="earwig-figma"
   altText="earwig styles and wire frames in Figma"
   style={{
-     width: '1038px', 
-     height: '672px', 
+     width: '1038px',
+     height: '672px',
      margin: '0 auto',
      transform: 'translateY(-30px)'
      }}
@@ -142,7 +142,7 @@ Following feedback from both users and the client, we have continued to iterate 
   width: '80%'
 }}>
 
-<Quote headline="Despite my demanding a lot from Yalla in terms of quality ​and​ quantity of work, they have given me precisely what I dreamt about building and they’ve done it fast, too." 
+<Quote headline="Despite my demanding a lot from Yalla in terms of quality ​and​ quantity of work, they have given me precisely what I dreamt about building and they’ve done it fast, too."
   person="HARRISON MOORE"
   position="ceo"
 >
@@ -161,5 +161,3 @@ I would highly recommend Yalla if you’ve got a product vision and are looking 
 
 </Quote>
 </div>
-
-<Contact />
