@@ -47,7 +47,7 @@ function SEO({ description, lang, meta, title, image }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${defaultTitle}`}
+      titleTemplate="%s | Yalla"
       meta={[
         {
           name: 'description',
