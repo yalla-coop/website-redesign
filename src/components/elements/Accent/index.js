@@ -17,8 +17,8 @@ export const Small = styled.div`
 `
 export const Medium = styled.div`
   display: inline-block;
-  height: 71px;
-  width: 5px;
+  height: 70px;
+  width: 4px;
   background-color: ${colors.accentLight};
 `
 

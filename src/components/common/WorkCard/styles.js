@@ -1,18 +1,34 @@
 import styled from 'styled-components'
 
-import { colors } from '../../../utils'
+import { colors, breakpoints, spacings, size } from '../../../utils'
 
 export const WorkWrapper = styled.div`
-  padding: 3.5rem;
-  background-color: ${colors.primary};
-  width: 100%;
   color: ${colors.white};
-  opacity: ${props => (props.light ? 1 : 0.5)};
 
-  transition: all 0.3s ease;
+  ${breakpoints.mobileSmall} {
+    h3 {
+      padding-top: ${spacings[3]};
+      padding-bottom: ${spacings[2]};
+      padding-left: 0;
+    }
+
+    h4 {
+      padding-left: 0;
+    }
+
+    margin-bottom: ${spacings[6]};
+  }
+
+  ${breakpoints.tabletVertical} {
+    width: 100%;
+    margin-right: ${spacings[6]};
+  }
+
+  ${breakpoints.laptopLarge} {
+    h4 {
+      font-size: ${size.md};
+    }
+  }
 `
 
-export const TextWrapper = styled.div`
-  width: 90%;
-  margin: 2.5rem 4rem 0 1.6rem;
-`
+export const TextWrapper = styled.div``
