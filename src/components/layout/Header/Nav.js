@@ -9,6 +9,10 @@ import { breakpoints, spacings } from '../../../utils'
 
 const MenuLink = styled(Link)`
   cursor: pointer;
+  ${breakpoints.laptopLarge} {
+    padding-top: ${spacings[3]};
+    padding-right: ${spacings[3]};
+  }
 `
 
 const Nav = styled(ContentWrapper)`
@@ -69,6 +73,15 @@ const Span = styled.span`
 
   &:before {
     top: -0.8rem;
+  }
+
+  ${breakpoints.laptopLarge} {
+    &,
+    &:after,
+    &:before {
+      width: 4rem;
+      height: 1px;
+    }
   }
 `
 const LogoContainer = styled(MenuLink)``
