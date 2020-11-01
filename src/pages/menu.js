@@ -45,7 +45,7 @@ export const Link = styled(GatsbyLink)`
   }
 
   ${breakpoints.laptopLarge} {
-    font-size: ${size.xl};
+    font-size: ${size.lg};
     padding-bottom: ${spacings[6]};
   }
 `
@@ -79,6 +79,7 @@ const MenuPage = () => (
       <Link to="/">Home</Link>
       <Link to="/our-approach">Our Approach + Services</Link>
       <Link to="/earwig">Case Study | Earwig Construction</Link>
+      <Link to="/presspad">Case Study | PressPad</Link>
     </MenuWrapper>
   </Layout>
 )
