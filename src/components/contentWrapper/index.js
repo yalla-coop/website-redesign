@@ -28,15 +28,15 @@ export const Wrapper = styled.section`
   }
 
   ${breakpoints.laptopLarge} {
-    padding-left: 45rem;
-    padding-right: 45rem;
+    padding-left: 32rem;
+    padding-right: 32rem;
     padding-top: ${spacings[9]};
     padding-bottom: ${spacings[9]};
   }
 
   ${breakpoints.desktop} {
-    padding-left: 110rem;
-    padding-right: 110rem;
+    padding-left: 65rem;
+    padding-right: 65rem;
   }
 `
 
