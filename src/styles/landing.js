@@ -231,10 +231,6 @@ export const OurApproachWrapper = styled.div`
     flex-direction: row-reverse;
     justify-content: space-between;
   }
-
-  ${breakpoints.laptopLarge} {
-    padding-right: 30rem;
-  }
 `
 
 export const OurApproachHeadings = styled.div`
