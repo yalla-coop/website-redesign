@@ -2,8 +2,10 @@ module.exports = {
   siteMetadata: {
     title: 'Yalla',
     description:
-      'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
+      ' Web design and development agency. We help non-profits and impact-driven businesses drive positive social change in the tech sphere.',
     author: '@yalla',
+    url: 'https://yalla-site.netlify.app',
+    image: '/images/yalla-logo.png',
   },
   plugins: [
     {

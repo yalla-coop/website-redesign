@@ -7,7 +7,7 @@ import LogoBlack from '../../../../static/svg/yall-logo-black.svg'
 import { Wrapper as ContentWrapper } from '../../contentWrapper'
 import { breakpoints, spacings } from '../../../utils'
 
-const MenuContainer = styled(Link)`
+const MenuLink = styled(Link)`
   cursor: pointer;
 `
 
@@ -71,7 +71,7 @@ const Span = styled.span`
     top: -0.8rem;
   }
 `
-const LogoContainer = styled(MenuContainer)``
+const LogoContainer = styled(MenuLink)``
 
 const Navbar = ({ menuColor, logoColor }) => (
   <NavContainer>
@@ -85,9 +85,9 @@ const Navbar = ({ menuColor, logoColor }) => (
           )}
         </LogoContainer>
       </Link>
-      <MenuContainer to="/menu">
+      <MenuLink to="/menu">
         <Span menuColor={menuColor}>&nbsp;</Span>
-      </MenuContainer>
+      </MenuLink>
     </Nav>
   </NavContainer>
 )
