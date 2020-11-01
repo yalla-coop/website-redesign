@@ -183,12 +183,14 @@ const IndexPage = () => {
             bigHeading="Building a powerful reviews platform setting new standards for workers in the construction industry"
             fileName="work-earwig"
             altText="work-earwig"
+            link="case-studies/earwig"
           />
           <WorkCard
             smallHeading="PRESSPAD - MEDIA & ACCOMMODATION"
             bigHeading="Designing and delivering a marketplace to bring diversity in media through mentorship & hosting"
             fileName="work-presspad"
             altText="work-presspad"
+            link="case-studies/presspad"
           />
           {/* <WorkCard
             smallHeading="CONNECT 5 - PUBLIC HEALTH"

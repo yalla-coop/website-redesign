@@ -7,7 +7,7 @@ import { CapsHeadingMedium, H2 } from '../elements/typography'
 
 const SubtitleContainer = styled.div`
   box-sizing: border-box;
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
   position: relative;
   background: transparent;
   /* padding-left: 2.8rem; */
@@ -21,14 +21,14 @@ const SubtitleContainer = styled.div`
 const Subtitle = ({ title, size }) =>
   size === 'large' ? (
     <SubtitleContainer>
-      <H2> {title}</H2>
+      <H2>{title}</H2>
       {/* <AccentContainer>
         <Small />
       </AccentContainer> */}
     </SubtitleContainer>
   ) : (
     <SubtitleContainer>
-      <CapsHeadingMedium> {title}</CapsHeadingMedium>
+      <CapsHeadingMedium>{title}</CapsHeadingMedium>
       {/* <AccentContainer>
         <ExtraSmall />
       </AccentContainer> */}

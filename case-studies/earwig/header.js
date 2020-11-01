@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import Image from '../../src/components/image'
-import Navbar from '../../src/components/layout/Header/Nav'
 
 const BackgroundImage = styled(Image)`
   background-image: url('../../src/images/earwig-header.png') no-repeat;
@@ -14,7 +13,6 @@ const BackgroundImage = styled(Image)`
 const Header = () => (
   <div>
     <BackgroundImage fileName="earwig-header" altText="earwig wire frames" />
-    <Navbar logoColor="black" menuColor="#000" />
   </div>
 )
 
