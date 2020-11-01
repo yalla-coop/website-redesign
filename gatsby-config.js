@@ -15,13 +15,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'case-studies',
-        path: `${__dirname}/case-studies`,
-      },
-    },
     `gatsby-plugin-styled-components`,
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',

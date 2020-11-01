@@ -10,13 +10,6 @@ const AlternateContainer = styled.div`
   ${breakpoints.mobileSmall} {
     padding: 0;
   }
-
-  ${breakpoints.laptopLarge} {
-    margin-top: 3rem;
-    position: relative;
-    padding: 5rem 9rem;
-    background: rgba(247, 247, 247, 0.7);
-  }
 `
 
 const PragraphContainer = styled.div`
@@ -27,6 +20,7 @@ const PragraphContainer = styled.div`
 //   top: -2.1rem;
 //   left: 6rem;
 // `
+
 const SubtitleAlternate = ({ title, content }) => (
   <AlternateContainer>
     <CapsHeadingMedium> {title}</CapsHeadingMedium>
