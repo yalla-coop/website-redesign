@@ -96,7 +96,7 @@ export const H1Modifier = styled.h1`
   }
 
   ${breakpoints.laptopLarge} {
-    font-size: ${size.xl};
+    font-size: ${size.lg};
     line-height: 6.4rem;
   }
 `
@@ -110,7 +110,7 @@ export const CapsHeadingSmallModifier = styled(CapsHeadingSmall)`
   }
 
   ${breakpoints.laptopLarge} {
-    font-size: ${size.xs};
+    font-size: ${psize.r};
     padding-bottom: ${spacings[5]};
   }
 `
