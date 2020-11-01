@@ -185,7 +185,7 @@ export const OurStorySection = styled(TextContentWrapper)`
     padding-bottom: 16rem;
 
     h2 {
-      font-size: 4.8rem;
+      font-size: 4rem;
       line-height: 4.8rem;
       margin-bottom: ${spacings[6]};
     }
@@ -307,8 +307,8 @@ export const Service = styled.div`
     }
 
     p {
-      font-size: ${psize.xl};
-      line-height: 3.2rem;
+      font-size: ${psize.l};
+      line-height: 3rem;
     }
   }
 `
@@ -419,14 +419,14 @@ export const TestimonialsSection = styled(TextContentWrapper)`
     padding-bottom: ${spacings[8]};
 
     h4 {
-      font-size: 4.8rem;
-      margin-top: ${spacings[3]};
+      font-size: ${size.md};
+      margin-top: ${spacings[1]};
       margin-bottom: ${spacings[5]};
     }
 
     p {
-      font-size: ${psize.xl};
-      line-height: 3.6rem;
+      font-size: ${psize.l};
+      line-height: 3rem;
     }
   }
 `
@@ -441,8 +441,11 @@ export const QuoteIcon = styled.span`
 export const CapsHeadingLargeModifier = styled(CapsHeadingLarge)`
   margin-top: ${spacings[3]};
   margin-bottom: ${spacings[2]};
-  color: ${colors.black};
   font-size: ${size.xs};
+
+  ${breakpoints.laptopLarge} {
+    font-size: ${size.s};
+  }
 `
 
 export const CapsHeadingMediumModifier = styled(CapsHeadingMedium)`

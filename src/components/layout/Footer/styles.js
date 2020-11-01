@@ -57,6 +57,6 @@ export const EmailLink = styled.a`
 
   ${breakpoints.laptopLarge} {
     margin-top: ${spacings[4]};
-    font-size: ${size.sm};
+    font-size: ${size.s};
   }
 `
