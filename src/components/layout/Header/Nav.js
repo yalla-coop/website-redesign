@@ -10,8 +10,8 @@ import { breakpoints, spacings } from '../../../utils'
 const MenuLink = styled(Link)`
   cursor: pointer;
   ${breakpoints.laptopLarge} {
-    padding-top: ${spacings[3]};
-    padding-right: ${spacings[3]};
+    padding-top: ${spacings[2]};
+    padding-right: ${spacings[2]};
   }
 `
 
@@ -40,7 +40,7 @@ const Img = styled.img`
     height: ${spacings[6]};
   }
   ${breakpoints.laptopLarge} {
-    width: 8rem;
+    width: 6.4rem;
     height: auto;
   }
 `
@@ -84,7 +84,11 @@ const Span = styled.span`
     }
   }
 `
-const LogoContainer = styled(MenuLink)``
+const LogoContainer = styled(MenuLink)`
+  ${breakpoints.laptopLarge} {
+    padding-left: ${spacings[3]};
+  }
+`
 
 const Navbar = ({ menuColor, logoColor }) => (
   <NavContainer>
