@@ -14,8 +14,7 @@ import {
 } from '../components/elements'
 
 import {
-  Dev,
-  ImageBackground,
+  ImageBackgroundWithGradient,
   CapsHeadingSmallModifier,
   CapsHeadingLargeModifier,
   H1Modifier,
@@ -62,9 +61,8 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Dev />
       <header>
-        <ImageBackground tag="section" fluid={image.sharp.fluid}>
+        <ImageBackgroundWithGradient tag="section" fluid={image.sharp.fluid}>
           <NavBar menuColor="white" logoColor="white" />
           <Wrapper>
             <CapsHeadingSmallModifier>
@@ -78,7 +76,7 @@ const IndexPage = () => {
           <ArrowWrapper>
             <ArrowImage src={ArrowDown} alt="arrow down" />
           </ArrowWrapper>
-        </ImageBackground>
+        </ImageBackgroundWithGradient>
       </header>
       <OurStorySection>
         <H2>
@@ -185,12 +183,14 @@ const IndexPage = () => {
             bigHeading="Building a powerful reviews platform setting new standards for workers in the construction industry"
             fileName="work-earwig"
             altText="work-earwig"
+            link="case-studies/earwig"
           />
           <WorkCard
             smallHeading="PRESSPAD - MEDIA & ACCOMMODATION"
             bigHeading="Designing and delivering a marketplace to bring diversity in media through mentorship & hosting"
             fileName="work-presspad"
             altText="work-presspad"
+            link="case-studies/presspad"
           />
           {/* <WorkCard
             smallHeading="CONNECT 5 - PUBLIC HEALTH"

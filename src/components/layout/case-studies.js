@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { MP, H2, H3 } from '../elements'
-import Footer from './Footer'
+// import Footer from './Footer'
 import { GlobalStyle, colors } from '../../utils'
 
 const H2Modifier = styled(H2)`
@@ -29,7 +29,7 @@ export default function PageTemplate({ data: { mdx } }) {
       <MDXProvider components={commonComponents}>
         <MDXRenderer>{mdx.body}</MDXRenderer>
       </MDXProvider>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
