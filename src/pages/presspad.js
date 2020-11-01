@@ -18,11 +18,12 @@ import { ImageBackground } from '../styles/ourApproach'
 import Subtitle from '../components/Subtitle'
 
 import {
-  Context,
   WhereItAllStartedSection,
   WhereWeCameInSection,
   WhatWeDeliveredSection,
 } from '../styles/earwig'
+
+import { Context } from '../styles/presspad'
 
 const EarwigCaseStudy = () => {
   const { image } = useStaticQuery(graphql`
@@ -179,7 +180,7 @@ const EarwigCaseStudy = () => {
         altText="PressPad app on desktop and mobile devices"
       />
 
-      <TestimonialsSection style={{ marginTop: 0 }}>
+      <TestimonialsSection>
         <QuoteIcon>“</QuoteIcon>
         <H4>
           Their team initially really appealed to a social enterprise like
