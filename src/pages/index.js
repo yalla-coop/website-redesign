@@ -1,6 +1,5 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-// import { css } from 'styled-components'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -40,10 +39,6 @@ import NavBar from '../components/layout/Header/Nav'
 import ArrowDown from '../../static/svg/arrow-down.svg'
 
 import { WorkCard } from '../components/common'
-// import {
-//   // Medium as AccentMedium,
-//   ExtraLarge as AccentExtraLarge,
-// } from '../components/elements/Accent'
 
 const IndexPage = () => {
   const { image } = useStaticQuery(graphql`
@@ -112,11 +107,6 @@ const IndexPage = () => {
         <OurApproachHeadings>
           <HeadingWithAccent>
             <H2>Our Approach + Services</H2>
-            {/* <AccentExtraLarge
-              css={css`
-                transform: translate(13rem, 12rem);
-              `}
-            /> */}
           </HeadingWithAccent>
         </OurApproachHeadings>
         <OurApproachWrapper>
@@ -183,14 +173,14 @@ const IndexPage = () => {
             bigHeading="Building a powerful reviews platform setting new standards for workers in the construction industry"
             fileName="work-earwig"
             altText="work-earwig"
-            link="case-studies/earwig"
+            link="earwig"
           />
           <WorkCard
             smallHeading="PRESSPAD - MEDIA & ACCOMMODATION"
             bigHeading="Designing and delivering a marketplace to bring diversity in media through mentorship & hosting"
             fileName="work-presspad"
             altText="work-presspad"
-            link="case-studies/presspad"
+            link="presspad"
           />
           {/* <WorkCard
             smallHeading="CONNECT 5 - PUBLIC HEALTH"
