@@ -6,35 +6,12 @@ import {
   size,
   letterSpacing,
   lineHeight,
+  psize,
 } from '../utils'
 import { Wrapper as ContentWrapper } from '../components/contentWrapper'
 
 export const Deliverables = styled(ContentWrapper)`
   padding-bottom: 0;
-`
-
-export const HeadingsWrapper = styled(ContentWrapper)`
-  ${breakpoints.mobileSmall} {
-    margin: 0;
-    padding-bottom: 0;
-
-    h2 {
-      font-size: 24px;
-      line-height: 32px;
-    }
-
-    h3 {
-      color: ${colors.gray3};
-      padding-bottom: ${spacings[2]};
-    }
-  }
-
-  ${breakpoints.laptopLarge} {
-    h2 {
-      font-size: 40px;
-      line-height: 52px;
-    }
-  }
 `
 
 export const Context = styled(ContentWrapper)`
@@ -47,12 +24,26 @@ export const Context = styled(ContentWrapper)`
       padding-right: ${spacings[2]};
     }
   }
-`
+  ${breakpoints.tabletVertical} {
+    h2 {
+      font-size: ${size.md};
+    }
+  }
 
-export const SecondSection = styled(ContentWrapper)`
-  ${breakpoints.mobileSmall} {
-    display: flex;
+  ${breakpoints.laptopLarge} {
     padding-bottom: 0;
+
+    h2 {
+      font-size: 4.8rem;
+      line-height: 4.8rem;
+      margin-bottom: ${spacings[6]};
+    }
+
+    p {
+      font-size: ${psize.xl};
+      line-height: 3.6rem;
+      padding-bottom: 48px;
+    }
   }
 `
 
@@ -66,10 +57,34 @@ export const WhereItAllStartedSection = styled(ContentWrapper)`
   p:not(:last-child) {
     margin-bottom: ${spacings[3]};
   }
+
+  ${breakpoints.laptopLarge} {
+    padding-top: 0;
+    background: white;
+    padding-bottom: 32px;
+  }
+
+  ${breakpoints.laptopLarge} {
+    h2 {
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
 `
 
 export const WhereWeCameInSection = styled(WhereItAllStartedSection)`
   background: white;
+
+  ${breakpoints.laptopLarge} {
+    padding-top: ${spacings[8]};
+    padding-bottom: ${spacings[8]};
+    background: #f9f9f9;
+  }
 `
 
 export const WhatWeDeliveredSection = styled(WhereItAllStartedSection)`
@@ -79,6 +94,15 @@ export const WhatWeDeliveredSection = styled(WhereItAllStartedSection)`
     font-size: 24px;
     margin-top: ${spacings[3]};
     margin-bottom: ${spacings[3]};
+  }
+
+  ${breakpoints.laptopLarge} {
+    padding-top: ${spacings[8]};
+
+    h3 {
+      font-size: 40px;
+      padding-top: ${spacings[6]};
+    }
   }
 `
 

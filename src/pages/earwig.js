@@ -1,10 +1,11 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import { useMediaQuery } from 'react-responsive'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import NavBar from '../components/layout/Header/Nav'
 import Image from '../components/image'
-import MetaData from '../components/common/MetaData'
+// import MetaData from '../components/common/MetaData'
 
 import { H2, H3, H4, MP } from '../components/elements'
 import {
@@ -22,7 +23,7 @@ import {
 import Subtitle from '../components/Subtitle'
 
 import {
-  Deliverables,
+  // Deliverables,
   Context,
   WhereItAllStartedSection,
   WhereWeCameInSection,
@@ -43,6 +44,8 @@ const EarwigCaseStudy = () => {
       }
     }
   `)
+  const isLaptop = useMediaQuery({ minWidth: 1024 })
+
   return (
     <Layout>
       <SEO title="Earwig Case Study" />
@@ -64,7 +67,7 @@ const EarwigCaseStudy = () => {
         </ImageBackgroundWithGradient>
       </header>
 
-      <Deliverables>
+      {/* <Deliverables>
         <MetaData title="client" text={['earwig']} />
         <MetaData title="SECTOR" text={['Construction']} />
         <MetaData
@@ -79,7 +82,7 @@ const EarwigCaseStudy = () => {
             'Web Applications',
           ]}
         />
-      </Deliverables>
+      </Deliverables> */}
 
       <Context>
         <H2>
@@ -105,17 +108,33 @@ const EarwigCaseStudy = () => {
           Here’s a video explaining that problem they’re looking to solve:
         </MP>
       </WhereItAllStartedSection>
-      <iframe
-        title="earwig introduction"
-        src="https://www.youtube.com/embed/Na1f8movCcw"
-        frameBorder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        style={{
-          height: '300px',
-          width: '100%',
-        }}
-      />
+      {isLaptop ? (
+        <WhereItAllStartedSection style={{ paddingBottom: '64px' }}>
+          <iframe
+            title="earwig introduction"
+            src="https://www.youtube.com/embed/Na1f8movCcw"
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            style={{
+              height: '600px',
+              width: '100%',
+            }}
+          />
+        </WhereItAllStartedSection>
+      ) : (
+        <iframe
+          title="earwig introduction"
+          src="https://www.youtube.com/embed/Na1f8movCcw"
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          style={{
+            height: '300px',
+            width: '100%',
+          }}
+        />
+      )}
 
       <WhereWeCameInSection>
         <Subtitle title="Where We Came In" size="small" />
@@ -128,13 +147,25 @@ const EarwigCaseStudy = () => {
           through to full implementation.
         </MP>
       </WhereWeCameInSection>
-      <Image
-        fileName="earwig-figma"
-        altText="earwig styles and wire frames in Figma"
-        style={{
-          width: '100%',
-        }}
-      />
+      {isLaptop ? (
+        <WhereWeCameInSection style={{ paddingTop: 0 }}>
+          <Image
+            fileName="earwig-figma"
+            altText="earwig styles and wire frames in Figma"
+            style={{
+              width: '100%',
+            }}
+          />
+        </WhereWeCameInSection>
+      ) : (
+        <Image
+          fileName="earwig-figma"
+          altText="earwig styles and wire frames in Figma"
+          style={{
+            width: '100%',
+          }}
+        />
+      )}
 
       <WhatWeDeliveredSection>
         <Subtitle title="What We Delivered" size="small" />
