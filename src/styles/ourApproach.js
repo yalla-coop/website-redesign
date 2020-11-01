@@ -86,9 +86,7 @@ export const Introduction = styled(OurStorySection)`
     span {
       color: ${colors.primary};
       font-weight: 600;
-      font-size: ${psize.l};
-      margin-top: ${spacings[3]};
-      margin-bottom: ${spacings[3]};
+      font-size: ${psize.m};
     }
   }
 
@@ -119,11 +117,13 @@ export const HeadingWithAccent = styled.div`
 export const Section = styled(TextContentWrapper)`
   ${breakpoints.mobileSmall} {
     h2 {
+      font-size: ${size.md};
       margin-top: ${spacings[3]};
       margin-bottom: ${spacings[5]};
     }
 
     h3 {
+      font-size: ${size.xs};
       margin-bottom: ${spacings[3]};
     }
   }
@@ -132,6 +132,10 @@ export const Section = styled(TextContentWrapper)`
     h2 {
       font-size: ${size.lg};
       margin-bottom: ${spacings[6]};
+    }
+
+    h3 {
+      font-size: ${size.s};
     }
   }
 `

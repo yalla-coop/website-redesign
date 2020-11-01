@@ -75,8 +75,8 @@ const OurApproachPage = () => {
           they need. After all, if we don’t help you build something that your
           users truly want, then we’re not helping you build something you need.
         </MP>
+        <MP>So, how do we get there? We go through three phases:</MP>
         <MP>
-          So, how do we get there? We go through three phases:{' '}
           <span>Discovery, Design and Develop.</span>
         </MP>
         <MP>
