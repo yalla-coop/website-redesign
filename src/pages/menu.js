@@ -78,6 +78,7 @@ const MenuPage = () => (
       <SEO title="Menu" />
       <Link to="/">Home</Link>
       <Link to="/our-approach">Our Approach + Services</Link>
+      <Link to="/earwig">Case Study | Earwig Construction</Link>
     </MenuWrapper>
   </Layout>
 )
