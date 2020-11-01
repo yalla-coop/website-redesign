@@ -36,6 +36,7 @@ export const H4 = styled.h4`
 export const CapsHeadingLarge = styled.h3`
   font-size: ${size.s};
   letter-spacing: ${letterSpacing.medium};
+  line-height: ${lineHeight.l};
   font-weight: bold;
   text-transform: uppercase;
   color: ${({ color }) => color};

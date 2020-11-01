@@ -8,6 +8,7 @@ import { H2, MP, CapsHeadingLarge } from '../components/elements'
 
 import {
   Wrapper,
+  HeadingWrapper,
   List,
   Li,
   Introduction,
@@ -20,7 +21,6 @@ import {
 } from '../styles/ourApproach'
 
 import {
-  Wrapper as HeaderWrapper,
   CapsHeadingSmallModifier,
   H1Modifier,
   ArrowWrapper,
@@ -53,7 +53,7 @@ const OurApproachPage = () => {
       <header>
         <ImageBackground tag="section" fluid={image.sharp.fluid}>
           <NavBar menuColor="white" logoColor="white" />
-          <HeaderWrapper>
+          <HeadingWrapper>
             <CapsHeadingSmallModifier>
               Web design and development agency
             </CapsHeadingSmallModifier>
@@ -61,7 +61,7 @@ const OurApproachPage = () => {
             <ArrowWrapper>
               <ArrowImage src={ArrowDown} alt="arrow down" />
             </ArrowWrapper>
-          </HeaderWrapper>
+          </HeadingWrapper>
         </ImageBackground>
       </header>
 

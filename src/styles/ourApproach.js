@@ -11,10 +11,16 @@ import {
 } from '../utils'
 
 import { TextContentWrapper } from '../components/contentWrapper'
-import { OurStorySection } from './landing'
+import { OurStorySection, Wrapper as LandingHeadingWrapper } from './landing'
 
 export const Wrapper = styled.section`
   background: ${({ background }) => background};
+`
+
+export const HeadingWrapper = styled(LandingHeadingWrapper)`
+  ${breakpoints.laptopLarge} {
+    margin-top: 16vh;
+  }
 `
 
 export const List = styled.ul`
@@ -79,9 +85,8 @@ export const Introduction = styled(OurStorySection)`
   ${breakpoints.mobileSmall} {
     span {
       color: ${colors.primary};
-      font-weight: 700;
+      font-weight: 600;
       font-size: ${psize.l};
-      display: block;
       margin-top: ${spacings[3]};
       margin-bottom: ${spacings[3]};
     }
