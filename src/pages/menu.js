@@ -63,7 +63,6 @@ export const CrossIcon = styled.img`
   }
 
   ${breakpoints.laptopLarge} {
-    width: 64px;
     margin-right: ${spacings[4]};
     margin-bottom: ${spacings[9]};
   }
