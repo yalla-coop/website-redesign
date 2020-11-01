@@ -130,7 +130,7 @@ export const Section = styled(TextContentWrapper)`
 
   ${breakpoints.laptopLarge} {
     h2 {
-      font-size: 48px;
+      font-size: ${size.lg};
       margin-bottom: ${spacings[6]};
     }
   }

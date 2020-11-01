@@ -92,7 +92,7 @@ const OurApproachPage = () => {
 
       {/* Discovery section */}
       <Wrapper background="#F9F9F9">
-        <Section b>
+        <Section>
           <H2>Discovery</H2>
           <Description>
             <CapsHeadingLargeModifier>
