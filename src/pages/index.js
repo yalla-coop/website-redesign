@@ -25,7 +25,6 @@ import {
   OurApproachBackground,
   OurApproachWrapper,
   OurApproachHeadings,
-  HeadingWithAccent,
   LearnMoreBlock,
   ServicesBlock,
   Service,
@@ -105,9 +104,7 @@ const IndexPage = () => {
       <OurApproachSection>
         <OurApproachBackground />
         <OurApproachHeadings>
-          <HeadingWithAccent>
-            <H2>Our Approach + Services</H2>
-          </HeadingWithAccent>
+          <H2>Our Approach + Services</H2>
         </OurApproachHeadings>
         <OurApproachWrapper>
           <ServicesBlock>

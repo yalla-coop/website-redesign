@@ -236,7 +236,7 @@ export const OurApproachWrapper = styled.div`
 export const OurApproachHeadings = styled.div`
   ${breakpoints.laptopLarge} {
     h2 {
-      font-size: 4.8rem;
+      font-size: ${size.lg};
     }
   }
 `
@@ -339,7 +339,7 @@ export const Callout = styled(ContentWrapper)`
 
   ${breakpoints.laptopLarge} {
     h3 {
-      font-size: 4.8rem;
+      font-size: ${size.lg};
     }
   }
 `
@@ -368,7 +368,7 @@ export const WorkSection = styled(TextContentWrapper)`
     padding-bottom: ${spacings[9]};
 
     h2 {
-      font-size: 4.8rem;
+      font-size: ${size.lg};
       margin-bottom: ${spacings[8]};
     }
   }
