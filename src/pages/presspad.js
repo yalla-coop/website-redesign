@@ -17,13 +17,9 @@ import { ImageBackground } from '../styles/ourApproach'
 
 import Subtitle from '../components/Subtitle'
 
-import {
-  WhereItAllStartedSection,
-  WhereWeCameInSection,
-  WhatWeDeliveredSection,
-} from '../styles/earwig'
+import { WhereWeCameInSection, WhatWeDeliveredSection } from '../styles/earwig'
 
-import { Context } from '../styles/presspad'
+import { Context, WhereItAllStartedSection } from '../styles/presspad'
 
 const EarwigCaseStudy = () => {
   const { image } = useStaticQuery(graphql`
