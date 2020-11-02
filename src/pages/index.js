@@ -177,14 +177,14 @@ const IndexPage = () => {
           <WorkCard
             smallHeading="EARWIG - CONSTRUCTION"
             bigHeading="Building a powerful reviews platform setting new standards for workers in the construction industry"
-            fileName="work-earwig"
+            fileName="earwig-header"
             altText="work-earwig"
             link="earwig"
           />
           <WorkCard
             smallHeading="PRESSPAD - MEDIA & ACCOMMODATION"
             bigHeading="Designing and delivering a marketplace to bring diversity in media through mentorship & hosting"
-            fileName="work-presspad"
+            fileName="presspad-header"
             altText="work-presspad"
             link="presspad"
           />

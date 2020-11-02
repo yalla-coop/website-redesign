@@ -87,7 +87,7 @@ const EarwigCaseStudy = () => {
       {isLaptop ? (
         <WhereWeCameInSection style={{ paddingTop: 0 }}>
           <Image
-            fileName="earwig-figma"
+            fileName="presspad-figma"
             altText="earwig styles and wire frames in Figma"
             style={{
               width: '100%',
