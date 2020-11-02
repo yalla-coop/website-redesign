@@ -38,8 +38,8 @@ export const Li = styled.li`
   color: ${colors.gray3};
 
   ${breakpoints.laptopLarge} {
-    font-size: 24px;
-    line-height: 36px;
+    font-size: ${psize.xl};
+    line-height: 3.6rem;
   }
 `
 
@@ -92,7 +92,7 @@ export const Introduction = styled(OurStorySection)`
 
   ${breakpoints.laptopLarge} {
     span {
-      font-size: 24px;
+      font-size: ${psize.xl};
     }
   }
 `
@@ -109,7 +109,7 @@ export const HeadingWithAccent = styled.div`
 
   ${breakpoints.laptopLarge} {
     h2 {
-      font-size: 60px;
+      font-size: ${size.xl};
     }
   }
 `
@@ -162,13 +162,13 @@ export const HeadingWithAccentDesign = styled.div`
   ${breakpoints.mobileSmall} {
     h2 {
       color: ${colors.primary};
-      font-size: 30px;
+      font-size: ${size.md};
     }
   }
 
   ${breakpoints.laptopLarge} {
     h2 {
-      font-size: 60px;
+      font-size: ${size.xl};
     }
   }
 `
@@ -199,8 +199,8 @@ export const Description = styled.div`
 
   ${breakpoints.laptopLarge} {
     p {
-      font-size: 24px;
-      line-height: 36px;
+      font-size: ${psize.xl};
+      line-height: 3.6rem;
     }
   }
 `

@@ -9,7 +9,7 @@ export const QuoteWrapper = styled.div`
 
 export const H3Modifier = styled(H3)`
   ${breakpoints.mobileSmall} {
-    font-size: 24px;
+    font-size: ${size.sm};
     margin-bottom: ${spacings[4]};
   }
 
@@ -18,10 +18,10 @@ export const H3Modifier = styled(H3)`
 `
 
 export const QuoteIcon = styled.div`
-  font-size: 100px;
+  font-size: 10rem;
   color: ${colors.accent};
   font-weight: 700;
-  line-height: 20px;
+  line-height: 2rem;
 
   /* and these spacings: */
   margin: 0 2rem 1.5rem 0;

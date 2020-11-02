@@ -42,7 +42,7 @@ export const Context = styled(ContentWrapper)`
     p {
       font-size: ${psize.xl};
       line-height: 3.6rem;
-      padding-bottom: 48px;
+      padding-bottom: ${spacings[6]};
     }
   }
 `
@@ -61,18 +61,18 @@ export const WhereItAllStartedSection = styled(ContentWrapper)`
   ${breakpoints.laptopLarge} {
     padding-top: 0;
     background: white;
-    padding-bottom: 32px;
+    padding-bottom: ${spacings[5]};
   }
 
   ${breakpoints.laptopLarge} {
     h2 {
-      font-size: 24px;
-      line-height: 36px;
+      font-size: ${size.sm};
+      line-height: 3.6rem;
     }
 
     p {
-      font-size: 24px;
-      line-height: 36px;
+      font-size: ${psize.xl};
+      line-height: 3.6rem;
     }
   }
 `
@@ -91,7 +91,7 @@ export const WhatWeDeliveredSection = styled(WhereItAllStartedSection)`
   background: white;
 
   h3 {
-    font-size: 24px;
+    font-size: ${size.sm};
     margin-top: ${spacings[3]};
     margin-bottom: ${spacings[3]};
   }
@@ -107,7 +107,7 @@ export const WhatWeDeliveredSection = styled(WhereItAllStartedSection)`
 `
 
 export const Link = styled.a`
-  font-size: 18px;
+  font-size: ${psize.m};
   margin-top: ${spacings[3]};
   color: ${colors.accent};
 `
