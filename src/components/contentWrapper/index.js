@@ -28,8 +28,8 @@ export const Wrapper = styled.section`
   }
 
   ${breakpoints.laptopLarge} {
-    padding-left: 32rem;
-    padding-right: 32rem;
+    padding-left: 36rem;
+    padding-right: 36rem;
     padding-top: ${spacings[9]};
     padding-bottom: ${spacings[9]};
   }

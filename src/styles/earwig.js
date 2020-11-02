@@ -66,13 +66,13 @@ export const WhereItAllStartedSection = styled(ContentWrapper)`
 
   ${breakpoints.laptopLarge} {
     h2 {
-      font-size: ${size.sm};
-      line-height: 3.6rem;
+      font-size: ${size.s};
+      line-height: 3rem;
     }
 
     p {
-      font-size: ${psize.xl};
-      line-height: 3.6rem;
+      font-size: ${psize.l};
+      line-height: 3rem;
     }
   }
 `
@@ -100,7 +100,7 @@ export const WhatWeDeliveredSection = styled(WhereItAllStartedSection)`
     padding-top: ${spacings[8]};
 
     h3 {
-      font-size: 40px;
+      font-size: ${size.md};
       padding-top: ${spacings[6]};
     }
   }
