@@ -33,11 +33,13 @@ import {
   WorkCards,
   TestimonialsSection,
   QuoteIcon,
+  TextSection,
 } from '../styles/landing'
 import NavBar from '../components/layout/Header/Nav'
 import ArrowDown from '../../static/svg/arrow-down.svg'
 
 import { WorkCard } from '../components/common'
+import Image from '../components/image'
 
 const IndexPage = () => {
   const { image } = useStaticQuery(graphql`
@@ -73,23 +75,30 @@ const IndexPage = () => {
         </ImageBackgroundWithGradient>
       </header>
       <OurStorySection>
-        <H2>
-          Yalla is a collective of web developers, designers, project managers
-          and strategists.
-        </H2>
-        <MP>
-          We work together across the UK, Gaza and Germany, united in our desire
-          to build quality products that deliver social good.
-        </MP>
-        <MP>
-          Collaborating with non-profits, start ups and impact-driven
-          businesses, we harness the power of technology to solve societal
-          challenges, spread knowledge and transcend borders.
-        </MP>
-        <MP>
-          So if you&apos;re looking for us to build a website, app, help your
-          understand your users or anything in between, give us a shout!
-        </MP>
+        <TextSection>
+          <H2>
+            Yalla is a collective of web developers, designers, project managers
+            and strategists.
+          </H2>
+          <MP>
+            We work together across the UK, Gaza and Germany, united in our
+            desire to build quality products that deliver social good.
+          </MP>
+          <MP>
+            Collaborating with non-profits, start ups and impact-driven
+            businesses, we harness the power of technology to solve societal
+            challenges, spread knowledge and transcend borders.
+          </MP>
+          <MP>
+            So if you&apos;re looking for us to build a website, app, help your
+            understand your users or anything in between, give us a shout!
+          </MP>
+        </TextSection>
+        <Image
+          fileName="team-old"
+          altText="test"
+          style={{ width: '95%', margin: '3rem' }}
+        />
 
         {/* hide story button for first release */}
 
