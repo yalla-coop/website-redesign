@@ -1,5 +1,5 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, navigate } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -149,7 +149,7 @@ const IndexPage = () => {
             <Button
               title="Learn More"
               hasArrow
-              onClick={() => null}
+              onClick={() => navigate('/our-approach/')}
               capitalize
               primary
             />
