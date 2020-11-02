@@ -221,7 +221,7 @@ const IndexPage = () => {
           hesitate to work with them again.
         </MP>
         <CapsHeadingLargeModifier>LAURA JENNER</CapsHeadingLargeModifier>
-        <MP>Digital Project Manager</MP>
+        <MP>Digital Project Manager, Tempo</MP>
       </TestimonialsSection>
     </Layout>
   )
