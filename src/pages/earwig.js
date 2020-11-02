@@ -7,7 +7,7 @@ import NavBar from '../components/layout/Header/Nav'
 import Image from '../components/image'
 // import MetaData from '../components/common/MetaData'
 
-import { H2, H3, H4, MP } from '../components/elements'
+import { H2, H3, H4, MP, Button } from '../components/elements'
 import {
   ImageBackgroundWithGradient,
   CapsHeadingSmallModifier,
@@ -28,7 +28,6 @@ import {
   WhereItAllStartedSection,
   WhereWeCameInSection,
   WhatWeDeliveredSection,
-  Link,
 } from '../styles/earwig'
 import ArrowDown from '../../static/svg/arrow-down.svg'
 
@@ -214,7 +213,20 @@ const EarwigCaseStudy = () => {
           further development plans in place following the next phase of user
           testing.
         </MP>
-        <Link href="https://www.earwigwork.com/">Check out Earwig here!</Link>
+        <Button
+          as="a"
+          title="Check out Earwig"
+          hasArrow
+          href="https://www.earwigwork.com/"
+          target="_blank"
+          capitalize
+          primary
+          style={{
+            textDecoration: 'none',
+            width: '250px',
+            marginTop: isLaptop ? '48px' : '24px',
+          }}
+        />
       </WhatWeDeliveredSection>
       <Image fileName="earwig-phones" altText="Earwig app on mobile devices" />
 
