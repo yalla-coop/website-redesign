@@ -34,7 +34,7 @@ export const Context = styled(ContentWrapper)`
     padding-bottom: 0;
 
     h2 {
-      font-size: 4.8rem;
+      font-size: ${size.lg};
       line-height: 4.8rem;
       margin-bottom: ${spacings[6]};
     }
