@@ -3,6 +3,7 @@ import { breakpoints, spacings } from '../utils'
 import {
   Context as EarwigContext,
   WhereItAllStartedSection as EarwigWhereItAllStartedSection,
+  WhatWeDeliveredSection as EarwigWhatWeDeliveredSection,
 } from './earwig'
 
 export const Context = styled(EarwigContext)`
@@ -17,4 +18,8 @@ export const WhereItAllStartedSection = styled(EarwigWhereItAllStartedSection)`
   }
 `
 
-export default Context
+export const WhatWeDeliveredSection = styled(EarwigWhatWeDeliveredSection)`
+  ${breakpoints.laptopLarge} {
+    padding-bottom: ${spacings[9]};
+  }
+`
