@@ -39,7 +39,6 @@ import NavBar from '../components/layout/Header/Nav'
 import ArrowDown from '../../static/svg/arrow-down.svg'
 
 import { WorkCard } from '../components/common'
-import Image from '../components/image'
 
 const IndexPage = () => {
   const { image } = useStaticQuery(graphql`
@@ -94,11 +93,11 @@ const IndexPage = () => {
             understand your users or anything in between, give us a shout!
           </MP>
         </TextSection>
-        <Image
+        {/* <Image
           fileName="team-old"
           altText="test"
           style={{ width: '95%', margin: '3rem' }}
-        />
+        /> */}
 
         {/* hide story button for first release */}
 
