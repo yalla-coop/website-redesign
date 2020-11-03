@@ -21,7 +21,7 @@ import { WhereWeCameInSection, WhatWeDeliveredSection } from '../styles/earwig'
 
 import { Context, WhereItAllStartedSection } from '../styles/presspad'
 
-const EarwigCaseStudy = () => {
+const PressPadCaseStudy = () => {
   const { image } = useStaticQuery(graphql`
     query {
       image: file(relativePath: { eq: "presspad-header.png" }) {
@@ -37,7 +37,7 @@ const EarwigCaseStudy = () => {
 
   return (
     <Layout>
-      <SEO title="Earwig Case Study" />
+      <SEO title="PressPad Case Study" />
       <header>
         <ImageBackground tag="section" fluid={image.sharp.fluid}>
           <NavBar menuColor="white" logoColor="white" />
@@ -88,7 +88,7 @@ const EarwigCaseStudy = () => {
         <WhereWeCameInSection style={{ paddingTop: 0 }}>
           <Image
             fileName="presspad-figma"
-            altText="earwig styles and wire frames in Figma"
+            altText="presspad styles and wire frames in Figma"
             style={{
               width: '100%',
             }}
@@ -205,4 +205,4 @@ const EarwigCaseStudy = () => {
   )
 }
 
-export default EarwigCaseStudy
+export default PressPadCaseStudy
