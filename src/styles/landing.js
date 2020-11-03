@@ -197,6 +197,10 @@ export const OurStorySection = styled(TextContentWrapper)`
   }
 `
 
+export const TextSection = styled.div`
+  margin-bottom: 4rem;
+`
+
 export const Main = styled.div`
   height: 65vh;
   position: relative;

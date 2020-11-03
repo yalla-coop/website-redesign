@@ -33,6 +33,7 @@ import {
   WorkCards,
   TestimonialsSection,
   QuoteIcon,
+  TextSection,
 } from '../styles/landing'
 import NavBar from '../components/layout/Header/Nav'
 import ArrowDown from '../../static/svg/arrow-down.svg'
@@ -73,23 +74,30 @@ const IndexPage = () => {
         </ImageBackgroundWithGradient>
       </header>
       <OurStorySection>
-        <H2>
-          Yalla is a collective of web developers, designers, project managers
-          and strategists.
-        </H2>
-        <MP>
-          We work together across the UK, Gaza and Germany, united in our desire
-          to build quality products that deliver social good.
-        </MP>
-        <MP>
-          Collaborating with non-profits, start ups and impact-driven
-          businesses, we harness the power of technology to solve societal
-          challenges, spread knowledge and transcend borders.
-        </MP>
-        <MP>
-          So if you&apos;re looking for us to build a website, app, help your
-          understand your users or anything in between, give us a shout!
-        </MP>
+        <TextSection>
+          <H2>
+            Yalla is a collective of web developers, designers, project managers
+            and strategists.
+          </H2>
+          <MP>
+            We work together across the UK, Gaza and Germany, united in our
+            desire to build quality products that deliver social good.
+          </MP>
+          <MP>
+            Collaborating with non-profits, start ups and impact-driven
+            businesses, we harness the power of technology to solve societal
+            challenges, spread knowledge and transcend borders.
+          </MP>
+          <MP>
+            So if you&apos;re looking for us to build a website, app, help your
+            understand your users or anything in between, give us a shout!
+          </MP>
+        </TextSection>
+        {/* <Image
+          fileName="team-old"
+          altText="test"
+          style={{ width: '95%', margin: '3rem' }}
+        /> */}
 
         {/* hide story button for first release */}
 
@@ -168,14 +176,14 @@ const IndexPage = () => {
           <WorkCard
             smallHeading="EARWIG - CONSTRUCTION"
             bigHeading="Building a powerful reviews platform setting new standards for workers in the construction industry"
-            fileName="work-earwig"
+            fileName="earwig-header"
             altText="work-earwig"
             link="earwig"
           />
           <WorkCard
             smallHeading="PRESSPAD - MEDIA & ACCOMMODATION"
             bigHeading="Designing and delivering a marketplace to bring diversity in media through mentorship & hosting"
-            fileName="work-presspad"
+            fileName="presspad-header"
             altText="work-presspad"
             link="presspad"
           />
@@ -212,7 +220,7 @@ const IndexPage = () => {
           hesitate to work with them again.
         </MP>
         <CapsHeadingLargeModifier>LAURA JENNER</CapsHeadingLargeModifier>
-        <MP>Digital Project Manager</MP>
+        <MP>Digital Project Manager, Tempo</MP>
       </TestimonialsSection>
     </Layout>
   )

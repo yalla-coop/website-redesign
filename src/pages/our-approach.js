@@ -35,7 +35,7 @@ import Img from '../components/image'
 const OurApproachPage = () => {
   const { image } = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "our-approach.png" }) {
+      image: file(relativePath: { eq: "simon-joe-ramy-working.png" }) {
         sharp: childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -133,7 +133,7 @@ const OurApproachPage = () => {
               }}
             />
             <Img
-              fileName="discovery"
+              fileName="joe-design-workshop"
               altText="discovery"
               style={{
                 height: '600px',
@@ -151,7 +151,7 @@ const OurApproachPage = () => {
                 marginBottom: '16px',
               }}
             />
-            <Img fileName="discovery" altText="discovery" />
+            <Img fileName="joe-design-workshop" altText="discovery" />
           </Images>
         )}
       </Wrapper>
@@ -251,7 +251,7 @@ const OurApproachPage = () => {
         {isLaptop ? (
           <Images>
             <Img
-              fileName="digital"
+              fileName="simon-ramy-ahmed-working"
               altText="digital"
               style={{
                 height: '700px',
@@ -261,7 +261,7 @@ const OurApproachPage = () => {
           </Images>
         ) : (
           <Images>
-            <Img fileName="digital" altText="digital" />
+            <Img fileName="simon-ramy-ahmed-working" altText="digital" />
           </Images>
         )}
       </Wrapper>
