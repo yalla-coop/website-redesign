@@ -89,7 +89,7 @@ const IndexPage = () => {
             challenges, spread knowledge and transcend borders.
           </MP>
           <MP>
-            So if you&apos;re looking for us to build a website, app, help your
+            So if you&apos;re looking for us to build a website, app, help you
             understand your users or anything in between, give us a shout!
           </MP>
         </TextSection>
