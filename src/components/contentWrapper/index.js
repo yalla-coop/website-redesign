@@ -2,40 +2,62 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import styled from 'styled-components'
-import { breakpoints } from '../../utils'
+import { breakpoints, spacings } from '../../utils'
 
-const Wrapper = styled.div`
+export const Wrapper = styled.section`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   margin: 0 auto;
 
   ${breakpoints.mobileSmall} {
-    width: ${({ fullWidth }) => (fullWidth ? '100vw' : 'calc(100vw - 48px)')};
+    padding: ${spacings[5]} ${spacings[4]};
   }
 
   ${breakpoints.mobileMedium} {
-    width: ${({ fullWidth }) => (fullWidth ? '100vw' : 'calc(100vw - 40px)')};
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
-  ${breakpoints.tablet} {
-    width: ${({ fullWidth }) => (fullWidth ? '100vw' : 'calc(100vw - 80px)')};
+  ${breakpoints.tabletVertical} {
+    padding: 6rem;
+  }
+
+  ${breakpoints.laptop} {
+    padding-left: 20rem;
+    padding-right: 20rem;
+  }
+
+  ${breakpoints.laptopLarge} {
+    padding-left: 36rem;
+    padding-right: 36rem;
+    padding-top: ${spacings[9]};
+    padding-bottom: ${spacings[9]};
+  }
+
+  ${breakpoints.desktop} {
+    padding-left: 65rem;
+    padding-right: 65rem;
   }
 `
 
-const ContentWrapper = ({ children, fullWidth }) => (
-  <Wrapper fullWidth={fullWidth}>{children}</Wrapper>
-)
+export const TextContentWrapper = styled(Wrapper)`
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  li {
+    padding-left: 2.8rem;
+  }
+`
+
+const ContentWrapper = ({ children }) => <Wrapper>{children}</Wrapper>
 
 ContentWrapper.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
-  fullWidth: PropTypes.bool,
-}
-
-ContentWrapper.defaultProps = {
-  fullWidth: false,
 }
 
 export default ContentWrapper

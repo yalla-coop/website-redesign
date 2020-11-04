@@ -4,29 +4,56 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import Logo from '../../../../static/svg/yalla-logo.svg'
 import LogoBlack from '../../../../static/svg/yall-logo-black.svg'
-import ContentWrapper from '../../contentWrapper'
+import { Wrapper as ContentWrapper } from '../../contentWrapper'
+import { breakpoints, spacings } from '../../../utils'
 
-const MenuContainer = styled.div`
+const MenuLink = styled(Link)`
   cursor: pointer;
+  ${breakpoints.laptopLarge} {
+    padding-top: ${spacings[2]};
+    padding-right: ${spacings[2]};
+  }
 `
 
-const Nav = styled(ContentWrapper)``
+const Nav = styled(ContentWrapper)`
+  padding-top: 0;
+  padding-bottom: 0;
+  flex-direction: row;
+  justify-content: space-between;
 
-const NavContainer = styled.div``
+  ${breakpoints.tabletVertical} {
+    padding-left: ${spacings[3]};
+    padding-right: ${spacings[4]};
+  }
+`
+
+const NavContainer = styled.div`
+  ${breakpoints.mobileSmall} {
+    padding-top: ${spacings[4]};
+    padding-bottom: ${spacings[4]};
+  }
+`
 
 const Img = styled.img`
-  width: 6rem;
-  height: 6rem;
+  ${breakpoints.mobileSmall} {
+    width: ${spacings[6]};
+    height: ${spacings[6]};
+  }
+  ${breakpoints.laptopLarge} {
+    width: 6.4rem;
+    height: auto;
+  }
 `
 
 const Span = styled.span`
   position: relative;
-  margin-top: 3.5rem;
+  margin-top: ${spacings[3]};
+
   &,
   &:after,
   &:before {
     width: 3rem;
-    height: 2px;
+    height: 1px;
     background-color: ${props =>
       props.menuColor === 'white' ? '#FFF' : '#000'};
     display: inline-block;
@@ -47,12 +74,25 @@ const Span = styled.span`
   &:before {
     top: -0.8rem;
   }
+
+  ${breakpoints.laptopLarge} {
+    &,
+    &:after,
+    &:before {
+      width: 4rem;
+      height: 1px;
+    }
+  }
 `
-const LogoContainer = styled(MenuContainer)``
+const LogoContainer = styled(MenuLink)`
+  ${breakpoints.laptopLarge} {
+    padding-left: ${spacings[3]};
+  }
+`
 
 const Navbar = ({ menuColor, logoColor }) => (
   <NavContainer>
-    <Nav>
+    <Nav direction="row" justifyContent="space-between">
       <Link to="/">
         <LogoContainer>
           {logoColor === 'black' ? (
@@ -62,9 +102,9 @@ const Navbar = ({ menuColor, logoColor }) => (
           )}
         </LogoContainer>
       </Link>
-      <MenuContainer>
+      <MenuLink to="/menu">
         <Span menuColor={menuColor}>&nbsp;</Span>
-      </MenuContainer>
+      </MenuLink>
     </Nav>
   </NavContainer>
 )
