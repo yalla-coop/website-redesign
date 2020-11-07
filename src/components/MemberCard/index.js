@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
-import * as S from './style'
+import { Descrip, Name, ImageBackground, CardWarapper } from './style'
 
 const MemberCard = ({ image, name, description, key }) => {
   const { placeholder } = useStaticQuery(graphql`
@@ -16,13 +16,13 @@ const MemberCard = ({ image, name, description, key }) => {
     }
   `)
   return (
-    <S.CardWarapper key={key}>
-      <S.ImageBackground
+    <CardWarapper key={key}>
+      <ImageBackground
         fluid={image ? image.sharp.fluid : placeholder.sharp.fluid}
       />
-      <S.Name>{name}</S.Name>
-      <S.Descrip>{description}</S.Descrip>
-    </S.CardWarapper>
+      <Name>{name}</Name>
+      <Descrip>{description}</Descrip>
+    </CardWarapper>
   )
 }
 
