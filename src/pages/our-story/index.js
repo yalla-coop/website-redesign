@@ -10,8 +10,22 @@ import Button from '../../components/elements/Button'
 import { Small as AccentSmall } from '../../components/elements/Accent'
 import ArrowDown from '../../../static/svg/arrow-down.svg'
 import { H3, H2, MP } from '../../components/elements'
-
-import * as S from './styles'
+import {
+  Header,
+  AboutSection,
+  TitleMobile,
+  TeamSection,
+  AccentContainer,
+  ImageBackground,
+  AccentLarge,
+  CardsContainer,
+  AccentTitle,
+  TextWrapper,
+  CapsHeadingSmallModifier,
+  PageTitle,
+  ArrowContainer,
+  ArrowImage,
+} from './styles'
 import ourTeam from './ourTeam'
 
 const OurStory = () => {
@@ -76,22 +90,22 @@ const OurStory = () => {
   return (
     <Layout>
       <SEO title="Our Story" />
-      <S.Header>
-        <S.ImageBackground tag="section" fluid={image.sharp.fluid}>
+      <Header>
+        <ImageBackground tag="section" fluid={image.sharp.fluid}>
           <NavBar menuColor="white" logoColor="white" />
-          <S.TextWrapper>
-            <S.CapsHeadingSmallModifier>
+          <TextWrapper>
+            <CapsHeadingSmallModifier>
               Web design and development agency
-            </S.CapsHeadingSmallModifier>
-            <S.PageTitle>Our Story + Team</S.PageTitle>
-            <S.ArrowContainer>
-              <S.ArrowImage src={ArrowDown} alt="arrow down" />
-            </S.ArrowContainer>
-          </S.TextWrapper>
-        </S.ImageBackground>
-      </S.Header>
+            </CapsHeadingSmallModifier>
+            <PageTitle>Our Story + Team</PageTitle>
+            <ArrowContainer>
+              <ArrowImage src={ArrowDown} alt="arrow down" />
+            </ArrowContainer>
+          </TextWrapper>
+        </ImageBackground>
+      </Header>
       {/* about section */}
-      <S.AboutSection>
+      <AboutSection>
         <H2>
           We’re a collective of web developers and designers, working together
           across Europe and Gaza, united by our vision to use technology to
@@ -107,7 +121,7 @@ const OurStory = () => {
         <MP>
           We work with charities, non-profits, start ups and impact-driven
           businesses, helping them get to the heart of the problems they’ve
-          looking to solve and delivering the products their users’ needs.
+          looking to solve and delivering the products their users’ need
         </MP>
         <MP>
           So whether you&apos;re looking for a new website, an app, UX design,
@@ -123,9 +137,9 @@ const OurStory = () => {
           capitalize
           primary
         />
-      </S.AboutSection>
+      </AboutSection>
       {/* members section */}
-      <S.TitleMobile>
+      <TitleMobile>
         <AccentSmall
           css={css`
             position: absolute;
@@ -140,19 +154,19 @@ const OurStory = () => {
         >
           Our Team
         </H3>
-      </S.TitleMobile>
-      <S.TeamSection>
-        <S.AccentContainer>
-          <S.AccentLarge />
-          <S.AccentTitle>Our Team</S.AccentTitle>
-        </S.AccentContainer>
-        <S.CardsContainer>
+      </TitleMobile>
+      <TeamSection>
+        <AccentContainer>
+          <AccentLarge />
+          <AccentTitle>Our Team</AccentTitle>
+        </AccentContainer>
+        <CardsContainer>
           {membersData.map(member => (
             // eslint-disable-next-line react/jsx-props-no-spreading
             <MemberCard {...member} />
           ))}
-        </S.CardsContainer>
-      </S.TeamSection>
+        </CardsContainer>
+      </TeamSection>
     </Layout>
   )
 }
