@@ -3,10 +3,6 @@ import BackgroundImage from 'gatsby-background-image'
 
 import { CapsHeadingMedium } from '../elements'
 
-export const Header = styled.header`
-  height: 100vh;
-`
-
 export const CardWarapper = styled.div`
   width: 336px;
   @media (max-width: 600px) {
