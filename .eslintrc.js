@@ -43,5 +43,6 @@ module.exports = {
         semi: false,
       },
     ],
+    'import/prefer-default-export': 'off',
   },
 };
