@@ -13,4 +13,5 @@ export default {
   accent: '#C73E46',
   accentLight: '#E66767',
   black: '#000000',
+  LightestGray: '#f7f7f7',
 }
