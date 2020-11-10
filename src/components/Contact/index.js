@@ -1,28 +1,41 @@
 import React from 'react'
-import { css } from 'styled-components'
+import styled, { css } from 'styled-components'
 import { H3, Button } from '../elements'
-import Image from '../image'
-import { colors } from '../../utils'
+import { colors, breakpoints, spacings } from '../../utils'
+
+const Wrapper = styled.div`
+  background-color: ${colors.gray7};
+  display: flex;
+  background-image: url('../images/logo-contact.png') no-repeat;
+`
+
+const Content = styled.div`
+  padding: ${spacings[5]} 0;
+  margin: 0 ${spacings[4]};
+
+  ${breakpoints.mobileMedium} {
+    margin: 0 ${spacings[5]};
+  }
+
+  ${breakpoints.tabletVertical} {
+    padding: ${spacings[7]} 0;
+  }
+
+  ${breakpoints.laptop} {
+    width: 50%;
+    margin: 0 ${spacings[9]};
+    padding: ${spacings[8]} 0;
+  }
+`
 
 const Contact = () => (
-  <div
-    css={css`
-      background-color: ${colors.gray7};
-      display: flex;
-    `}
-  >
-    <div
-      css={css`
-        width: 50%;
-        margin-left: 18rem;
-        padding: 7rem 0;
-      `}
-    >
+  <Wrapper>
+    <Content>
       <H3
         css={css`
-          color: ${colors.primary} !important;
-          margin-bottom: 4rem;
+          margin-bottom: ${spacings[3]};
         `}
+        color={colors.primary}
       >
         Interested in working with us?
       </H3>
@@ -32,17 +45,8 @@ const Contact = () => (
         hasArrow
         backgroundColor={colors.accent}
       />
-    </div>
-    <div
-      css={css`
-        width: 50%;
-
-        opacity: 0.1;
-      `}
-    >
-      <Image fileName="logo-contact" altText="Yalla logo" />
-    </div>
-  </div>
+    </Content>
+  </Wrapper>
 )
 
 export default Contact
