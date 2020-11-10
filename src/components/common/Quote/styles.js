@@ -38,6 +38,10 @@ export const BodyWrapper = styled.div`
 export const XLPModifier = styled(XLP)`
   color: ${colors.gray3};
   margin-bottom: 0.8rem;
+
+  p {
+    margin-bottom: ${spacings[3]};
+  }
 `
 
 export const CapsHeadingLargeModifier = styled(CapsHeadingLarge)`
