@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { colors } from '../../utils'
-import { H1 } from '../../components/elements'
+import { colors } from '../utils'
+import { H1 } from '../components/elements'
 
 export const FlexDiv = styled.div`
   display: flex;
@@ -30,5 +30,3 @@ export const H1Inverted = styled(H1)`
   transform: rotate(-90deg) translateX(-30%);
   color: ${colors.white};
 `
-
-export default () => null

@@ -10,10 +10,10 @@ import {
   Button,
   Quote,
   Contact,
-} from '../../components'
-import NavBar from '../../components/layout/Header/Nav'
-import Layout from '../../components/layout'
-import { CapsHeadingLargeModifier } from '../../styles/landing'
+} from '../components'
+import NavBar from '../components/layout/Header/Nav'
+import Layout from '../components/layout'
+import { CapsHeadingLargeModifier } from '../styles/landing'
 import {
   BackgroundWithGradient,
   LogoContainer,
@@ -25,9 +25,9 @@ import {
   WhereWeCameSection,
   WhatWeDeliveredSection,
   QuoteSection,
-} from './styles'
-import { Context } from '../../styles/caseStudies'
-import { colors } from '../../utils'
+} from '../styles/connect5'
+import { Context } from '../styles/caseStudies'
+import { colors } from '../utils'
 
 const Connect5CaseStudy = () => {
   const isIpadOrBigger = useMediaQuery({

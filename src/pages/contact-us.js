@@ -1,16 +1,16 @@
 import React, { useReducer } from 'react'
 import { css } from 'styled-components'
-import { Button } from '../../components/elements'
-import Input from '../../components/Input'
-import Layout from '../../components/layout'
-import Subtitle from '../../components/Subtitle'
+import { Button } from '../components/elements'
+import Input from '../components/Input'
+import Layout from '../components/layout'
+import Subtitle from '../components/Subtitle'
 import {
   FlexDiv,
   FlexDivWrap,
   SidePanel,
   H1Inverted,
   HeadingSection,
-} from './styles'
+} from '../styles/contactUs'
 
 const CHANGE = 'CHANGE'
 

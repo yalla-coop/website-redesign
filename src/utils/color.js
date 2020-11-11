@@ -13,5 +13,6 @@ export default {
   accent: '#C73E46',
   accentLight: '#E66767',
   black: '#000000',
+  lightGray: 'rgba(247, 247, 247, 0.7)',
   LightestGray: '#f7f7f7',
 }
