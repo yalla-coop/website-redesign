@@ -28,7 +28,6 @@ import {
   LearnMoreBlock,
   ServicesBlock,
   Service,
-  Callout,
   WorkSection,
   WorkCards,
   TestimonialsSection,
@@ -38,7 +37,7 @@ import {
 import NavBar from '../components/layout/Header/Nav'
 import ArrowDown from '../../static/svg/arrow-down.svg'
 
-import { WorkCard } from '../components/common'
+import { WorkCard, Banner } from '../components/common'
 
 const IndexPage = () => {
   const { image } = useStaticQuery(graphql`
@@ -164,12 +163,10 @@ const IndexPage = () => {
           </LearnMoreBlock>
         </OurApproachWrapper>
       </OurApproachSection>
-      <Callout>
-        <H3>
-          We work collaboratively with our clients and take pride in creating
-          delightful user experiences.
-        </H3>
-      </Callout>
+      <Banner>
+        We work collaboratively with our clients and take pride in creating
+        delightful user experiences.
+      </Banner>
       <WorkSection>
         <H2>Featured Work + Case Studies</H2>
         <WorkCards>

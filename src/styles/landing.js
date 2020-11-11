@@ -315,37 +315,6 @@ export const Service = styled.div`
   }
 `
 
-export const Callout = styled(ContentWrapper)`
-  ${breakpoints.mobileSmall} {
-    background: ${colors.secondary};
-    background: linear-gradient(
-      90deg,
-      rgba(183, 21, 64, 1) 0%,
-      rgba(199, 62, 70, 1) 100%
-    );
-
-    h3 {
-      color: ${colors.white};
-      text-align: center;
-      margin-top: ${spacings[3]};
-      margin-bottom: ${spacings[3]};
-    }
-  }
-
-  ${breakpoints.tabletVertical} {
-    h3 {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-  }
-
-  ${breakpoints.laptopLarge} {
-    h3 {
-      font-size: ${size.lg};
-    }
-  }
-`
-
 export const WorkSection = styled(TextContentWrapper)`
   background: ${colors.primary};
 
