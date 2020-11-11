@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { breakpoints, spacings, colors } from '../../utils'
-import * as CaseStudies from '../../styles/caseStudies'
+import { breakpoints, spacings, colors } from '../utils'
+import * as CaseStudies from './caseStudies'
 
 export const BackgroundWithGradient = styled.div`
   position: relative;

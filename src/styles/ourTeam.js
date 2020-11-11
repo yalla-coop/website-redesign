@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import BackgroundImage from 'gatsby-background-image'
 
-import { H2, CapsHeadingSmall, H1 } from '../../components/elements'
-import { TextContentWrapper } from '../../components/contentWrapper'
-import { ExtraLarge } from '../../components/elements/Accent'
+import { H2, CapsHeadingSmall, H1 } from '../components/elements'
+import { TextContentWrapper } from '../components/contentWrapper'
+import { ExtraLarge } from '../components/elements/Accent'
 import {
   colors,
   breakpoints,
@@ -12,7 +12,7 @@ import {
   size,
   psize,
   lineHeight,
-} from '../../utils'
+} from '../utils'
 
 export const Header = styled.header`
   height: 100vh;

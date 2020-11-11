@@ -1,9 +1,14 @@
 import React from 'react'
 import { css } from 'styled-components'
-import Layout from '../../components/layout'
-import Subtitle from '../../components/Subtitle'
-import { FlexDiv, SidePanel, H1Inverted, HeadingSection } from './styles'
-import { H3 } from '../../components/elements'
+import Layout from './layout'
+import Subtitle from './Subtitle'
+import {
+  FlexDiv,
+  SidePanel,
+  H1Inverted,
+  HeadingSection,
+} from '../styles/contactUs'
+import { H3 } from './elements'
 
 export default () => (
   <Layout noFooter>

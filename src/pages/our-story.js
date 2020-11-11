@@ -2,14 +2,14 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { css } from 'styled-components'
-import Layout from '../../components/layout'
-import SEO from '../../components/seo'
-import NavBar from '../../components/layout/Header/Nav'
-import MemberCard from '../../components/MemberCard'
-import Button from '../../components/elements/Button'
-import { Small as AccentSmall } from '../../components/elements/Accent'
-import ArrowDown from '../../../static/svg/arrow-down.svg'
-import { H3, H2, MP } from '../../components/elements'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import NavBar from '../components/layout/Header/Nav'
+import MemberCard from '../components/MemberCard'
+import Button from '../components/elements/Button'
+import { Small as AccentSmall } from '../components/elements/Accent'
+import ArrowDown from '../../static/svg/arrow-down.svg'
+import { H3, H2, MP } from '../components/elements'
 import {
   Header,
   AboutSection,
@@ -25,8 +25,8 @@ import {
   PageTitle,
   ArrowContainer,
   ArrowImage,
-} from './styles'
-import ourTeam from './ourTeam'
+} from '../styles/ourTeam'
+import ourTeam from '../utils/data/ourTeam'
 
 const OurStory = () => {
   const { image, joe, simon, ramy, ahmed, jem, fadi } = useStaticQuery(graphql`
