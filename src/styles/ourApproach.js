@@ -186,7 +186,7 @@ export const Images = styled.div`
   }
 
   ${breakpoints.laptopLarge} {
-    width: 100vw;
+    width: 100%;
   }
 `
 
