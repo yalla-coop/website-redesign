@@ -5,6 +5,7 @@ import { useMediaQuery } from 'react-responsive'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { H2, MP, CapsHeadingLarge } from '../components/elements'
+import { Contact } from '../components'
 
 import {
   Wrapper,
@@ -264,6 +265,7 @@ const OurApproachPage = () => {
             <Img fileName="simon-ramy-ahmed-working" altText="digital" />
           </Images>
         )}
+        <Contact />
       </Wrapper>
     </Layout>
   )
