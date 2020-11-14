@@ -1,5 +1,6 @@
 import React from 'react'
 import { useMediaQuery } from 'react-responsive'
+import { css } from 'styled-components'
 import {
   Image,
   Subtitle,
@@ -25,9 +26,10 @@ import {
   WhereWeCameSection,
   WhatWeDeliveredSection,
   QuoteSection,
+  IntroAndMetaSection,
 } from '../styles/connect5'
 import { Context } from '../styles/caseStudies'
-import { colors } from '../utils'
+import { colors, breakpoints, spacings } from '../utils'
 
 const Connect5CaseStudy = () => {
   const isIpadOrBigger = useMediaQuery({
@@ -47,15 +49,15 @@ const Connect5CaseStudy = () => {
             }}
           />
         </LogoContainer>
+        {isIpadOrBigger && (
+          <PhoneContainer>
+            <Image
+              fileName="connect5-mobile"
+              altText="connect 5 app in a mobile"
+            />
+          </PhoneContainer>
+        )}
       </BackgroundWithGradient>
-      {isIpadOrBigger && (
-        <PhoneContainer>
-          <Image
-            fileName="connect5-mobile"
-            altText="connect 5 app in a mobile"
-          />
-        </PhoneContainer>
-      )}
 
       <TitleSection>
         <CapsHeadingLargeModifier color={colors.gray3}>
@@ -67,21 +69,25 @@ const Connect5CaseStudy = () => {
         </H2>
       </TitleSection>
 
-      <MetaDataContainer>
-        <MetaData title="DELIVERABLES" text={['c5. training']} />
-      </MetaDataContainer>
+      <IntroAndMetaSection>
+        <MetaDataContainer>
+          <MetaData title="CLIENT" text={['Connect 5']} />
+          <MetaData title="SECTOR" text={['Public Health']} />
+          <MetaData title="DELIVERABLES" text={['c5. training']} />
+        </MetaDataContainer>
 
-      <WhereItAllStartedSection>
-        <Subtitle title="WHERE IT ALL STARTED" size="small" />
-        <MP>
-          Connect 5 is a UK-wide mental health promotion training programme. It
-          is designed to increase the confidence and core skills of front line
-          staff so that they can be more effective in having conversations about
-          mental health and wellbeing, help people to manage mental health
-          problems and increase their resilience and mental wellbeing through
-          positive changes.
-        </MP>
-      </WhereItAllStartedSection>
+        <WhereItAllStartedSection>
+          <Subtitle title="WHERE IT ALL STARTED" size="small" />
+          <MP>
+            Connect 5 is a UK-wide mental health promotion training programme.
+            It is designed to increase the confidence and core skills of front
+            line staff so that they can be more effective in having
+            conversations about mental health and wellbeing, help people to
+            manage mental health problems and increase their resilience and
+            mental wellbeing through positive changes.
+          </MP>
+        </WhereItAllStartedSection>
+      </IntroAndMetaSection>
       <ImagesWrapper>
         <Image
           fileName="connect-intro-2"
@@ -115,10 +121,7 @@ const Connect5CaseStudy = () => {
       <Image fileName="connect-figma" altText="connect 5 designs" />
       <WhatWeDeliveredSection>
         <Subtitle title="What We Delivered" size="small" />
-        <H3>
-          1.0 Building a platform with the functionality of Airbnb (but without
-          the ££££ VC investment!)
-        </H3>
+        <H3>1.0 Breaking down the problems</H3>
         <MP>
           This was a complex problem with many areas you could work on, which
           can quickly lead to bulky digital products. So we carried out a series
@@ -143,7 +146,18 @@ const Connect5CaseStudy = () => {
           hasArrow
           capitalize
           primary
-          onClick={() => {}}
+          buttonType="link"
+          href="https://google.com"
+          target="_blank"
+          css={css`
+            margin-top: ${spacings[4]};
+            margin-bottom: ${spacings[6]};
+            ${breakpoints.tabletVertical} {
+              width: 25rem;
+              margin-top: ${spacings[6]};
+              margin-bottom: ${spacings[7]};
+            }
+          `}
         />
       </WhatWeDeliveredSection>
       <Image

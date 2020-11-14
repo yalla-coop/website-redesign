@@ -45,8 +45,6 @@ export const Context = styled(ContentWrapper)`
 `
 
 export const WhereItAllStartedSection = styled(ContentWrapper)`
-  background: #f9f9f9;
-
   h2 {
     margin-bottom: ${spacings[2]};
   }

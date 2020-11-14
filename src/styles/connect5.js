@@ -16,11 +16,15 @@ export const BackgroundWithGradient = styled.div`
   }
 
   ${breakpoints.laptop} {
-    height: 90vh;
+    height: 60vh;
   }
 
-  ${breakpoints.laptopLarge} {
-    height: 100vh;
+  @media (min-width: 1280px) {
+    height: 75vh;
+  }
+
+  @media (min-width: 1800px) {
+    height: 80vh;
   }
 `
 
@@ -32,35 +36,61 @@ export const LogoContainer = styled.div`
 `
 
 export const PhoneContainer = styled.div`
-  width: 40%;
-  /* height: 30.84rem; */
-
   position: absolute;
-  top: 15%;
   right: 0;
 
-  ${breakpoints.laptop} {
-    /* top: 10%; */
+  width: 30%;
+  top: 30%;
 
-    /* width: 5; */
-    /* height: 80rem; */
+  @media (min-width: 1024px) {
+    top: 55%;
+  }
+
+  @media (min-width: 1280px) {
+    top: 0%;
   }
 `
 
 export const TitleSection = styled(CaseStudies.Context)`
   margin-top: 3.2rem;
   margin-bottom: 5rem;
+
+  ${breakpoints.tabletVertical} {
+    margin: ${spacings[6]} 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+`
+
+export const IntroAndMetaSection = styled.div`
+  ${breakpoints.tabletVertical} {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 `
 
 export const MetaDataContainer = styled.div`
-  padding: ${spacings[4]};
   background-color: ${colors.LightestGray};
+
+  ${breakpoints.tabletVertical} {
+    order: 2;
+    width: 30%;
+    padding: ${spacings[4]};
+    background-color: ${colors.white};
+  }
 `
 
 export const WhereItAllStartedSection = styled(
   CaseStudies.WhereItAllStartedSection,
 )`
   margin: ${spacings[4]} 0;
+
+  ${breakpoints.tabletVertical} {
+    order: 1;
+    width: 60%;
+    padding-right: 0;
+  }
 `
 
 export const ImagesWrapper = styled.div`
@@ -80,4 +110,8 @@ export const WhatWeDeliveredSection = styled(
 
 export const QuoteSection = styled.section`
   margin: ${spacings[5]} 0;
+
+  p {
+    padding-bottom: 0;
+  }
 `
