@@ -4,17 +4,27 @@ import { H3, XLP, CapsHeadingLarge, CapsHeadingMedium } from '../../elements'
 import { colors, breakpoints, spacings, size, psize } from '../../../utils'
 
 export const QuoteWrapper = styled.div`
-  /* width: 80%; */
+  ${breakpoints.tabletVertical} {
+    display: flex;
+  }
 `
 
 export const H3Modifier = styled(H3)`
-  ${breakpoints.mobileSmall} {
-    font-size: ${size.sm};
-    margin-bottom: ${spacings[4]};
+  font-size: ${size.sm};
+  margin-bottom: ${spacings[4]};
+  color: ${colors.black};
+
+  ${breakpoints.mobileMedium} {
+    font-size: ${size.md};
   }
 
-  color: ${colors.black};
-  margin-bottom: 5rem; /* the space between it and the paragraph */
+  ${breakpoints.tabletVertical} {
+    margin-bottom: ${spacings[5]};
+  }
+
+  ${breakpoints.laptopLarge} {
+    font-size: ${size.lg};
+  }
 `
 
 export const QuoteIcon = styled.div`
@@ -23,12 +33,11 @@ export const QuoteIcon = styled.div`
   font-weight: 700;
   line-height: 2rem;
 
-  /* and these spacings: */
-  margin: 0 2rem 1.5rem 0;
-`
+  margin: ${spacings[3]} 0;
 
-export const HeadlineWrapper = styled.div`
-  /* display: flex; */
+  ${breakpoints.tabletVertical} {
+    margin-right: ${spacings[5]};
+  }
 `
 
 export const BodyWrapper = styled.div`
@@ -37,10 +46,19 @@ export const BodyWrapper = styled.div`
 
 export const XLPModifier = styled(XLP)`
   color: ${colors.gray3};
-  margin-bottom: 0.8rem;
+  margin-bottom: ${spacings[4]};
 
   p {
     margin-bottom: ${spacings[3]};
+  }
+
+  ${breakpoints.tabletVertical} {
+    margin-bottom: ${spacings[5]};
+  }
+
+  ${breakpoints.laptopLarge} {
+    margin-bottom: ${spacings[3]};
+    padding-bottom: 0;
   }
 `
 

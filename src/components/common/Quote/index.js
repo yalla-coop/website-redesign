@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import {
   QuoteWrapper,
   QuoteIcon,
-  HeadlineWrapper,
   H3Modifier,
   BodyWrapper,
   XLPModifier,
@@ -14,15 +13,17 @@ import {
 
 const Quote = ({ headline, children, person, position }) => (
   <QuoteWrapper>
-    <HeadlineWrapper>
-      <QuoteIcon>“</QuoteIcon>
+    <QuoteIcon>“</QuoteIcon>
+    <div>
       <H3Modifier>{headline}</H3Modifier>
-    </HeadlineWrapper>
-    <BodyWrapper>
-      <XLPModifier>{children}</XLPModifier>
-      <CapsHeadingLargeModifier w="500">{person}</CapsHeadingLargeModifier>
-      <CapsHeadingMediumModifier w="700">{position}</CapsHeadingMediumModifier>
-    </BodyWrapper>
+      <BodyWrapper>
+        <XLPModifier>{children}</XLPModifier>
+        <CapsHeadingLargeModifier w="500">{person}</CapsHeadingLargeModifier>
+        <CapsHeadingMediumModifier w="700">
+          {position}
+        </CapsHeadingMediumModifier>
+      </BodyWrapper>
+    </div>
   </QuoteWrapper>
 )
 
