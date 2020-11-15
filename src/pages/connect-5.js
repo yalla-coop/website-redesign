@@ -118,7 +118,11 @@ const Connect5CaseStudy = () => {
           programme.
         </MP>
       </WhereWeCameSection>
-      <Image fileName="connect-figma" altText="connect 5 designs" />
+      <Image
+        fileName="connect-figma"
+        altText="connect 5 designs"
+        style={{ width: '60%', margin: '0 auto' }}
+      />
       <WhatWeDeliveredSection>
         <Subtitle title="What We Delivered" size="small" />
         <H3>1.0 Breaking down the problems</H3>
