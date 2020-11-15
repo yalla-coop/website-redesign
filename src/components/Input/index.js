@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { letterSpacing, colors, size, font } from '../../utils'
+import { letterSpacing, colors, size, font, breakpoints } from '../../utils'
 
 const { black, gray3 } = colors
 
@@ -64,7 +64,9 @@ const Textarea = styled.textarea`
 `
 
 const InputContainer = styled.div`
-  width: 45%;
+  ${breakpoints.tabletVertical} {
+    width: 45%;
+  }
   margin: 1rem 0;
 `
 const TextareaContainer = styled.div`

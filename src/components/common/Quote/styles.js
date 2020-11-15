@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { H3, XLP, CapsHeadingLarge, CapsHeadingMedium } from '../../elements'
-import { colors, breakpoints, spacings, size, psize } from '../../../utils'
+import { colors, breakpoints, spacings, size } from '../../../utils'
 
 export const QuoteWrapper = styled.div`
   ${breakpoints.tabletVertical} {
@@ -70,7 +70,7 @@ export const CapsHeadingLargeModifier = styled(CapsHeadingLarge)`
 `
 
 export const CapsHeadingMediumModifier = styled(CapsHeadingMedium)`
-  font-size: ${psize.s};
+  font-size: ${size.xs} !important;
   letter-spacing: 0;
   font-weight: 400;
   color: ${colors.gray3};

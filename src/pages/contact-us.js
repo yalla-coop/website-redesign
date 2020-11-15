@@ -1,15 +1,17 @@
 import React, { useReducer } from 'react'
-import { css } from 'styled-components'
+import { useMediaQuery } from 'react-responsive'
 import { Button } from '../components/elements'
 import Input from '../components/Input'
 import Layout from '../components/layout'
 import Subtitle from '../components/Subtitle'
+import NavBar from '../components/layout/Header/Nav'
 import {
   FlexDiv,
   FlexDivWrap,
   SidePanel,
   H1Inverted,
   HeadingSection,
+  NavBackground,
 } from '../styles/contactUs'
 
 const CHANGE = 'CHANGE'
@@ -43,7 +45,7 @@ const Form = () => {
     <form
       method="post"
       name="contact-us"
-      action="/contact-us/success"
+      action="/success"
       netlify
       netlify-honeypot="bot-field"
     >
@@ -76,12 +78,7 @@ const Form = () => {
           dispatch({ type: CHANGE, key: 'message', value })
         }
       />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+
       <Button
         title="Send message"
         hasArrow
@@ -92,33 +89,30 @@ const Form = () => {
     </form>
   )
 }
-const ContactUs = () => (
-  <Layout noFooter>
-    <FlexDiv>
-      <div
-        css={css`
-          padding: 7.5rem;
-          width: 100%;
-        `}
-      >
-        <Subtitle title="Interested in working with us?" size="large" />
-        <div
-          css={css`
-            padding: 7.5rem 2rem 7.5rem 3.5rem;
-            width: 65%;
-          `}
-        >
+const ContactUs = () => {
+  const isLaptop = useMediaQuery({
+    minWidth: 1280,
+  })
+  return (
+    <Layout noFooter>
+      <NavBackground>
+        <NavBar menuColor="white" logoColor={isLaptop ? 'black' : 'white'} />
+      </NavBackground>
+      <FlexDiv>
+        <div>
+          <Subtitle title="Interested in working with us?" size="large" />
           <Form />
         </div>
-      </div>
-
-      <SidePanel>
-        <HeadingSection>
-          <H1Inverted>Get in touch!</H1Inverted>
-        </HeadingSection>
-      </SidePanel>
-    </FlexDiv>
-  </Layout>
-)
+        {isLaptop && (
+          <SidePanel>
+            <HeadingSection>
+              <H1Inverted>Get in touch!</H1Inverted>
+            </HeadingSection>
+          </SidePanel>
+        )}
+      </FlexDiv>
+    </Layout>
+  )
+}
 
 export default ContactUs
