@@ -73,7 +73,7 @@ export const ImageBackgroundWithGradient = styled(BackgroundImage)`
     height: 70vh;
   }
 
-  ${breakpoints.laptopLarge} {
+  @media (min-width: 1280px) {
     height: 100vh;
   }
 `
@@ -116,12 +116,11 @@ export const CapsHeadingSmallModifier = styled(CapsHeadingSmall)`
 `
 
 export const Wrapper = styled(ContentWrapper)`
-  ${breakpoints.mobileMedium} {
-    margin-top: 20vh;
-  }
-  ${breakpoints.tabletVertical} {
-    margin-top: 6vh;
-  }
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `
 
 export const TextWrapper = styled(ContentWrapper)`
@@ -352,6 +351,7 @@ export const WorkCards = styled.div`
 
   ${breakpoints.tabletVertical} {
     display: flex;
+    flex-wrap: wrap;
   }
 `
 
@@ -361,7 +361,7 @@ export const AllWorkLink = styled(Link)`
   text-decoration: none;
 `
 
-export const TestimonialsSection = styled(TextContentWrapper)`
+export const TestimonialsSection = styled(ContentWrapper)`
   margin-top: ${spacings[5]};
 
   ${breakpoints.mobileSmall} {

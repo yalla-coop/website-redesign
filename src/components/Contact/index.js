@@ -1,4 +1,5 @@
 import React from 'react'
+import { navigate } from 'gatsby'
 import styled, { css } from 'styled-components'
 import { H3, Button } from '../elements'
 import { colors, breakpoints, spacings } from '../../utils'
@@ -44,6 +45,7 @@ const Contact = () => (
         capitalize
         hasArrow
         backgroundColor={colors.accent}
+        onClick={() => navigate('/contact-us')}
       />
     </Content>
   </Wrapper>

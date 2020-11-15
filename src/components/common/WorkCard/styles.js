@@ -20,7 +20,7 @@ export const WorkWrapper = styled.div`
   }
 
   ${breakpoints.tabletVertical} {
-    width: 100%;
+    width: 40%;
     margin-right: ${spacings[6]};
   }
 

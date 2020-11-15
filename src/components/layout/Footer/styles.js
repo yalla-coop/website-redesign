@@ -74,7 +74,9 @@ export const ContactSection = styled.div`
 `
 
 export const FooterBox = styled.div`
-  width: 80%;
+  ${breakpoints.tabletVertical} {
+    width: 80%;
+  }
 
   ${breakpoints.laptop} {
     display: flex;
@@ -121,7 +123,6 @@ export const HeadingSection = styled.div`
   align-items: center;
   align-self: baseline;
   margin: ${spacings[5]} 0;
-  width: 20%;
 
   h1 {
     font-size: ${size.md};
@@ -131,7 +132,7 @@ export const HeadingSection = styled.div`
     h1 {
       font-size: ${size.lg};
     }
-
+    width: 20%;
     margin: 0 0;
     transform: rotate(-90deg) translateX(-69%);
   }

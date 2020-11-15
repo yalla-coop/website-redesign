@@ -59,10 +59,10 @@ const OurApproachPage = () => {
               Web design and development agency
             </CapsHeadingSmallModifier>
             <H1Modifier>Our Approach + Services</H1Modifier>
-            <ArrowWrapper>
-              <ArrowImage src={ArrowDown} alt="arrow down" />
-            </ArrowWrapper>
           </HeadingWrapper>
+          <ArrowWrapper>
+            <ArrowImage src={ArrowDown} alt="arrow down" />
+          </ArrowWrapper>
         </ImageBackground>
       </header>
 

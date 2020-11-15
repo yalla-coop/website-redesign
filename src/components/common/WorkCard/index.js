@@ -13,7 +13,7 @@ const WorkCard = ({ smallHeading, bigHeading, fileName, altText, link }) => (
       <Image
         fileName={fileName}
         altText={altText}
-        style={{ width: '100%', height: 'auto' }}
+        style={{ width: '100%', height: 'auto', maxHeight: '25rem' }}
       />
     </Link>
     <CapsHeadingSmall>{smallHeading}</CapsHeadingSmall>

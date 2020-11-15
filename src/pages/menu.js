@@ -187,11 +187,11 @@ const MenuPage = () => {
             <LinkNumber>1.0</LinkNumber>
             <LinkText>Our Approach + Services</LinkText>
           </Link>
-          <Link to="/earwig">
+          <Link to="/#case-studies">
             <LinkNumber>2.0</LinkNumber>
             <LinkText>Our Work + Case Studies</LinkText>
           </Link>
-          <Link to="/presspad">
+          <Link to="/our-story">
             <LinkNumber>3.0</LinkNumber>
             <LinkText>Our Story + Team</LinkText>
           </Link>

@@ -59,10 +59,10 @@ const EarwigCaseStudy = () => {
               Building a powerful reviews platform setting new standards for
               workers in the construction industry
             </H1Modifier>
-            <ArrowWrapper>
-              <ArrowImage src={ArrowDown} alt="arrow down" />
-            </ArrowWrapper>
           </Wrapper>
+          <ArrowWrapper>
+            <ArrowImage src={ArrowDown} alt="arrow down" />
+          </ArrowWrapper>
         </ImageBackgroundWithGradient>
       </header>
 

@@ -24,18 +24,17 @@ export const ImageBackground = styled(BackgroundImage)`
   height: 100vh;
   width: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `
 
 export const TextWrapper = styled.div`
   width: 100%;
-  height: 100%;
-  padding: 1.5rem 0;
-  display: flex;
-  flex-direction: column;
-  transform: translate(0, 0);
-  @media (min-width: 620px) {
-    transform: translate(0, 200px);
-  }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `
 
 export const CapsHeadingSmallModifier = styled(CapsHeadingSmall)`
@@ -54,12 +53,22 @@ export const PageTitle = styled(H2)`
   }
 `
 
-export const ArrowImage = styled.img``
+export const ArrowImage = styled.img`
+  position: absolute;
+
+  ${breakpoints.mobileSmall} {
+    bottom: ${spacings[5]};
+  }
+
+  ${breakpoints.laptopLarge} {
+    bottom: ${spacings[9]};
+  }
+`
 
 export const ArrowContainer = styled.div`
   display: flex;
   justify-content: center;
-  flex-grow: 1;
+  /* flex-grow: 1; */
 `
 export const TeamSection = styled.section`
   padding: 90px 15% 68px 25%;

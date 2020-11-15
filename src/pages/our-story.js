@@ -98,10 +98,10 @@ const OurStory = () => {
               Web design and development agency
             </CapsHeadingSmallModifier>
             <PageTitle>Our Story + Team</PageTitle>
-            <ArrowContainer>
-              <ArrowImage src={ArrowDown} alt="arrow down" />
-            </ArrowContainer>
           </TextWrapper>
+          <ArrowContainer>
+            <ArrowImage src={ArrowDown} alt="arrow down" />
+          </ArrowContainer>
         </ImageBackground>
       </Header>
       {/* about section */}

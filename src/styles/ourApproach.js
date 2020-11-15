@@ -18,9 +18,11 @@ export const Wrapper = styled.section`
 `
 
 export const HeadingWrapper = styled(LandingHeadingWrapper)`
-  ${breakpoints.laptopLarge} {
-    margin-top: 16vh;
-  }
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `
 
 export const List = styled.ul`
@@ -69,7 +71,7 @@ export const ImageBackground = styled(BackgroundImage)`
     height: 70vh;
   }
 
-  ${breakpoints.laptopLarge} {
+  @media (min-width: 1280px) {
     height: 100vh;
   }
 `
