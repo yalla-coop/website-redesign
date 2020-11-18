@@ -7,17 +7,15 @@ import NavBar from '../components/layout/Header/Nav'
 import Image from '../components/image'
 // import MetaData from '../components/common/MetaData'
 
-import { H2, H3, H4, MP, Button } from '../components/elements'
+import { H2, H3, MP, Button } from '../components/elements'
 import {
   ImageBackgroundWithGradient,
   CapsHeadingSmallModifier,
-  CapsHeadingLargeModifier,
   H1Modifier,
   Wrapper,
   ArrowWrapper,
   ArrowImage,
   TestimonialsSection,
-  QuoteIcon,
 } from '../styles/landing'
 
 import Subtitle from '../components/Subtitle'
@@ -29,6 +27,11 @@ import {
   WhereWeCameInSection,
   WhatWeDeliveredSection,
 } from '../styles/earwig'
+
+import { IntroAndMetaSection, MetaDataContainer } from '../styles/caseStudies'
+
+import { MetaData, Quote, Contact } from '../components'
+
 import ArrowDown from '../../static/svg/arrow-down.svg'
 
 const EarwigCaseStudy = () => {
@@ -66,23 +69,6 @@ const EarwigCaseStudy = () => {
         </ImageBackgroundWithGradient>
       </header>
 
-      {/* <Deliverables>
-        <MetaData title="client" text={['earwig']} />
-        <MetaData title="SECTOR" text={['Construction']} />
-        <MetaData
-          title="DELIVERABLES"
-          text={[
-            'User Experience',
-            'UI Kits/Design',
-            'Systems Prototypes',
-            'Full stack development',
-            'Information Architecture',
-            'Content Management Systems',
-            'Web Applications',
-          ]}
-        />
-      </Deliverables> */}
-
       <Context>
         <H2>
           Earwig is a start up company looking to provide more accountability,
@@ -95,45 +81,64 @@ const EarwigCaseStudy = () => {
         </MP>
       </Context>
 
-      <WhereItAllStartedSection>
-        <Subtitle title="Where It All Started" size="small" />
-        <MP>
-          earwig is a start up company looking to provide more accountability,
-          security and community within the construction industry. Their mission
-          is to build a worker-led community that give construction workers a
-          voice and sets new standards for construction jobs.
-        </MP>
-        <MP>
-          Here’s a video explaining that problem they’re looking to solve:
-        </MP>
-      </WhereItAllStartedSection>
-      {isLaptop ? (
-        <WhereItAllStartedSection style={{ paddingBottom: '64px' }}>
-          <iframe
-            title="earwig introduction"
-            src="https://www.youtube.com/embed/Na1f8movCcw"
-            frameBorder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            style={{
-              height: '600px',
-              width: '100%',
-            }}
+      <IntroAndMetaSection>
+        <MetaDataContainer>
+          <MetaData title="CLIENT" text={['earwig']} />
+          <MetaData title="SECTOR" text={['Construction']} />
+          <MetaData
+            title="DELIVERABLES"
+            text={[
+              'User Experience',
+              ' UI Kits/Design Systems',
+              ' Prototypes',
+              ' Full stack development',
+              '  Information Architecture',
+              'Content Management Systems',
+              'Web Applications',
+            ]}
           />
+        </MetaDataContainer>
+
+        <WhereItAllStartedSection>
+          <Subtitle title="Where It All Started" size="small" />
+          <MP>
+            earwig is a start up company looking to provide more accountability,
+            security and community within the construction industry. Their
+            mission is to build a worker-led community that give construction
+            workers a voice and sets new standards for construction jobs.
+          </MP>
+          <MP>
+            Here’s a video explaining that problem they’re looking to solve:
+          </MP>
+          {isLaptop ? (
+            <div style={{ paddingBottom: '64px' }}>
+              <iframe
+                title="earwig introduction"
+                src="https://www.youtube.com/embed/Na1f8movCcw"
+                frameBorder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{
+                  height: '600px',
+                  width: '100%',
+                }}
+              />
+            </div>
+          ) : (
+            <iframe
+              title="earwig introduction"
+              src="https://www.youtube.com/embed/Na1f8movCcw"
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{
+                height: '300px',
+                width: '100%',
+              }}
+            />
+          )}
         </WhereItAllStartedSection>
-      ) : (
-        <iframe
-          title="earwig introduction"
-          src="https://www.youtube.com/embed/Na1f8movCcw"
-          frameBorder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          style={{
-            height: '300px',
-            width: '100%',
-          }}
-        />
-      )}
+      </IntroAndMetaSection>
 
       <WhereWeCameInSection>
         <Subtitle title="Where We Came In" size="small" />
@@ -231,29 +236,30 @@ const EarwigCaseStudy = () => {
       <Image fileName="earwig-phones" altText="Earwig app on mobile devices" />
 
       <TestimonialsSection style={{ marginTop: 0 }}>
-        <QuoteIcon>“</QuoteIcon>
-        <H4>
-          Despite my demanding a lot from Yalla in terms of quality ​and​
+        <Quote
+          person="HARRISON MOORE"
+          position="CEO"
+          headline=" Despite my demanding a lot from Yalla in terms of quality ​and​
           quantity of work, they have given me precisely what I dreamt about
-          building and they’ve done it fast, too.
-        </H4>
-        <MP>
-          I’ve been working with Yalla for six months and the word I would use
-          to describe them best is ‘reliable.’ At first I was concerned about
-          hiring Yalla because the ‘remote’ development aspect made me feel like
-          I wouldn’t have the closeness I felt I needed, especially as a virgin
-          founder with zero product experience. But Yalla made me feel in
-          control and included from day 1 by being well structured, reliable and
-          honest.
-        </MP>
-        <MP>
-          I would highly recommend Yalla if you’ve got a product vision and are
-          looking for real, trustworthy and hardworking people to accompany you
-          along the way.
-        </MP>
-        <CapsHeadingLargeModifier>HARRISON MOORE</CapsHeadingLargeModifier>
-        <MP>CEO</MP>
+          building and they’ve done it fast, too."
+        >
+          <MP>
+            I’ve been working with Yalla for six months and the word I would use
+            to describe them best is ‘reliable.’ At first I was concerned about
+            hiring Yalla because the ‘remote’ development aspect made me feel
+            like I wouldn’t have the closeness I felt I needed, especially as a
+            virgin founder with zero product experience. But Yalla made me feel
+            in control and included from day 1 by being well structured,
+            reliable and honest.
+          </MP>
+          <MP>
+            I would highly recommend Yalla if you’ve got a product vision and
+            are looking for real, trustworthy and hardworking people to
+            accompany you along the way.
+          </MP>
+        </Quote>
       </TestimonialsSection>
+      <Contact />
     </Layout>
   )
 }

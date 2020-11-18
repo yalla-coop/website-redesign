@@ -16,6 +16,13 @@ export const WhereItAllStartedSection = styled(EarwigWhereItAllStartedSection)`
   ${breakpoints.laptopLarge} {
     padding-bottom: ${spacings[8]};
   }
+
+  ${breakpoints.tabletVertical} {
+    order: 1;
+    width: 60%;
+    padding-right: 1rem;
+    margin: 0;
+  }
 `
 
 export const WhatWeDeliveredSection = styled(EarwigWhatWeDeliveredSection)`

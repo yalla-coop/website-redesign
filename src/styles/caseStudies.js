@@ -8,6 +8,7 @@ import {
   letterSpacing,
   lineHeight,
   psize,
+  colors,
 } from '../utils'
 import { Wrapper as ContentWrapper } from '../components/contentWrapper'
 
@@ -98,5 +99,25 @@ export const WhatWeDeliveredSection = styled(WhereItAllStartedSection)`
       font-size: ${size.md};
       padding-top: ${spacings[6]};
     }
+  }
+`
+
+export const IntroAndMetaSection = styled.div`
+  ${breakpoints.tabletVertical} {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+`
+
+export const MetaDataContainer = styled.div`
+  background-color: ${colors.LightestGray};
+  padding: ${spacings[4]};
+
+  ${breakpoints.tabletVertical} {
+    order: 2;
+    width: 30%;
+    padding: ${spacings[4]};
+    background-color: ${colors.white};
   }
 `

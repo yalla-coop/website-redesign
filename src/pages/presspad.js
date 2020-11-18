@@ -6,16 +6,15 @@ import SEO from '../components/seo'
 import NavBar from '../components/layout/Header/Nav'
 import Image from '../components/image'
 
-import { H2, H3, H4, MP } from '../components/elements'
-import {
-  CapsHeadingLargeModifier,
-  TestimonialsSection,
-  QuoteIcon,
-} from '../styles/landing'
+import { H2, H3, MP, Button } from '../components/elements'
+import { TestimonialsSection } from '../styles/landing'
+
+import { IntroAndMetaSection, MetaDataContainer } from '../styles/caseStudies'
 
 import { ImageBackground } from '../styles/ourApproach'
 
 import Subtitle from '../components/Subtitle'
+import { Contact, Quote, MetaData } from '../components'
 
 import { WhereWeCameInSection } from '../styles/earwig'
 
@@ -55,23 +54,45 @@ const PressPadCaseStudy = () => {
         </H2>
       </Context>
 
-      <WhereItAllStartedSection>
-        <Subtitle title="Where It All Started" size="small" />
-        <MP>
-          PressPad is a social enterprise that matches young journalists with
-          host-mentors. In 2018 the Sutton Trust estimated that it costs a young
-          person £1,019 a month to do unpaid internships in London where the
-          best media opportunities are found. This prices out talented, diverse
-          people who cannot afford to work for free or who don’t have
-          friends/family to stay with.
-        </MP>
-        <MP>
-          PressPad significantly lowers these costs by matching such people with
-          professional journalists in London with a spare room who act as
-          hosts *and mentors* for those completing placements. Our service
-          levels the playing field thus diversifying the media industry.
-        </MP>
-      </WhereItAllStartedSection>
+      <IntroAndMetaSection>
+        <MetaDataContainer>
+          <MetaData title="CLIENT" text={['PressPad']} />
+          <MetaData title="SECTOR" text={['Media & Accommodation']} />
+          <MetaData
+            title="DELIVERABLES"
+            text={[
+              'User Testing',
+              'Content Strategy',
+              'User Experience',
+              'UI/UX Design',
+              'UI Kits/Design Systems',
+              'Prototypes',
+              'Full stack development ',
+              'Information Architecture',
+              'Prototypes',
+              'Web Applications',
+            ]}
+          />
+        </MetaDataContainer>
+
+        <WhereItAllStartedSection>
+          <Subtitle title="Where It All Started" size="small" />
+          <MP>
+            PressPad is a social enterprise that matches young journalists with
+            host-mentors. In 2018 the Sutton Trust estimated that it costs a
+            young person £1,019 a month to do unpaid internships in London where
+            the best media opportunities are found. This prices out talented,
+            diverse people who cannot afford to work for free or who don’t have
+            friends/family to stay with.
+          </MP>
+          <MP>
+            PressPad significantly lowers these costs by matching such people
+            with professional journalists in London with a spare room who act as
+            hosts *and mentors* for those completing placements. Our service
+            levels the playing field thus diversifying the media industry.
+          </MP>
+        </WhereItAllStartedSection>
+      </IntroAndMetaSection>
 
       <WhereWeCameInSection>
         <Subtitle title="Where We Came In" size="small" />
@@ -174,6 +195,20 @@ const PressPadCaseStudy = () => {
           platform continues to grow in exactly the right way to meet our
           users&apos; needs.
         </MP>
+        <Button
+          as="a"
+          title="Check out Presspad"
+          hasArrow
+          href="https://presspad.co.uk/"
+          target="_blank"
+          capitalize
+          primary
+          style={{
+            textDecoration: 'none',
+            width: '250px',
+            marginTop: isLaptop ? '48px' : '24px',
+          }}
+        />
       </WhatWeDeliveredSection>
       <Image
         fileName="presspad-mockups"
@@ -181,30 +216,31 @@ const PressPadCaseStudy = () => {
       />
 
       <TestimonialsSection>
-        <QuoteIcon>“</QuoteIcon>
-        <H4>
-          Their team initially really appealed to a social enterprise like
+        <Quote
+          person="OLIVIA CRELLIN"
+          position="CEO"
+          headline=" Their team initially really appealed to a social enterprise like
           PressPad because of their unique set-up utilising programming talent
           in Gaza and bringing work to an economically maligned and war-torn
-          region.
-        </H4>
-        <MP>
-          Joe and the Yalla team have been fantastic to work with. It soon
-          became clear that [working with this remote team] set up was just a
-          bonus on top of the flexible, economically-viable and conscientious
-          way they go about work for their clients.
-        </MP>
-        <MP>
-          Endlessly patient with someone like myself who has limited technical
-          expertise and has never built a website from scratch, Joe has been a
-          great communicator working around my schedule, availability and
-          disaster of an email inbox! Honest and pragmatic while at the same
-          time remaining supportive and ambitious, I would thoroughly recommend
-          working with the team to date!
-        </MP>
-        <CapsHeadingLargeModifier>OLIVIA CRELLIN</CapsHeadingLargeModifier>
-        <MP>CEO</MP>
+          region."
+        >
+          <MP>
+            Joe and the Yalla team have been fantastic to work with. It soon
+            became clear that [working with this remote team] set up was just a
+            bonus on top of the flexible, economically-viable and conscientious
+            way they go about work for their clients.
+          </MP>
+          <MP>
+            Endlessly patient with someone like myself who has limited technical
+            expertise and has never built a website from scratch, Joe has been a
+            great communicator working around my schedule, availability and
+            disaster of an email inbox! Honest and pragmatic while at the same
+            time remaining supportive and ambitious, I would thoroughly
+            recommend working with the team to date!
+          </MP>
+        </Quote>
       </TestimonialsSection>
+      <Contact />
     </Layout>
   )
 }

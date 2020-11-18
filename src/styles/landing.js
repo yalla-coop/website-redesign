@@ -366,39 +366,15 @@ export const TestimonialsSection = styled(ContentWrapper)`
 
   ${breakpoints.mobileSmall} {
     margin-bottom: ${spacings[3]};
-
-    h4 {
-      margin-bottom: ${spacings[3]};
-      margin-top: -0.8rem;
-    }
-
-    p:not(:last-child) {
-      margin-bottom: ${spacings[3]};
-    }
   }
 
   ${breakpoints.tabletVertical} {
     margin-bottom: 0;
-
-    h4 {
-      font-size: ${size.md};
-    }
   }
 
   ${breakpoints.laptopLarge} {
     padding-top: ${spacings[7]};
     padding-bottom: ${spacings[8]};
-
-    h4 {
-      font-size: ${size.md};
-      margin-top: ${spacings[1]};
-      margin-bottom: ${spacings[5]};
-    }
-
-    p {
-      font-size: ${psize.l};
-      line-height: 3rem;
-    }
   }
 `
 
