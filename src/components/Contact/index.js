@@ -7,7 +7,26 @@ import { colors, breakpoints, spacings } from '../../utils'
 const Wrapper = styled.div`
   background-color: ${colors.gray7};
   display: flex;
-  background-image: url('../images/logo-contact.png') no-repeat;
+
+  ${breakpoints.tabletVertical} {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
+  @media (min-width: 1280px) {
+    padding-left: 20rem;
+    padding-right: 20rem;
+  }
+
+  ${breakpoints.laptopLarge} {
+    padding-left: 36rem;
+    padding-right: 36rem;
+  }
+
+  ${breakpoints.desktop} {
+    padding-left: 65rem;
+    padding-right: 65rem;
+  }
 `
 
 const Content = styled.div`
