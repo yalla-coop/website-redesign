@@ -20,7 +20,7 @@ const StyledButton = styled.button`
 const fadeInLeft = keyframes`
   0% {
     opacity: 0.2;
-    transform: translateX(100px);
+    transform: translateX(200px);
   }
 
   50% {
@@ -34,13 +34,13 @@ const fadeInLeft = keyframes`
 `
 
 const QuoteWrapper = styled.div`
-  animation: 0.7s ${fadeInLeft} ease-out;
+  animation: 1.5s ${fadeInLeft} ease-out;
 `
 
 export default function App() {
   const [slide, setSlide] = useState(1)
   return (
-    <div className="App">
+    <div>
       {slide === 1 && (
         <QuoteWrapper>
           <Quote
