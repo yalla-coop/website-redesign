@@ -171,11 +171,11 @@ const IndexPage = () => {
             link="presspad"
           />
           <WorkCard
-            smallHeading="CONNECT 5 - PUBLIC HEALTH"
-            bigHeading="Creating an end-to-end management and reporting tool to improve delivery of training in mental health"
+            smallHeading="TEMPO - VOLUNTEERING"
+            bigHeading="Delivering digital transformation for a leading UK charity to drive volunteering and community engagement"
             fileName="work-connect5"
             altText="work-connect5"
-            link="connect-5"
+            link="tempo"
           />
         </WorkCards>
       </WorkSection>
