@@ -199,6 +199,10 @@ const MenuPage = () => {
             <LinkNumber>4.0</LinkNumber>
             <LinkText>Get in touch</LinkText>
           </Link>
+          <Link to="/policies">
+            <LinkNumber>5.0</LinkNumber>
+            <LinkText>Our Policies</LinkText>
+          </Link>
         </LinksWrapper>
         {isIpadOrBigger && (
           <WhereWeAreSection>
