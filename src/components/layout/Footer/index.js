@@ -40,6 +40,9 @@ const Footer = () => {
               <H4>
                 <span>4.0</span>Get in touch
               </H4>
+              <H4>
+                <span>5.0</span>Our Policies
+              </H4>
             </SitemapSection>
             <ContactSection>
               <CapsHeadingSmall>contact</CapsHeadingSmall>
