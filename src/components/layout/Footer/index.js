@@ -10,6 +10,7 @@ import {
   ContentWrapper,
   Copyright,
   FooterBox,
+  StyledLink,
 } from './styles'
 import { H1, H4, CapsHeadingSmall, XSP } from '../../elements'
 
@@ -29,16 +30,29 @@ const Footer = () => {
               {/* TODO: make the sitemap items as Gatsby links */}
               <CapsHeadingSmall>sitemap</CapsHeadingSmall>
               <H4>
-                <span>1.0</span>Our Approach + Services
+                <StyledLink to="/our-approach">
+                  <span>1.0</span>Our Approach + Services
+                </StyledLink>
               </H4>
               <H4>
-                <span>2.0</span>Our Work + Case Studies
+                <StyledLink to="/#case-studies">
+                  <span>2.0</span>Our Work + Case Studies
+                </StyledLink>
               </H4>
               <H4>
-                <span>3.0</span>Our Story + Team
+                <StyledLink to="/our-story">
+                  <span>3.0</span>Our Story + Team
+                </StyledLink>
               </H4>
               <H4>
-                <span>4.0</span>Get in touch
+                <StyledLink to="/contact-us">
+                  <span>4.0</span>Get in touch
+                </StyledLink>
+              </H4>
+              <H4>
+                <StyledLink to="/policies">
+                  <span>5.0</span>Our policies
+                </StyledLink>
               </H4>
             </SitemapSection>
             <ContactSection>

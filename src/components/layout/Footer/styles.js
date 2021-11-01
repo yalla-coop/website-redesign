@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 import { colors, breakpoints, spacings, size, psize } from '../../../utils'
 import { TextContentWrapper } from '../../contentWrapper'
 
@@ -174,4 +175,8 @@ export const Copyright = styled(TextContentWrapper)`
     font-size: ${psize.m};
   }
 }
+`
+export const StyledLink = styled(Link)`
+  color: white;
+  text-decoration: none;
 `
