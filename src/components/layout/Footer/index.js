@@ -60,16 +60,12 @@ const Footer = () => {
                   </div>
                   <div>
                     <CapsHeadingSmall>germany</CapsHeadingSmall>
-                    <XSP>
-                      149 Fonthill Rd <br /> Finsbury Park <br /> London <br />{' '}
-                      N4 3HF
-                    </XSP>
+                    <XSP>Remote locations</XSP>
                   </div>
                   <div>
                     <CapsHeadingSmall>gaza</CapsHeadingSmall>
                     <XSP>
-                      149 Fonthill Rd <br /> Finsbury Park <br /> London <br />{' '}
-                      N4 3HF
+                      Capital Mall <br /> Omar Almokhtar <br /> Alrimal
                     </XSP>
                   </div>
                 </AddressesBlock>
@@ -79,7 +75,7 @@ const Footer = () => {
         </ContentWrapper>
       </FooterWrapper>
       <Copyright>
-        <p>© 2020 Yalla Cooperative</p>
+        <p>© 2021 Yalla Cooperative</p>
       </Copyright>
     </>
   )

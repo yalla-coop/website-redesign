@@ -27,7 +27,7 @@ import {
 const TempoCaseStudy = () => {
   const { image } = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "presspad-header.png" }) {
+      image: file(relativePath: { eq: "tempo-cover.png" }) {
         sharp: childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -43,7 +43,7 @@ const TempoCaseStudy = () => {
       <SEO title="Tempo Case Study" />
       <header>
         <ImageBackground tag="section" fluid={image.sharp.fluid}>
-          <NavBar menuColor="white" logoColor="white" />
+          <NavBar menuColor="black" logoColor="white" />
         </ImageBackground>
       </header>
 
@@ -113,8 +113,8 @@ const TempoCaseStudy = () => {
       {isLaptop ? (
         <WhereWeCameInSection style={{ paddingTop: 0 }}>
           <Image
-            fileName="presspad-figma"
-            altText="presspad styles and wire frames in Figma"
+            fileName="tempo-design-thinking"
+            altText="tempo styles and wire frames in Figma"
             style={{
               width: '100%',
             }}
@@ -122,8 +122,8 @@ const TempoCaseStudy = () => {
         </WhereWeCameInSection>
       ) : (
         <Image
-          fileName="presspad-figma"
-          altText="presspad styles and wire frames in Figma"
+          fileName="tempo-design-thinking"
+          altText="tempo styles and wire frames in Figma"
           style={{
             width: '100%',
           }}
@@ -241,8 +241,8 @@ const TempoCaseStudy = () => {
         />
       </WhatWeDeliveredSection>
       <Image
-        fileName="presspad-mockups"
-        altText="PressPad app on desktop and mobile devices"
+        fileName="tempo-mockups"
+        altText="tempo app on desktop and mobile devices"
       />
 
       <TestimonialsSection>

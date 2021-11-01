@@ -173,8 +173,8 @@ const IndexPage = () => {
           <WorkCard
             smallHeading="TEMPO - VOLUNTEERING"
             bigHeading="Delivering digital transformation for a leading UK charity to drive volunteering and community engagement"
-            fileName="work-connect5"
-            altText="work-connect5"
+            fileName="tempo-cover"
+            altText="tempo-cover"
             link="tempo"
           />
         </WorkCards>
