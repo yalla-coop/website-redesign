@@ -89,7 +89,7 @@ const Footer = () => {
         </ContentWrapper>
       </FooterWrapper>
       <Copyright>
-        <p>© 2021 Yalla Cooperative</p>
+        <p>© 2022 Yalla Cooperative</p>
       </Copyright>
     </>
   )
