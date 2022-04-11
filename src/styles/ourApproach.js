@@ -83,19 +83,17 @@ export const CapsHeadingLargeModifier = styled(CapsHeadingLarge)`
 
 // introduction style //
 
-export const Introduction = styled(OurStorySection)`
+export const Introduction = styled(OurStorySection)``
+
+export const Bold = styled.span`
   ${breakpoints.mobileSmall} {
-    span {
-      color: ${colors.primary};
-      font-weight: 600;
-      font-size: ${psize.m};
-    }
+    color: ${colors.primary};
+    font-weight: 600;
+    font-size: ${psize.m};
   }
 
   ${breakpoints.laptopLarge} {
-    span {
-      font-size: ${psize.xl};
-    }
+    font-size: ${psize.xl};
   }
 `
 

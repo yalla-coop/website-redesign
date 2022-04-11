@@ -19,6 +19,7 @@ import {
   WhatWeOffer,
   Images,
   Description,
+  Bold,
 } from '../styles/ourApproach'
 
 import {
@@ -78,7 +79,7 @@ const OurApproachPage = () => {
         </MP>
         <MP>So, how do we get there? We go through three phases:</MP>
         <MP>
-          <span>Discovery, Design and Develop.</span>
+          <Bold>Discovery, Design and Develop.</Bold>
         </MP>
         <MP>
           And then we go around again! Taking the product back to the users, to
@@ -86,8 +87,8 @@ const OurApproachPage = () => {
         </MP>
         <MP>
           This tight, cyclical approach ensures we build your product in the
-          most efficient way, with you fully in control and secure that
-          you&lsquo;re creating something that will be used.
+          most <span>efficient</span> way, with you fully in control and secure
+          that you&lsquo;re creating something that will be used.
         </MP>
       </Introduction>
 
