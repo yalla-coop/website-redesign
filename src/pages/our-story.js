@@ -29,7 +29,18 @@ import {
 import ourTeam from '../utils/data/ourTeam'
 
 const OurStory = () => {
-  const { image, joe, simon, ramy, ahmed, jem, fadi } = useStaticQuery(graphql`
+  const {
+    image,
+    joe,
+    ramy,
+    ahmed,
+    jem,
+    fadi,
+    cemal,
+    beth,
+    kristina,
+    israa,
+  } = useStaticQuery(graphql`
     query {
       image: file(relativePath: { eq: "our-story.png" }) {
         sharp: childImageSharp {
@@ -38,14 +49,7 @@ const OurStory = () => {
           }
         }
       }
-      joe: file(relativePath: { eq: "joe.png" }) {
-        sharp: childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      simon: file(relativePath: { eq: "simon.png" }) {
+      joe: file(relativePath: { eq: "joe.jpeg" }) {
         sharp: childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -73,7 +77,35 @@ const OurStory = () => {
           }
         }
       }
-      fadi: file(relativePath: { eq: "fadi.png" }) {
+      fadi: file(relativePath: { eq: "fadi.jpg" }) {
+        sharp: childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      cemal: file(relativePath: { eq: "cemal.jpg" }) {
+        sharp: childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      beth: file(relativePath: { eq: "beth.jpeg" }) {
+        sharp: childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      kristina: file(relativePath: { eq: "kristina.jpg" }) {
+        sharp: childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      israa: file(relativePath: { eq: "israa.png" }) {
         sharp: childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -82,7 +114,17 @@ const OurStory = () => {
       }
     }
   `)
-  const images = { joe, simon, ramy, ahmed, jem, fadi }
+  const images = {
+    joe,
+    ramy,
+    ahmed,
+    jem,
+    fadi,
+    cemal,
+    beth,
+    kristina,
+    israa,
+  }
   const membersData = ourTeam.map(member => ({
     ...member,
     image: images[member.key],
