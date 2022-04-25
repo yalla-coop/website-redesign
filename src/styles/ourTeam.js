@@ -109,6 +109,11 @@ export const CardsContainer = styled.div`
       margin-top: 30px;
       margin-right: 10px;
     }
+    @media (max-width: 1035px) {
+      & div {
+        margin-top: 30px;
+      }
+    }
   }
 `
 

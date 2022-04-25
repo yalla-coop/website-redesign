@@ -9,7 +9,8 @@ import { spacings } from '../../utils'
 export const CardWarapper = styled.div`
   width: 336px;
   @media (max-width: 600px) {
-    width: 272px;
+    width: 100%;
+    max-width: 272px;
   }
 `
 
@@ -20,7 +21,7 @@ export const ImageBackground = styled(BackgroundImage)`
   position: relative;
   margin-top: 0;
   @media (max-width: 600px) {
-    width: 312px;
+    max-width: 272px;
   }
 `
 
