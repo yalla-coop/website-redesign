@@ -61,6 +61,7 @@ const Button = ({
   capitalize,
   primary,
   buttonType,
+  iconProps = {},
   ...props
 }) => {
   const bgColor = (primary && colors.primary) || backgroundColor
@@ -77,7 +78,11 @@ const Button = ({
       >
         {title}
         {primary || hasArrow ? (
-          <StyledArrow width={25} height={16} color={textColor} />
+          <StyledArrow
+            width={iconProps.width || 25}
+            height={iconProps.height || 16}
+            color={iconProps.color || textColor}
+          />
         ) : null}
       </StyledLink>
     )
@@ -93,7 +98,11 @@ const Button = ({
     >
       {title}
       {primary || hasArrow ? (
-        <StyledArrow width={25} height={16} color={textColor} />
+        <StyledArrow
+          width={iconProps.width || 25}
+          height={iconProps.height || 16}
+          color={iconProps.color || textColor}
+        />
       ) : null}
     </StyledButton>
   )
@@ -107,6 +116,11 @@ Button.propTypes = {
   capitalize: PropTypes.bool,
   primary: PropTypes.bool,
   buttonType: PropTypes.string,
+  iconProps: PropTypes.shape({
+    width: PropTypes.number,
+    height: PropTypes.number,
+    color: PropTypes.string,
+  }),
 }
 
 Button.defaultProps = {
@@ -117,6 +131,7 @@ Button.defaultProps = {
   textColor: colors.gray8,
   title: 'Click me',
   buttonType: 'button',
+  iconProps: {},
 }
 
 export default Button
