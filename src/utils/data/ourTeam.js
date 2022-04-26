@@ -45,7 +45,7 @@ const ourTeam = [
     key: 'kristina',
     image: null,
     name: 'KRISTINA',
-    description: 'LEAD DESIGNER / CUSTOMER SERVICE',
+    description: 'DESIGN AND PROJECT MANAGEMENT',
   },
   {
     key: 'israa',
