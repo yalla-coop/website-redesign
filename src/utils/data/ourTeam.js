@@ -6,6 +6,12 @@ const ourTeam = [
     description: 'CO - FOUNDER / DESIGNER / FULL STACK DEVELOPER',
   },
   {
+    key: 'simon',
+    image: null,
+    name: 'SIMON DUPREE',
+    description: 'CO - FOUNDER / FULL STACK DEVELOPER',
+  },
+  {
     key: 'ramy',
     image: null,
     name: 'RAMY AL SHURAFA',

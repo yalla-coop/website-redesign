@@ -34,6 +34,7 @@ const OurStory = () => {
     joe,
     ramy,
     ahmed,
+    simon,
     jem,
     fadi,
     cemal,
@@ -50,6 +51,13 @@ const OurStory = () => {
         }
       }
       joe: file(relativePath: { eq: "joe.jpeg" }) {
+        sharp: childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      simon: file(relativePath: { eq: "simon.jpg" }) {
         sharp: childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -117,6 +125,7 @@ const OurStory = () => {
   const images = {
     joe,
     ramy,
+    simon,
     ahmed,
     jem,
     fadi,
